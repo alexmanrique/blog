@@ -22,7 +22,10 @@ github_username:  alexmanrique
 
 # Build settings
 markdown: kramdown
-theme: minimal-mistakes-jekyll
+plugins:
+  - jekyll-remote-theme
+remote_theme: mmistakes/minimal-mistakes
+
 plugins:
   - jekyll-feed
 
