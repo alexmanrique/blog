@@ -86,7 +86,6 @@ author:
   youtube:
   
 analytics:
-  provider: custom
   google:
     tracking_id: UA-68424461-1
 comments:
