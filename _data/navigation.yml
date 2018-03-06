@@ -1,0 +1,13 @@
+# main links links
+main:
+    
+  - title: 
+    children:
+    - title: "Blog"
+      url: /
+    - title: "About"
+      url: /about/
+    - title: "Posts"
+      url: "/year-archive/"
+    - title: "Tags"
+      url: "/tags/"

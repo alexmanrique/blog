@@ -1,0 +1,10 @@
+# Config overrides for production.
+url: https://alexmanrique.com
+analytics:
+  provider: custom
+  google:
+    tracking_id: UA-68424461-1
+comments:
+  provider: disqus
+  disqus:
+    shortname: alexman
