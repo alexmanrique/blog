@@ -2,7 +2,7 @@
 layout: single
 title:  "My experience migrating from Windows to Ubuntu"
 date:   2018-07-08 20:13:53 +0200
-categories: books
+categories: development
 comments: true
 lang: es
 tags: development 
