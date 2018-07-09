@@ -97,7 +97,7 @@ Useful links to install development tools in ubuntu
 
 Conclusion
 -------------------------
-If you use the terminal to execute commands you will prefer Ubuntu than Windows. The price of the operating system is a good reason to migrate because it's free. The security of the operating system can be also a good reason because malware and virus developers target their efforts to the Microsoft operating system
+If you use the terminal to execute commands you will prefer Ubuntu than Windows. The price of the operating system is a good reason to migrate because it's free. The security of the operating system can be also a good reason because malware and virus developers target their efforts to the Microsoft operating system.
 
 
 
