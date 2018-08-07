@@ -20,7 +20,7 @@ From the operating system, to the applications that we have in our mobile phone 
 
 Fixing old bugs and vulnerabilities
 -------------------------------------
-Software changes during time because new requirements come up and -of course- you should add controls in your development process to reduce as much as you can the number of them like: static code analysis tools, code reviews, unit tests, functional tests, regression tests and manual tests to your software, to reduce the number of bugs that you deliver, but all developers know that bugs exist, the think is to have a quality mindset that reduces the number of them. 
+Software changes during time because new requirements come up and -of course- you should add controls in your development process to reduce as much as you can the number of them like: static code analysis tools, code reviews, unit tests, functional tests, regression tests and manual tests to your software, to reduce the number of bugs that you deliver, but all developers know that bugs exist, the thing is to have a quality mindset that reduces that number. 
 
 Getting new functionalities
 -------------------------------------
@@ -28,7 +28,7 @@ Software that doesn't change during time because no new functionalities are adde
 
 How often we should update
 -------------------------------------
-The newest stable software should be used and migrate as soon as possible to the latest versions. GA (general availability) version should be used because those versions are more stable rather than beta or alpha, which are versions that are released to a reduced group of users to detect possible problems. Versions after the alpha or beta are good choices because the number of bugs is reduced comparing with beta and alfa versions. I.e: Nowadays browsers update automatically like Google Chrome or Firefox and don't give you the choice of not updating.    
+The newest stable software should be used and migrate as soon as possible to the latest versions. GA (general availability) version should be used because those versions are more stable rather than beta or alpha, which are versions that are released to a reduced group of users to detect possible problems. Versions after the alpha or beta are good choices because the number of bugs is reduced comparing with beta and alfa versions.
 
 Forced to migrate cakephp version  
 -----------------------------------
