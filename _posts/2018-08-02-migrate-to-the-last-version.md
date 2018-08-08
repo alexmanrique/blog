@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Migrate to the last version"
+title:  "Update to the last version"
 date:   2018-08-02 20:13:53 +0200
 categories: development
 comments: true
