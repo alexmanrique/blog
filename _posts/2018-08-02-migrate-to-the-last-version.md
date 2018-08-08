@@ -10,7 +10,7 @@ tags: development
 
 Is it necessary to update the software?
 ------------------------------------------------
-Sometimes non technical people doesn't understand why its necessary to migrate that application in your mobile phone, or why it is necessary that annoying blue screen when you are shutting down windows that tells you "Do not turn off your computer".
+Sometimes non technical people don't understand why its necessary to migrate an application in your mobile phone, or why it is necessary that annoying blue screen when you are shutting down windows that tells you "Do not turn off your computer".
 
 All software has to be updated
 ------------------------------------------------
