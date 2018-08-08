@@ -20,7 +20,7 @@ From the operating system, to the applications that we have in our mobile phone 
 
 Fixing old bugs and vulnerabilities
 -------------------------------------
-A good reason to update the software is to fix problems and vulnerabilities that you can have in the software. There is a website called https://www.cvedetails.com where you can search for bugs and vulnerabilities for particular versions that are known and an historic of them. 
+A good reason to update the software is to fix problems and vulnerabilities that you can have in the software. There is a website called <a href="https://www.cvedetails.com">https://www.cvedetails.com</a> where you can search for bugs and vulnerabilities for particular versions that are known and an historic of them. 
 
 Controlling the number of bugs
 --------------------------------------
