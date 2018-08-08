@@ -20,7 +20,7 @@ From the operating system, to the applications that we have in our mobile phone 
 
 Fixing old bugs and vulnerabilities
 -------------------------------------
-Software changes during time because new requirements come up and -of course- you should add controls in your development process to reduce as much as you can the number of them like: static code analysis tools, code reviews, unit tests, functional tests, regression tests and manual tests to your software, to reduce the number of bugs that you deliver, but all developers know that bugs exist, the thing is to have a quality mindset that reduces that number. 
+Software changes during time because new requirements come up and -of course- you should add controls in your development process to reduce as much as you can the number of them like: static code analysis tools, code reviews, unit tests, functional tests, regression tests and manual tests. All this helps reduce the number of bugs that you deliver, but all developers know that bugs will appear, however, good developers try to reduce this number as much as possible. 
 
 Getting new functionalities
 -------------------------------------
