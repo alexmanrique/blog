@@ -20,11 +20,15 @@ From the operating system, to the applications that we have in our mobile phone 
 
 Fixing old bugs and vulnerabilities
 -------------------------------------
-Software changes during time because new requirements come up and -of course- you should add controls in your development process to reduce as much as you can the number of them like: static code analysis tools, code reviews, unit tests, functional tests, regression tests and manual tests. All this helps reduce the number of bugs that you deliver, but all developers know that bugs will appear, however, good developers try to reduce this number as much as possible. 
+A good reason to update the software is to fix problems and vulnerabilities that you can have in the software. There is a website called https://www.cvedetails.com where you can search for bugs and vulnerabilities for particular versions that are known and an historic of them. 
+
+Controlling the number of bugs
+--------------------------------------
+Software changes during time because new requirements come up and -of course- you should add controls in your development process to reduce as much as you can the number of them like: static code analysis tools, code reviews, unit tests, functional tests, regression tests and manual tests. All this helps reduce the number of bugs that you deliver, but all developers know that bugs will appear, however, good developers try to reduce this number as much as possible.
 
 Getting new functionalities
 -------------------------------------
-Software that doesn't change during time because no new functionalities are added, will no increase the number of bugs in later versions, will only decrease the number of errors, but if you deliver new functionalities it will add normally a number undetermined number of bugs. The more lines of code that you deliver, more potential bugs can have your application.  
+The good part of getting new functionalities is that you will be able to do new things with the software that you couldn't before. The drawback If you deliver new functionalities is that it will add normally a number undetermined number of bugs. Software that doesn't change during time because no new functionalities are added, will no increase the number of bugs in newer versions. The more lines of code that you deliver, more potential bugs can have your application. 
 
 How often we should update
 -------------------------------------
@@ -37,7 +41,6 @@ I maintain a website written in PHP with a framework called <a href="https://cak
 An outdated version
 --------------------------------
 The website was using PHP 5.5 and I suspect that this could be the reason why it was not working in Safari. I changed the version of PHP to 7, and then I could see the website again in Safari. The bad news was that there was a class called String that cakephp was using, and String in PHP 7 is  <a href="https://www.drupal.org/project/graphql/issues/2715609">reserved</a>. My only option was to migrate to the last version cakephp 3.6 that was compatible with PHP 7. 
-
 I could't provide SSL to the website users when the website was using PHP 5.5. For some reason with this version there was an error `ERR_SPDY_PROTOCOL_ERROR`in Chrome and in Safari (not in Firefox) when trying to load the page using SSL. 
 
 After updating the version
