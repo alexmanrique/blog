@@ -30,7 +30,7 @@ How often we should update
 -------------------------------------
 The newest stable software should be used and migrate as soon as possible to the latest versions. GA (general availability) version should be used because those versions are more stable rather than beta or alpha, which are versions that are released to a reduced group of users to detect possible problems. Versions after the alpha or beta are good choices because the number of bugs is reduced comparing with beta and alfa versions.
 
-Forced to migrate cakephp version  
+Forced to update cakephp version  
 -----------------------------------
 I maintain a website written in PHP with a framework called <a href="https://cakephp.org/">cakephp</a>, and one of the customers of the website called one day telling me that he couldn't see the website in safari browser. In the beginning I thought was because the shared hosting or the database was down. I realized that the website was available in other browsers like Firefox or google chrome. I tried to reproduce the error locally and I did, the website was not available when I used Safari version 11.
 
@@ -40,7 +40,7 @@ The website was using PHP 5.5 and I suspect that this could be the reason why it
 
 I could't provide SSL to the website users when the website was using PHP 5.5. For some reason with this version there was an error `ERR_SPDY_PROTOCOL_ERROR`in Chrome and in Safari (not in Firefox) when trying to load the page using SSL. 
 
-After migrating the version
+After updating the version
 --------------------------------
 Both problems disappeared after migrating the version of cakephp 2.4.9 to cakephp 3.6 and migrating from PHP 5.5 to 7. Now customers can use SSL in the website and the web can be browsed with any browser.
 
