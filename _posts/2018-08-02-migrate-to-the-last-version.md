@@ -36,13 +36,13 @@ I maintain a website written in PHP with a framework called <a href="https://cak
 
 An outdated version
 --------------------------------
-The website was using PHP 5.5 and I suspect that this could be the reason why it was not working in Safari. I changed the version of php to 7, and then I could see the website again in safari. The bad news was that there was a class called String that cakephp was using, and String in PHP 7 is  <a href="https://www.drupal.org/project/graphql/issues/2715609">reserved</a>. My only option was to migrate to the last version cakephp 3.6 that was compatible with php 7. 
+The website was using PHP 5.5 and I suspect that this could be the reason why it was not working in Safari. I changed the version of PHP to 7, and then I could see the website again in safari. The bad news was that there was a class called String that cakephp was using, and String in PHP 7 is  <a href="https://www.drupal.org/project/graphql/issues/2715609">reserved</a>. My only option was to migrate to the last version cakephp 3.6 that was compatible with PHP 7. 
 
-I could't provide SSL to the website users when the website was using php 5.5. For some reason with this version there was an error `ERR_SPDY_PROTOCOL_ERROR`in Chrome and in Safari (not in Firefox) when trying to load the page using SSL. 
+I could't provide SSL to the website users when the website was using PHP 5.5. For some reason with this version there was an error `ERR_SPDY_PROTOCOL_ERROR`in Chrome and in Safari (not in Firefox) when trying to load the page using SSL. 
 
 After migrating the version
 --------------------------------
-Both problems disappeared after migrating the version of cakephp 2.4.9 to cakephp 3.6 and migrating from php 5.5 to 7. Nowadays the website can be browsed with any browser and SSL is provided to the website users.
+Both problems disappeared after migrating the version of cakephp 2.4.9 to cakephp 3.6 and migrating from PHP 5.5 to 7. Now customers can use SSL in the website and the web can be browsed with any browser.
 
 Bonus - Why I developed a website in PHP?
 ----------------------------------
