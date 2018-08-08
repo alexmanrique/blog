@@ -36,7 +36,7 @@ I maintain a website written in PHP with a framework called <a href="https://cak
 
 An outdated version
 --------------------------------
-The website was using php 5.5 and I suspect that this could be the reason why it was not working in Safari. I changed the version of php to 7, and then I could see the website again in safari. The bad news was that there was a class that cakephp was using String that was a reserved in php 7. My only option was to migrate to the last version cakephp 3.6 that was compatible with php 7. 
+The website was using PHP 5.5 and I suspect that this could be the reason why it was not working in Safari. I changed the version of php to 7, and then I could see the website again in safari. The bad news was that there was a class called String that cakephp was using, and String in PHP 7 is reserved <a href="https://www.drupal.org/project/graphql/issues/2715609">. My only option was to migrate to the last version cakephp 3.6 that was compatible with php 7. 
 
 I could't provide SSL to the website users when the website was using php 5.5. For some reason with this version there was an error `ERR_SPDY_PROTOCOL_ERROR`in Chrome and in Safari (not in Firefox) when trying to load the page using SSL. 
 
