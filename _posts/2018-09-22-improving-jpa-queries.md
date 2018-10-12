@@ -12,7 +12,7 @@ Why to use JPA?
 -------------------------
 JPA stands for Java persistence and describes the management of relational data in applications using the Java platform.
 
-One important concept of JPA is the concept of persistence entity. An entity It's a lightweight java class whose state is typically persisted to a table in a relational database. Instances of such entity are rows in a table.
+One important thing of JPA is the concept of persistence entity. An entity It's a lightweight java class whose state is typically persisted to a table in a relational database. Instances of such entity are rows in a table.
 
 JPA is a java standard defined in the java community process which is a formalized mechanism that allows interested parties to develop standard technical specifications for Java technology.
 
