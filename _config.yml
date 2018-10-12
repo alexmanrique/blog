@@ -96,9 +96,9 @@ analytics:
   google:
     tracking_id: UA-68424461-1
 comments:
-  provider: disqus
+  provider: "disqus"
   disqus:
-    shortname: blog-pygxhogzdi
+    shortname: "alexman"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
