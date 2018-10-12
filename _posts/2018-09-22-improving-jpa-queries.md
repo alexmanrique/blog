@@ -62,7 +62,7 @@ This way I was able to show sql in the logs, generate statistics, format the sql
 Checking statistics
 ---------------------------
 
-This way I was able to see which queries were done while executing the operation in the database. The surprise was that a lot of queries to the database were executed:  
+The surprise was that a lot of queries to the database were executed:  
 
 ```
 2018-09-19 11:17:56,656 INFO  [http-0.0.0.0:8080-1: : ] [StatisticalLoggingSessionEventListener] - Session Metrics {
@@ -79,6 +79,7 @@ This way I was able to see which queries were done while executing the operation
 }
 ```
 
+35595 JDBC connections were done to the database. If this API has to be used by a high number of users this is not acceptable. 
 
 I realize that there was a problem of n+1 select query issue problem in <a href="https://en.wikipedia.org/wiki/Object-relational_mapping">ORM</a> <a href="https://stackoverflow.com/questions/97197/what-is-the-n1-select-query-issue">https://stackoverflow.com/questions/97197/what-is-the-n1-select-query-issue</a>
 
