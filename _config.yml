@@ -26,8 +26,15 @@ plugins:
   - jekyll-remote-theme
 remote_theme: mmistakes/minimal-mistakes
 
+
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
 
 defaults:
   # _posts
@@ -60,7 +67,7 @@ author:
   bio: Software engineer fascinated by software development and ideas that change the world.
   location: Barcelona, BCN
   home: /
-  email: 
+  email: contact@alexmanrique.com
   uri: 
   bitbucket: 
   codepen: 
@@ -91,7 +98,7 @@ analytics:
 comments:
   provider: disqus
   disqus:
-    shortname: alexman
+    shortname: disqus_ToBQPiwQxS
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

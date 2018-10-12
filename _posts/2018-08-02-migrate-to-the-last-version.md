@@ -32,11 +32,11 @@ The newest stable software should be used and migrate as soon as possible to the
 
 Forced to migrate cakephp version  
 -----------------------------------
-I maintain a website written in PHP with a framework called <a href="https://cakephp.org/">cakephp</a>, and one of the customers of the website called one day telling me that he couldn't see the website in safari browser. In the beginning I thought was because the shared hosting or the database was down. I realized that the website was available in other browsers like Firefox or google chrome. I tried to reproduce the error locally and I did, the website was not available when I used Safari version 11.
+I maintain a website written in PHP with a framework called <a href="https://cakephp.org/">cakephp</a>, and one of the customers of the website called one day telling me that he couldn't see the website in Safari browser. In the beginning I thought was because the shared hosting or the database was down. I realized that the website was available in other browsers like Firefox or google chrome. I tried to reproduce the error locally and I did, the website was not available when I used Safari version 11.
 
 An outdated version
 --------------------------------
-The website was using php 5.5 and I suspect that this could be the reason why it was not working in Safari. I changed the version of php to 7, and then I could see the website again in safari. The bad news was that there was a class that cakephp was using String that was a reserved in php 7. My only option was to migrate to the last version cakephp 3.6 that was compatible with php 7. 
+The website was using php 5.5 and I suspect that this could be the reason why it was not working in Safari. I changed the version of php to 7, and then I could see the website again in Safari. The bad news was that there was a class that cakephp was using String that was a reserved in php 7. My only option was to migrate to the last version cakephp 3.6 that was compatible with php 7. 
 
 I could't provide SSL to the website users when the website was using php 5.5. For some reason with this version there was an error `ERR_SPDY_PROTOCOL_ERROR`in Chrome and in Safari (not in Firefox) when trying to load the page using SSL. 
 
