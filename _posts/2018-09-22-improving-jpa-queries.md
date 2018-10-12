@@ -137,7 +137,7 @@ I thought that this query could be improved and we check the query plan in the s
 
 ![Query plan]({{ site.baseurl }}/images/query_plan.jpg)
 
-We found that there was an order by was introducing a cost that we could reduce. We had to delete `@OrderBy` annotation in one of the entities that was increasing the query time. This helped to reduce the time of the query to 2.8 seconds in the first execution.
+We found that there was an order by that was adding a cost that we could reduce. We had to delete `@OrderBy` annotation in one of the entities that was increasing the query time. This helped to reduce the time of the query to 2.8 seconds in the first execution.
 
 Conclusion
 --------------------------
