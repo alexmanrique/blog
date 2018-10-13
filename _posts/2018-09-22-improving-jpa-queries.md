@@ -10,11 +10,11 @@ tags: development
 
 Why to use JPA?
 -------------------------
-JPA stands for Java persistence and describes the management of relational data in applications using the Java platform.
+JPA stands for Java persistence api and describes the management of relational data in applications using the Java platform.
 
-One important thing of JPA is the concept of persistence entity. An entity It's a lightweight java class whose state is typically persisted to a table in a relational database. Instances of such entity are rows in a table.
+One important thing of JPA is the concept of <a href="https://docs.oracle.com/cd/E16439_01/doc.1013/e13981/undejbs003.htm">persistence entity</a>. An entity it's a lightweight java class whose state is typically persisted to a table in a relational database. Instances of such entity are rows in a table.
 
-JPA is a java standard defined in the java community process which is a formalized mechanism that allows interested parties to develop standard technical specifications for Java technology.
+JPA is a java standard defined in the <a href="https://en.wikipedia.org/wiki/Java_Community_Process">Java community process</a> which is a formalized mechanism that allows interested parties to develop standard technical specifications for Java technology.
 
 Using something standard is a good practice when using technology and using JPA is not an exception.
 
@@ -28,11 +28,13 @@ The application was written in Java 8 using <a href="https://access.redhat.com/d
 
 Bad performance in the API
 --------------------------
-The operation getAllEntities() returned a JSON with all the entities and it was spending 120 seconds to retrieve 95 entities from the database.
+The operation getAllCampaigns() returned a <a href="https://es.wikipedia.org/wiki/JSON">JSON</a> with all the entities and it was spending 120 seconds to retrieve 95 campaigns from the database.
 
-One of this entities had in another database table 2000 rows that were related to that entity. A part from that, the main entity was using different tables that were related, having a star database typical schema <a href="https://en.wikipedia.org/wiki/Star_schema">https://en.wikipedia.org/wiki/Star_schema</a>
+One of this campaigns had 20000 codes that were in the Code table and also had conditions in other table conditions.
 
-![Star schema]({{ site.baseurl }}/images/Star-schema-example.jpg)
+![ER diagram]({{ site.baseurl }}/images/ER-diagram.png)
+
+The number of joins to do in the operation getAllCampaigns() was high and I should find a better way to query the data.
 
 Printing logs
 -------------------------
@@ -45,7 +47,7 @@ The first thing that I did was to activate in the <a href="https://docs.oracle.c
 <property name="hibernate.use_sql_comments" value="true"/>
 ```
 
-and in the log4j.properties I added also the following lines:
+and in the <a href="https://docs.oracle.com/cd/E29578_01/webhelp/cas_webcrawler/src/cwcg_config_log4j_file.html">log4j.properties</a> I added also the following lines:
 
 ```
 # basic log level for all messages
@@ -57,12 +59,12 @@ log4j.logger.org.hibernate.type.descriptor.sql=trace
 log4j.logger.org.hibernate.stat=debug
 ```
 
-This way I was able to show sql in the logs, generate statistics, format the sql and having sql comments to understand better which queries where being executed.
+This way I was able to show <a href="https://es.wikipedia.org/wiki/SQL">sql</a> in the logs, generate statistics, format the sql and having sql comments to understand better which queries where being executed.
 
 Checking statistics
 ---------------------------
 
-The surprise was that a lot of queries to the database were executed:  
+The surprise was that a lot of queries to the database were executed for a single API operation:  
 
 ```
 2018-09-19 11:17:56,656 INFO  [http-0.0.0.0:8080-1: : ] [StatisticalLoggingSessionEventListener] - Session Metrics {
@@ -79,21 +81,21 @@ The surprise was that a lot of queries to the database were executed:
 }
 ```
 
-35595 JDBC connections were done to the database. If this API has to be used by a high number of users this is not acceptable. 
+35595 JDBC connections were done to the database. If this API has to be used by a high number of users this was not acceptable. 
 
 I realize that there was a problem of n+1 select query issue problem in <a href="https://en.wikipedia.org/wiki/Object-relational_mapping">ORM</a> <a href="https://stackoverflow.com/questions/97197/what-is-the-n1-select-query-issue">https://stackoverflow.com/questions/97197/what-is-the-n1-select-query-issue</a>
 
 Using FetchType.Eager
 -----------------------
 
-Then I tried to set anotation `FetchType.EAGER` that according to the book <a href="https://www.manning.com/books/java-persistence-with-hibernate">Java Persistence with Hibernate 2007</a>, it was one of the ways to fix this problem because it forces to make joins with the related entities instead of doing a query for each table related with the first entity.
+Then I tried to set anotation `FetchType.EAGER` that according to the book <a href="https://www.manning.com/books/java-persistence-with-hibernate">Java Persistence with Hibernate 2007</a>, it was one of the ways to fix this problem because it forces to make joins with the related entities instead of doing a query for each row related with the an entity.
 
 {% highlight java %}
 @Embeddable
 public class CampaignConditionsEntity implements Serializable {
 
 @ElementCollection(fetch = FetchType.EAGER)
-@CollectionTable(name = "CAMPAIGN_COND_TRIP_TYPE", joinColumns = @JoinColumn(name = CAMPAIGN_ID))
+@CollectionTable(name = "TRIP_TYPE_CONDITION", joinColumns = @JoinColumn(name = CAMPAIGN_ID))
 private Set<TripTypeConditionEntity> tripTypeConditions;
 {% endhighlight %}
 
@@ -101,15 +103,13 @@ The problem was that the related tables with the main entity were using `@Elemen
 
 Using Join fetch
 ------------------------
-We tried then with a <a href="https://es.wikipedia.org/wiki/Java_Persistence_Query_Language">JPQL</a> query that did `JOIN FETCH` because according to specification it says the following:
-
-In the JPA 2.2 specification (<a href="http://download.oracle.com/otn-pub/jcp/persistence-2_2-mrel-spec/JavaPersistence.pdf?AuthParam=1537804209_8090f5eb50f5ef167e6551d97e04fa27">JSR 338</a>):
+I tried then with a <a href="https://es.wikipedia.org/wiki/Java_Persistence_Query_Language">JPQL</a> query that did `JOIN FETCH` because according to JPA 2.2 specification (<a href="http://download.oracle.com/otn-pub/jcp/persistence-2_2-mrel-spec/JavaPersistence.pdf?AuthParam=1537804209_8090f5eb50f5ef167e6551d97e04fa27">JSR 338</a>):
 
 ```
 A FETCH JOIN enables the fetching of an association or element collection as a side effect of the execution of a query.
 ```
 
-The first attempt of this optimization was with `JOIN fetch`. It returned no results because there were some relationships that have no related rows and because of that we had to use LEFT joins instead of that.
+The first attempt of this optimization was with `JOIN fetch`. It returned no results because there were some relationships that have no related rows and because of that I had to use LEFT joins instead of that.
 
 The results were the ones expected for a single operation: 1 JDBC connection. However, time to retrieve the data for this query was still 8 seconds:
 
@@ -129,15 +129,15 @@ The results were the ones expected for a single operation: 1 JDBC connection. Ho
 }
 ```
 
-Next calls to the operation spend 2.8 seconds approximately. We wonder if JPA/hibernate Level 1 cache was caching some way our database query, but what we did was to get the raw query and execute it directly in the oracle sql developer. The first execution was slow and next ones were faster.
+Next calls to the operation spend 2.8 seconds approximately. I wonder if JPA/hibernate Level 1 cache was caching some way our database query, but what I did was to get the raw query and execute it directly in the oracle sql developer. The first execution was slow and next ones were faster.
 
 Reviewing the query plan
 -------------------------
-I thought that this query could be improved and we check the query plan in the sql developer.
+I thought that this query could be improved and I checked the query plan in the <a href="https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html">sql developer</a>
 
 ![Query plan]({{ site.baseurl }}/images/query_plan.jpg)
 
-We found that there was an order by that was adding a cost that we could reduce. We had to delete `@OrderBy` annotation in one of the entities that was increasing the query time. This helped to reduce the time of the query to 2.8 seconds in the first execution.
+I found that there was an order by that was adding a cost that could be reduced. I had to delete `@OrderBy` annotation in one of the entities that was increasing the query time. This helped to reduce the time of the query to 2.8 seconds in the first execution.
 
 Conclusion
 --------------------------
