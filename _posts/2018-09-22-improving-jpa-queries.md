@@ -144,7 +144,7 @@ Conclusion
 
 Using a left join was a good option to decrease the time that the API operation spent in time, because JPA was doing a lot of queries to the database and it increased a lot the time to get the data requested through the API operation. 
 In the following charts you can see a summary with the reduction of time for each optimization. In this case was a good option but it depends on the database design.
- I recommend the book <a href="https://www.amazon.com/Java-Persistence-Hibernate-Revised-Action/dp/1932394885/"> Java Persistence Hibernate in action </a> where it explains in more detail how to optimize your queries.
+I recommend the book <a href="https://www.amazon.com/Java-Persistence-Hibernate-Revised-Action/dp/1932394885/"> Java Persistence Hibernate in action </a> where it explains in more detail how to optimize your queries.
 
 ![Table times]({{ site.baseurl }}/images/times_table.png)
 
