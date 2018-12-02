@@ -40,7 +40,7 @@ that you will use on a daily basis at work.
 Questions related with String class or memory management are questions that all Java developers should know for their daily work.
 
 Imagine a journalist that doesn't excel the english language and has to write everyday an article for a newspaper. You would prefer someone
-that has a deep knowledge of the language that will use, to write code to develop software.
+that has a deep knowledge of the language that will use, to write good articles.
 
 Promoting bad written code?
 ---------------------------------
@@ -49,7 +49,7 @@ that the questions with code snippets have to be used to learn the concepts of t
 of programming in Java.
 
 We have to program always thinking in the next developer that will come next to you and will read the
-code that you write a while ago.
+code that you are writing.
 
 The value of a certification
 ---------------------------------
@@ -58,7 +58,7 @@ but it means that this person has been able to pass a tricky exam and has dedica
 Java programming language and will have a deeper understanding of how works a Java program.
 
 If you have two developers with the same background will you hire the one that has a certification in Java or the one that has not?
-It is not a guaranteed that the one that has the certification will perform better, but at least this developer knows a bit of Java.
+It is not a guaranteed that the one that has the certification will perform better, but at least this developer knows Java.
 
 Resources to prepare the exam
 ----------------------------
