@@ -28,11 +28,11 @@ private int salary;
 
 {% endhighlight %}
 
-When the backend receives a request has to validate that the values meet the constraints.
+When the backend receives a request we have to validate that the values meet the constraints.
 
 > Suppose that the user will send bad values in his request and be ready for that.
 
-To do it you can instantiate a `ValidatorFactory` and call `validate` method to check that all your constraints are fulfilled.
+To do it we can instantiate a `ValidatorFactory` and call `validate` method to check that all the constraints are fulfilled.
 
 {% highlight java %}
 ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
@@ -45,7 +45,7 @@ if (!violations.isEmpty()) {
 {% endhighlight %}
 
 The above code can be improved because there’s no need to instantiate the ValidatorFactory this way. We can use `@ValidateRequest`
-and `@Valid` annotations to do it for you. Your resource class has to be tagged with `@ValidateRequest` and the parameters in the
+and `@Valid` annotations to do it for us. Our resource class has to be tagged with `@ValidateRequest` and the parameters in the
 methods with @Valid.
 
 {% highlight java %}
@@ -90,8 +90,8 @@ To use the annotations that we were talking about we need to use the following d
 </dependency>
 {% endhighlight %}
 
-Note that in the maven dependency we have set scope provided. It’s important to check libraries that your application
-server comes with. In case that you are using JBoss application server you have to check in the modules folder.
+Note that in the maven dependency we have set scope `provided`. It’s important to check libraries that your application
+server comes with. In case that we are using JBoss application server we have to check in the modules folder.
 
 > Use provided in the maven dependencies when your application server has the library.
 
@@ -107,9 +107,9 @@ We will get a list of folders where the different libraries that come in the JBo
 
 > Once you know which libraries you have in your application server is good to use them instead of providing your own.
 
-The good thing to use hibernate validator is that this library comes with a lot of annotations that help you validate
-things in the requests that your api receives. When your API is running you get `HibernateValidatorAdapter` for free,
-that will check if your constraints are fulfilled.
+The good thing to use hibernate validator is that this library comes with a lot of annotations that help us validate
+things in the requests that our api receives. When our API is running we get `HibernateValidatorAdapter` for free,
+that will check if our constraints are fulfilled.
 
 {% highlight java %}
 class HibernateValidatorAdapter implements ValidatorAdapter {
@@ -128,7 +128,7 @@ class HibernateValidatorAdapter implements ValidatorAdapter {
   @Override
   public void applyValidation(Object resource, Method invokedMethod,
         Object[] args) {
-
+...
 {% endhighlight %}
 
 > Use the libraries and don't reinvent the wheel writing code that has been already written
@@ -169,7 +169,7 @@ public class MethodConstraintViolationExceptionMapper implements ExceptionMapper
 
 {% endhighlight %}
 
-Response received when using the ExceptionMapper
+Response received when using exception mapper
 -----------------------------------------------------------
 Finally if we test the API and we don't send all the parameters we receive a 400 Bad request error with a message of the value that we are missing.
 
