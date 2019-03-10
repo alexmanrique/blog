@@ -17,7 +17,7 @@ that they have introduced wrong some input we have to do the same in a rest api.
 ![Bad request]({{ site.baseurl }}/images/bad_request_api.png)
 {: refdef}
 
-If we want to validate the requests that we receive in our java backend endpoint we can use javax validations annotations in
+If we want to validate the requests that we receive in our java backend endpoint we can use <a href="https://docs.oracle.com/javaee/7/api/javax/validation/constraints/package-summary.html">javax validations</a> annotations in
 our request objects.
 
 {% highlight java %}
