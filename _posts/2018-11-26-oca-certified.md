@@ -75,3 +75,4 @@ I used the enthuware simulator, I highly recommend it because for $10 you have a
 - Book: <a href="https://www.amazon.com/OCA-Java-Programmer-Practice-Tests-ebook/dp/B06XQR7DVN/">https://www.amazon.com/OCA-Java-Programmer-Practice-Tests-ebook/dp/B06XQR7DVN/</a>
 - Experience of another developer that passed the exam : <a href="https://coderanch.com/t/661190/certification/Passed-Java-SE-Programmer-exam">https://coderanch.com/t/661190/certification/Passed-Java-SE-Programmer-exam</a>
 
+
