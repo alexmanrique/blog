@@ -105,7 +105,7 @@ asm  ch  com  gnu  ibm  javaee  javax  net  nu  org  sun
 
 We will get a list of folders where the different libraries that come in the JBoss application server.
 
-> Once you know which libraries you have in your application server is good to use them instead of providing your own.
+Once you know which libraries you have in your application server is good to use them instead of providing your own.
 
 The good thing to use hibernate validator is that this library comes with a lot of annotations that help us validate
 things in the requests that our api receives. When our API is running we get `HibernateValidatorAdapter` for free,
