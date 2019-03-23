@@ -90,10 +90,13 @@ author:
   weibo: 
   xing: 
   youtube:
-  
+
 analytics:
+  provider: "google"
   google:
-    tracking_id: UA-68424461-1
+    tracking_id: "UA-68424461-1"
+    anonymize_ip: false # default
+
 comments:
   provider               : "disqus"
   disqus:
