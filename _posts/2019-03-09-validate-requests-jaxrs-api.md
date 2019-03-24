@@ -8,14 +8,12 @@ lang: es
 tags: development
 ---
 
-Validate requests in a Java Rest API
------------------------------------------------------------------------------------
-The same way that we have to validate the input of our users in a form, validating what they introduce and displaying them
-that they have introduced wrong some input we have to do the same in a rest api.
-
 {:refdef: style="text-align: center;"}
 ![Bad request]({{ site.baseurl }}/images/bad_request_api.png)
 {: refdef}
+
+The same way that we have to validate the input of our users in a form, validating what they introduce and displaying them
+that they have introduced wrong some input we have to do the same in a rest api.
 
 If we want to validate the requests that we receive in our java backend endpoint we can use <a href="https://docs.oracle.com/javaee/7/api/javax/validation/constraints/package-summary.html">javax validations</a> annotations in
 our request objects.
