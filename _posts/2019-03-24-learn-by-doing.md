@@ -34,7 +34,7 @@ Learning android development
 Instead of reading all <a href="https://developer.android.com/guide"> android documentation</a> I downloaded <a href="https://developer.android.com/studio">Android Studio</a> 
 and I created a new Android project. To accelerate the learning I did the following:
 
-- I bought and <a href="https://www.udemy.com/programacion-de-android-desde-cero/">Udemy Android development course</a> where a teacher explained the most important aspects, to begin with. 
+- I bought a <a href="https://www.udemy.com/programacion-de-android-desde-cero/">Udemy Android development course</a> where a teacher explained the most important aspects, to begin with. 
 
 - I search for things in <a href="https://en.wikipedia.org/wiki/Stack_Overflow">Stackoverflow</a> when I got stuck or I had some doubts such as "How to do a tab layout in Android" or "How to create a Navigation Drawer" where it explained how to do it. 
 
