@@ -8,14 +8,9 @@ lang: en
 tags: android development
 ---
 
-{:refdef: style="text-align: center;"}
-![Android programing]({{ site.baseurl }}/images/caleb-woods-269348-unsplash.jpg)
-{: refdef}
-
 This is a statement that is used nowadays in the software development industry but this is a concept that can be used in a lot of environments and disciplines. 
 
 How do you learn to play a sport? Sitting in a class and listening to someone who explains to you how to play?  I don't think so. How do you learn photography? How do you learn to play the guitar? 
-
 
 Find the opportunity to learn
 ------------------------------
