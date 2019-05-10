@@ -102,6 +102,7 @@ comments:
   disqus:
     shortname            : "alexman"
 search: true
+repository: alexmanrique/blog
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
