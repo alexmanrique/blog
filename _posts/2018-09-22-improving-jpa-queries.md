@@ -8,7 +8,7 @@ lang: es
 tags: development
 ---
 
-Why to use JPA?
+Why use JPA?
 -------------------------
 JPA stands for Java persistence api and describes the management of relational data in applications using the Java platform.
 
