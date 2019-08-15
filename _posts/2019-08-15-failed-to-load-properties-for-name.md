@@ -49,7 +49,7 @@ protected static synchronized void ensureCacheManager()
 }
 ```
 
-If we look at the code from `CompositeCacheManager.java` method `configure`
+If we look at the code from `CompositeCacheManager.java` method `configure` we can see that the code is trying to load a properties file.
 
 `CompositeCacheManager.java`
 
