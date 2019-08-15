@@ -137,7 +137,7 @@ To understant this definition we have to look at documentation of class loaders 
 Class loaders in Java
 -------------------------------------
 
-The class loader of `CompositeCacheManager` was the `Web class loader` because it was inside WEB-INF/lib folder 
+The class loader of `CompositeCacheManager` was the `Web class loader` because it was inside `WEB-INF/lib` folder 
 
 <a href="https://docs.oracle.com/cd/E19501-01/819-3659/beadf/index.html">class loaders</a> follows a delegation methodology, if a class loader is not able to load a class it delegates the task to it’s parent class loader in the hierarchy:
 
@@ -178,7 +178,7 @@ Changing the `maven-ear-plugin` configuration in maven moved `services.jar` outs
 </plugin>
 {% endhighlight %}
 
-Inside the Application.ear after doing the change in the pom.xml :
+Inside the `Application.ear` after doing the change in the `pom.xml` :
 
 ```console
 /war/WEB-INF/lib/
