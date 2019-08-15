@@ -5,7 +5,7 @@ date: 2019-08-15 00:13:53 +0200
 categories: development
 comments: true
 lang: en
-tags: data 
+tags: java cache loaders opensource apache javadoc
 ---
 
 Adding a cache
