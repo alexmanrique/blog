@@ -25,7 +25,9 @@ After Docker
 -------------------------
 <a href="https://en.wikipedia.org/wiki/Docker_(software)">Docker</a> automates the deployment of applications within software <a href="https://en.wikipedia.org/wiki/OS-level_virtualisation">containers</a>, providing an additional layer of abstraction and automation of application <a href="https://en.wikipedia.org/wiki/Virtualization">virtualization</a> on multiple operating systems.
 
-With Docker you are deploying not only an ear, you are deploying a container that has an operating system, the application server configured and the ear with the code that you have written. You clone a repository from your code repository and you just need to create the docker image and run `docker compose up` if a `docker-compose.yml` file exists in the repository.
+With Docker you are deploying not only an ear, you are deploying a container that has an operating system, the application server configured and the ear with the code that you have written. 
+
+With Docker you clone a repository from your code repository and you just need to create the docker image and run `docker compose up` if a `docker-compose.yml` file exists in the repository.
 
 
 Docker compose
@@ -52,7 +54,7 @@ services:
 
 This command creates you all necessary to run your app locally and start your development. If you need <a href="https://kafka.apache.org/">kafka</a> you can run it adding in the docker-compose.yml, if you need an <a href="https://www.elastic.co/">elasticsearch</a> you can do it also, if you need <a href="https://neo4j.com/">neo4j</a> or mysql you can add it too. 
 
-There's no need to install it manually in your computer, and it saves a lot of time to you as a developer, and if your team where you are working is big enough you can save time and money to your company.
+There's no need to install all this manually in your computer. This saves a lot of time to you as a developer, and if your team where you are working is big enough you can save a lot of <a href="https://alexmanrique.com/blog/development/2017/07/20/slow-builds-fast-deploys.html">time</a> and money to your company.
 
 Resources separated by environment
 -------------------------------------------
@@ -62,11 +64,11 @@ In a Java application, you would have a folder for each environment with the pro
 
 I.e: You would have a datasource file for dev which points to the development database, you would have a datasource for integration environment pointing to a database that is a copy of production and you would have a datasource pointing to a production database.
 
-> Code repository has to be the source of truth of your application, everything should be inside it to be able to run it like you were in production.
+> A code repository has to be the source of truth of your application, everything should be inside it to be able to run it like you were in production.
 
 Vault to store secrets
 -------------------------------------------
-One thing that should be taken into account is that passwords should not be inside your repository. You should use something like <a href="https://www.vaultproject.io/">vault</a> to store passwords and connect to this service to retrieve those secrets when are needed and not storing them in the repository.  
+One thing that should be taken into account is that secrets should not be inside your repository. You should use something like <a href="https://www.vaultproject.io/">vault</a> to store secrets and connect to this service to retrieve those secrets when are needed and not storing them in the repository.  
 
 Conclusion
 -----------------------
