@@ -72,7 +72,7 @@ import ma.glasnost.orika.metadata.Type;
 import java.math.BigDecimal;
 import java.util.Currency;
 
-public class PriceConditionConverter extends BidirectionalConverter<com.odigeo.marketing.promo.campaigns.v3.conditions.PriceCondition, PriceCondition> {
+public class PriceConditionConverter extends BidirectionalConverter<com.mycompany.v3.conditions.PriceCondition, PriceCondition> {
 
     @Override
     public PriceCondition convertTo(com.mycompany.v3.conditions.PriceCondition priceCondition, Type<PriceCondition> type, MappingContext mappingContext) {
