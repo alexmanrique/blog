@@ -33,7 +33,7 @@ The accuracy to estimate how long will take is pretty low.
 
 > What we can say is that avoiding technical debt has a cost that increases in time until there is no other option, and you have to pay this technical debt 
 
-because it blocks your team and you can't deliver new functionalities because the cost of doing them is too high and you move forward really slowly.
+because it blocks your team and you can't deliver new functionalities and the cost of doing them is too high and you move forward really slowly.
 
 {:refdef: style="text-align: center;"}
 ![Technical debt delay cost]({{ site.baseurl }}/images/technical_debt_function.png)
