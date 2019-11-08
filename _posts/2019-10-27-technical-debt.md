@@ -57,7 +57,7 @@ Examples of technical debt
 
 - Your code is using old versions of third party libraries.
 
-- Your code is coupled with an specific implementation and changing is difficult.
+- Your code is coupled with an specific implementation and changing it, is difficult.
 
 - Your code doesn't have unit tests.
 
