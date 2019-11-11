@@ -29,11 +29,7 @@ Stated like that seems like is easy to measure the time to develop a feature and
 
 > Unfortunately, is not easy to estimate the amount of time to develop a feature, neither to clean/refactor your code. 
 
-The accuracy to estimate how long will take is pretty low. 
-
-> What we can say is that avoiding technical debt has a cost that increases in time until there is no other option, and you have to pay this technical debt 
-
-because it blocks your team and you can't deliver new functionalities and the cost of doing them is too high and you move forward really slowly.
+What we can say is that avoiding technical debt has a cost that increases in time until there is no other option, and you have to pay this technical debt because the cost of delivering new functionalities is too high and you move forward really slowly.
 
 {:refdef: style="text-align: center;"}
 ![Technical debt delay cost]({{ site.baseurl }}/images/technical_debt_function.png)

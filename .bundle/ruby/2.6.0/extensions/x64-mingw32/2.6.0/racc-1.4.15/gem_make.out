@@ -1,0 +1,17 @@
+current directory: C:/dev/repository/git/blog/.bundle/ruby/2.6.0/gems/racc-1.4.15/ext/racc
+C:/Ruby26-x64/bin/ruby.exe -I C:/Ruby26-x64/lib/ruby/2.6.0 -r ./siteconf20191111-1324-8h12ia.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: C:/dev/repository/git/blog/.bundle/ruby/2.6.0/gems/racc-1.4.15/ext/racc
+make "DESTDIR=" clean
+
+current directory: C:/dev/repository/git/blog/.bundle/ruby/2.6.0/gems/racc-1.4.15/ext/racc
+make "DESTDIR="
+generating cparse-x64-mingw32.def
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: C:/dev/repository/git/blog/.bundle/ruby/2.6.0/gems/racc-1.4.15/ext/racc
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20191111-1324-1hnzhk0/racc
