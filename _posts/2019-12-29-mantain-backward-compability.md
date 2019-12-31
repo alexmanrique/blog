@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Mantaining backward compatibility in your REST Java API"
+title: "Mantaining backward compatibility - Don't break your clients"
 date: 2019-12-29 00:13:53 +0200
 categories: development
 comments: true
