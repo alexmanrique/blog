@@ -71,7 +71,7 @@ catch(IOException e) {
 ```
 ## 4 - Using exceptions for non-exceptional situations.
 
-Exceptions are, as their name implies, to be used only for exceptional conditions; they should never be used for ordinary control flow. Read the following [post](https://dzone.com/articles/exceptions-as-controlflow-in-java) if you are curious about the impact in terms of performance if you use exceptions for ordinary control flow.
+Exceptions are, as their name implies, to be used only for exceptional conditions; they should never be used for ordinary control flow. Read the following [post](https://dzone.com/articles/exceptions-as-controlflow-in-java) if you are curious about the impact in terms of performance if you use exceptions for ordinary control flow. In the following snipped of code we can see an example:
 
 ```java
 public Car bookCar(long id){
@@ -119,7 +119,7 @@ private Car findCarById(long id){
 If you open a [datasource](https://docs.oracle.com/javase/7/docs/api/javax/sql/DataSource.html) connection to interact with the database you have to close it in the `finally` clause. Not doing this can lead to a leak and you can eventually run out of database connections from the database pool.
 
 ```java
-//you have a connection leak
+//we have a connection leak
 Connection conn = null;
 PreparedStatement ps = null;
 ResultSet rs = null;
@@ -155,7 +155,7 @@ Since Java 7 you have the option to use this [mechanism](https://docs.oracle.com
        PreparedStatement stmt = connection.prepareStatement();) {
        ResultSet rs = stmt.executeQuery(query);
    }
-   //no don't need to close the connections like before :) 
+   //no need to close the connections like before :) 
    
 ```
 
@@ -194,7 +194,7 @@ In this situation, we are losing the original exception that is [IOException](ht
 ```java
 //ok we are not losing the original exception
 catch(IOException e){
-   throw new SessionException(“SessionException ”, e)
+   throw new SessionException(“SessionException thrown”, e)
 }
 ```
 
