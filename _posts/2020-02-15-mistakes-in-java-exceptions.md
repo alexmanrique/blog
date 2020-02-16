@@ -124,10 +124,11 @@ Connection conn = null;
 PreparedStatement ps = null;
 ResultSet rs = null;
 try {
-    stmt.executeUpdate( "INSERT INTO MyTable( name ) VALUES ( 'my name' ) " );
+    //execute prepared statement
 } 
 //we don't do anything else :(
 ```
+We must close the `Resultset`, the `PreparedStatement` and the `Connection`
 
 ```java
 // ok
@@ -137,9 +138,9 @@ ResultSet rs = null;
 try {
     // do whatever you want to do
 } finally {
-    try { rs.close(); } catch (Exception e) { /* ignored */ }
-    try { ps.close(); } catch (Exception e) { /* ignored */ }
-    try { conn.close(); } catch (Exception e) { /* ignored */ }
+    try { rs.close(); } catch (SQLException e) { /* ignored */ }
+    try { ps.close(); } catch (SQLException e) { /* ignored */ }
+    try { conn.close(); } catch (SQLException e) { /* ignored */ }
 }
 //we don't have any connection leak
 ```
