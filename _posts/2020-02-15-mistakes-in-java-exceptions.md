@@ -31,7 +31,17 @@ catch(FileNotFoundException e){
 
 ## 2 - Don’t know the difference between checked and unchecked exceptions.
 
-Checked exceptions are the ones that are checked at compile-time and that you have to declare in the method that is throwing them to the callers: I.e: [IOException](https://docs.oracle.com/javase/7/docs/api/index.html?overview-summary.html), [InterruptedException](https://docs.oracle.com/javase/7/docs/api/index.html?overview-summary.html), [FileNotFoundException](https://docs.oracle.com/javase/7/docs/api/java/io/FileNotFoundException.html). Unchecked are not checked at compile-time, the kinds of exceptions that are not declared in the methods: I.e: [IllegalArgumentException](https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html), [NullPointerException](https://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html). Catching [unchecked](https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html) exceptions is not a really good practice. 
+Checked exceptions are the ones that are checked at compile-time and that you have to declare in the method that is throwing them to the callers: I.e: [IOException](https://docs.oracle.com/javase/7/docs/api/index.html?overview-summary.html), [InterruptedException](https://docs.oracle.com/javase/7/docs/api/index.html?overview-summary.html), [FileNotFoundException](https://docs.oracle.com/javase/7/docs/api/java/io/FileNotFoundException.html). 
+
+Unchecked are not checked at compile-time, the kinds of exceptions that are not declared in the methods: I.e: [IllegalArgumentException](https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html), [NullPointerException](https://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html). Catching [unchecked](https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html) exceptions is not a really good practice.
+
+```java
+//don't catch unchecked exceptions
+catch(NullPointerException e){
+    
+}
+```
+
 
 ## 3 - Use log and throw inside of a catch.
 
@@ -63,37 +73,75 @@ catch(IOException e) {
 
 Exceptions are, as their name implies, to be used only for exceptional conditions; they should never be used for ordinary control flow. Read the following [post](https://dzone.com/articles/exceptions-as-controlflow-in-java) if you are curious about the impact in terms of performance if you use exceptions for ordinary control flow.
 
+```java
+public Car bookCar(long id){
+    Car car = null;
+    try {
+       Car car = findCarById(id);
+    }
+    catch(CarNotFoundException e){
+        //we are using exceptions to control program flow
+    }
+  }
+}
+
+private Car findCarById(long id){
+  Car car = retrieveCarByIdFromDB(id);
+  if (car == null){
+    throw new CarNotFoundException("Car not found");
+  }
+  else{
+      return car;
+  }
+}
+
+```
+```java 
+//better control flow without using exceptions
+public Car bookCar(long id){
+    Car car = findCarById(id);
+    if(car!=null){
+       //book car in the system   
+    }
+    else{
+      //handle when car is not found     
+    }
+  }
+}
+
+private Car findCarById(long id){
+  return retrieveCarByIdFromDB(id);
+}
+```
+
 ## 5 - Not using finally to close resources (before Java 7)
 
 If you open a [datasource](https://docs.oracle.com/javase/7/docs/api/javax/sql/DataSource.html) connection to interact with the database you have to close it in the `finally` clause. Not doing this can lead to a leak and you can eventually run out of database connections from the database pool.
 
 ```java
 //you have a connection leak
-Connection conn = DriverManager.getConnection(
-     "jdbc:somejdbcvendor:other data needed by some jdbc vendor",
-     "myLogin",
-     "myPassword" );
-
-Statement stmt = conn.createStatement();
+Connection conn = null;
+PreparedStatement ps = null;
+ResultSet rs = null;
 try {
     stmt.executeUpdate( "INSERT INTO MyTable( name ) VALUES ( 'my name' ) " );
 } 
+//we don't do anything else :(
 ```
 
 ```java
 // ok
-Connection conn = DriverManager.getConnection(
-     "jdbc:somejdbcvendor:other data needed by some jdbc vendor",
-     "myLogin",
-     "myPassword" );
-
-Statement stmt = conn.createStatement();
+Connection conn = null;
+PreparedStatement ps = null;
+ResultSet rs = null;
 try {
-    stmt.executeUpdate( "INSERT INTO MyTable( name ) VALUES ( 'my name' ) " );
+    // do whatever you want to do
 } finally {
-    //It's important to close the statement when you are done with it
-    stmt.close();
+    try { rs.close(); } catch (Exception e) { /* ignored */ }
+    try { ps.close(); } catch (Exception e) { /* ignored */ }
+    try { conn.close(); } catch (Exception e) { /* ignored */ }
 }
+//we don't have any connection leak
 ```
 
 
@@ -102,17 +150,12 @@ try {
 Since Java 7 you have the option to use this [mechanism](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) to write less code. One of the things that Java is criticized is because is a verbose programming language code. With this mechanism, you don’t have to write finally with the closing statement. Not using it means writing more than necessary code. 
 
 ```java
-   String query = "select * from SALES";
    try (Connection connection = datasource.getConnection();
        PreparedStatement stmt = connection.prepareStatement();) {
        ResultSet rs = stmt.executeQuery(query);
    }
-   //no need to do 
-   //finally {
-   //  if (stmt!=null){
-   //   stmt.close;
-   //  }
-   //}
+   //no don't need to close the connections like before :) 
+   
 ```
 
 ## 7 - Non-usage of existing exceptions and creating new ones.
@@ -141,7 +184,7 @@ Another problem when dealing with exceptions is that the original exception is n
 ```java
 //the original exception here is lost
 catch(IOException e){
-throw new SessionException(“Session Exception”);
+   throw new SessionException(“Session Exception”);
 }
 ```
 
@@ -150,7 +193,7 @@ In this situation, we are losing the original exception that is [IOException](ht
 ```java
 //ok we are not losing the original exception
 catch(IOException e){
-throw new SessionException(“SessionException ”, e)
+   throw new SessionException(“SessionException ”, e)
 }
 ```
 
