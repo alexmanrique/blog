@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "10 mistakes using exceptions in Java"
+title: "10 common mistakes using exceptions in Java"
 date: 2020-02-15 00:13:53 +0200
 categories: development
 comments: true
