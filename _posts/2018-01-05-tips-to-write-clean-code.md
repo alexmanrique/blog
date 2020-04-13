@@ -57,7 +57,7 @@ Less code, means less code to mantain and less possible mistakes and more easy t
 
 Conclusion
 --------------------
-This is my list of things to remember when writing code and keep it clean (there are more). I definitely recommend <a target="_blank" href="https://www.amazon.com/gp/product/0132350882/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0132350882&linkCode=as2&tag=de8blg6-20&linkId=3d20c156665621e677091dfeeb4bc1e0">Clean Code: A Handbook of Agile Software Craftsmanship</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=de8blg6-20&l=am2&o=1&a=0132350882" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> where he explains how to write clean code with a lot of examples (A must for any software developer) 
+This is my list of things to remember when writing code and keep it clean (there are more). I definitely recommend <a target="_blank" href="https://www.amazon.es/gp/product/0132350882/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=0132350882&linkCode=as2&tag=almanbl01-21&linkId=03a6ee82ff02248dd706396123d557dd" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> where he explains how to write clean code with a lot of examples (A must for any software developer) 
 What is your list? leave a comment below if you have another tip that you feel that is important.
 
 
