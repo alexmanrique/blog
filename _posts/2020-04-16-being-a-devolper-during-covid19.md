@@ -8,6 +8,8 @@ lang: en
 tags: developer
 ---
 
+![Java certification path]({{ site.baseurl }}/images/developer-home.jpg)
+
 In this post I will go throught what is like being a developer during covid-19 lockdown at home and some hacks/tips that work for me. All our community and people that are able to work remotely we are lucky compared to other people that unfortunately are not able to work in this difficult times. It's true that those tips can be helpful for other professions also, so if you are not a developer keep reading.
 
 Prepare your worspace
