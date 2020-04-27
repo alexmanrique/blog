@@ -234,7 +234,6 @@ In the following lines we can see how to set a maven profile in our java project
 Conclusion
 ------------------------
 
-We have seen in this post the importance of unit testing our code, different concepts related with the code coverage and how to introduce a plugin in our java project called Jacoco to be able to force a threshold of code coverage in our code. I would recommend you if you are interested in this topic that you read <a href="https://www.amazon.es/gp/product/0321503627/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=0321503627&linkCode=as2&tag=almanbl01-21&linkId=ec276f2f1f676815f2ef4b92501b557b">Growing object oriented software guided by tests</a> quoting Robert C. Martin : 
-> If you want to be an expert in the state of the art in TDD, you need to understand the ideas in this book.
+We have seen in this post the importance of unit testing our code, different concepts related with the code coverage and how to introduce a plugin in our java project called Jacoco to be able to force a threshold of code coverage in our code. I would recommend you if you are interested in this topic that you read <a href="https://www.amazon.es/gp/product/0321503627/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=0321503627&linkCode=as2&tag=almanbl01-21&linkId=ec276f2f1f676815f2ef4b92501b557b">Growing object oriented software guided by tests</a>
 
 
