@@ -27,7 +27,7 @@ There's code that is not worth it to test like Java <a href="https://en.wikipedi
 
 It's more meaningful to test a `Controller` class that interacts with different services and that has some logic related with your algorithm than testing Java POJO's.
 
-If you do a test for a class of your model because your objective is to increase the coverage of your code is better that you invest this time in testing the core parts of your application. 
+If you write a test for a class of your model because your objective is to increase the coverage of your code is better that you invest this time in testing the core parts of your application. 
   
 More tests mean more quality?
 --------------------
