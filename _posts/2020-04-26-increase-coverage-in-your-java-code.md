@@ -45,7 +45,7 @@ If you remove all the code and you only keep tests you should be able to rewrite
 
 > The next developer that will read your code should understand you application reading your tests. 
 
-As a rule of thumb you should have a low number of asserts per test. I'm not saying one single assert per test because sometimes is not possible, but if you have a lot of asserts is becuase your test is validating more than one thing at the same time.   
+As a rule of thumb you should have a low number of `asserts` per test. I'm not saying one single assert per test because sometimes is not possible, but if you have a lot of asserts is becuase your test is validating more than one thing at the same time.   
 
 
 Test driven development
