@@ -28,100 +28,7 @@ There's code that is not worth it to test like Java <a href="https://en.wikipedi
 It's more meaningful to test a `Controller` class that interacts with different services and that has some logic related with your algorithm than testing Java POJO's.
 
 If you do a test for a class of your model because your objective is to increase the coverage of your code is better that you invest this time in testing the core parts of your application. 
-
-If your code is difficult to unit test ...
---------------------
-If your code is difficult to test it means that your design can be improved. Is possible that the class that you are testing is not following the <a href="https://en.wikipedia.org/wiki/Single-responsibility_principle">Single responsability principle</a> (SRP), or the code is not using <a href="{{site.baseurl}}{% post_url 2018-02-23-dependency-injection-in-code %}"> Dependency injection</a> as much as it should because dependencies are hardcoded instantiating objects or services using it's constructors directly in the class.  
-
-```java
-
-public class EmailService {
-
-//method difficult to test
-public EmailResponse process(EmailRequest emailRequest){
-    EmailStore emailStore = new GreatEmailStorage();
-    // do more things
-    return emailStore.save(emailRequest);
-}
-} 
-
-```
-Here we try to do a unit test from the previous class but ...
-
-```java
-public class EmailServiceTest {
-
-@Mock  
-private EmailStore emailStore;
-
-private EmailService emailService;
-
-@BeforeMethod
-public void init(){
   
-MockitoAnnotations.init(this);
-emailService = new EmailService();
-
-}
-
-@Test
-public void emailShouldBeSaved(){
-  
-     // we can't mock emailStore 
-}
-``` 
-
-In the previous code we are not be able to mock `EmailStore` because it's hardcoded in the `process` method. We should refactor in the following way: 
-
-```java
-
-public class EmailService {
-
-private final EmailStore emailStore;
-
-@Inject
-public EmailController(EmailStore emailStore){
-    this.emailStore = emailStore;
-}	
-
-//method easier to test than the previous one
-public EmailResponse process(EmailRequest emailRequest){
-	// do more things
-    return emailStore.save(emailRequest);
-}
-} 
-
-```
-Now we can test properly the `process` method.
-
-```java
-public class EmailServiceTest {
-
-@Mock  
-private EmailStore emailStore;
-
-private EmailService emailService;
-
-@BeforeMethod
-public void init(){
-  
-     MockitoAnnotations.init(this);
-     emailService = new EmailService(emailStore);
-
-}
-
-@Test
-public void emailShouldBeSaved(){
-     // we can mock emailStore
-     EmailRequest anEmailRequest = anEmailRequest();
-     EmailResponse anEmailResponse = anEmailResponse();
-     when(emailStore.save(anEmailRequest)).thenReturn(anEmailResponse);
-     EmailResponse emailResponse = emailService.process(anEmailRequest);
-     verify(emailStore).save(emailRequest); 
-     assertEquals(anEmailResponse, emailResponse);
-}
-``` 
-
 More tests mean more quality?
 --------------------
 Having more tests doesn't mean more quality. Tests are code and they have to be mantainable and they have to have a purpose. The same concept of single responsability principle applies to a test method. It has to test one thing and do it well. 
@@ -227,13 +134,11 @@ In the following lines we can see how to set a maven profile in our java project
     </executions>
 </plugin>
 </plugins>
-...
 
 ```
 
 Conclusion
 ------------------------
-
-We have seen in this post the importance of unit testing our code, different concepts related with the code coverage and how to introduce a plugin in our java project called Jacoco to be able to force a threshold of code coverage in our code. I would recommend you if you are interested in this topic that you read <a href="https://www.amazon.es/gp/product/0321503627/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=0321503627&linkCode=as2&tag=almanbl01-21&linkId=ec276f2f1f676815f2ef4b92501b557b">Growing object oriented software guided by tests</a>
+We have seen in this post the importance of unit testing our code, different concepts related with the code coverage and how to introduce a plugin in our java project called Jacoco to be able to force a threshold of code coverage in our code. I would recommend you if you are interested in this topic that you read <a href="https://www.amazon.es/gp/product/0321503627/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=0321503627&linkCode=as2&tag=almanbl01-21&linkId=ec276f2f1f676815f2ef4b92501b557b">Growing object oriented software guided by tests</a> if you want to go deeper into this topic.
 
 
