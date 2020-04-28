@@ -35,7 +35,7 @@ Having more tests doesn't mean more quality. Tests are code and they have to be 
 
 You can have 90% of code coverage and your tests are difficult to read and they are brittle. If you have to do a change in your codebase and you have to change all the unit tests it means that something is wrong with your code. 
 
-> Remember do meaningful tests easy to read, that have a purpose and that test behavoir and not implementation
+> Do meaningful tests easy to read, that have a purpose and that test behavoir and not implementation
 
 If your code has no tests it's a very bad sign because you don't have any guarantee that if you change some part of the code you will not break anything. 
 
