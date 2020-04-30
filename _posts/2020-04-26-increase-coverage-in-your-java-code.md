@@ -8,7 +8,7 @@ lang: en
 tags: increase coverage unit test 
 ---
 
-In this post we are going to talk about code coverage in your Java code. It's important to have a high coverage but we have to consider other things a part from this metric.
+In this post we are going to talk about code coverage in your Java code. It's important to have a high coverage but we have to consider other things apart from this metric.
 
 ![Code coverage API plugin jenkins]({{ site.baseurl }}/images/summary-chart.gif)
 GIF source : <a href = "https://www.jenkins.io/blog/2018/08/17/code-coverage-api-plugin-1/"> Code coverage api plugin for jenkins</a>
