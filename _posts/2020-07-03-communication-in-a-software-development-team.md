@@ -8,6 +8,8 @@ lang: en
 tags: communication, agile 
 ---
 
+![remote meetings]({{ site.baseurl }}/images/remote-meetings.jpg)
+
 Like in any other human organization, communication is key to the success of a collectivity. Great teams communicate very well. By communication, we mean the act of sharing opinions or feedback to one single person or the whole group. In the following post, we are going to review the more common meetings were the attendants communicate with each other.
 
 Daily (Stand-up)
