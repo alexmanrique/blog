@@ -34,7 +34,7 @@ It's possible to do a retrospective when there's a bug in production also or whe
 
 Pair programming
 ----------------------------
-In these events, two developers can be developing at the same time and interacting with each other. Is good to mix a person with more experience with another that has less experience, this way the less experienced can learn some tricks from the senior, or the way of approaching problems. In the past, before COVID-19 one person had the keyboard and the other one was next sitting. Now working remotely we can have more than 2 people interacting in the same source code and learning. 
+In these events, two developers can be developing at the same time and interacting with each other. Is good to mix a person with more experience with another that has less experience, this way the less experienced can learn some tricks from the senior, or the way that the senior approaches problems. In the past, before COVID-19 one person had the keyboard and the other one was next sitting. Now working remotely we can have more than 2 people interacting in the same source code and learning. 
 
 One trick if you are using IntelliJ IDE is to use the <a href="https://www.jetbrains.com/help/idea/ide-viewing-modes.html"> presentation mode </a> for the others to see better your screen also you can show to the others which shortcut in your keyboard you are using. 
 
