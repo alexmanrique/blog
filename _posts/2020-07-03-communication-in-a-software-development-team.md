@@ -36,11 +36,11 @@ Pair programming
 ----------------------------
 In these events, two developers can be developing at the same time and interacting with each other. Is good to mix a person with more experience with another that has less experience, this way the less experienced can learn some tricks from the senior, or the way that the senior approaches problems. In the past, before COVID-19 one person had the keyboard and the other one was next sitting. Now working remotely we can have more than 2 people interacting in the same source code and learning. 
 
-One trick if you are using IntelliJ IDE is to use the <a href="https://www.jetbrains.com/help/idea/ide-viewing-modes.html"> presentation mode </a> for the others to see better your screen also you can show to the others which shortcut in your keyboard you are using. 
+One trick if you are using IntelliJ IDE is to use the <a href="https://www.jetbrains.com/help/idea/ide-viewing-modes.html"> presentation mode </a> for the others to see better your screen, also you can show to the others which shortcut in your keyboard you are using. 
 
 Code review feedback
 ----------------------------
-Here we are not talking of a meeting, but it's a very important form of communication inside a development team. This communication is asynchronous because the person that reviews the code writes a comment in the code that some mate has developed and the person that has his code reviewed can respond in another moment. 
+Here we are not talking of a meeting, but it's a very important form of communication inside a development team. This communication is asynchronous because the person that reviews the code, writes a comment in the code that some mate has developed and the person that has his code reviewed can respond in another moment. 
 
 This feedback starts when the developer does a <a href="https://docs.github.com/en/github/getting-started-with-github/github-glossary#pull-request">pull request</a> and adds as reviewers some mates of the team or all the team, depends on the rules that you agreed between the team. The feedback has to be always constructive having in mind that the person who worked with that code did the best way that he knew at that moment.
 
@@ -68,9 +68,9 @@ In these meetings, there are 2 possible roles. You ask for something for another
 
 Project status meetings
 -------------------------
-This kind of meeting (in my opinion) can be omitted and instead of that ask for weekly mail with the status of the project. Writing things down in an email help recap all the details of the status of the project (KPI's, tasks, next steps) and can be shared with all the stakeholders.
+This kind of meeting (in my opinion) can be omitted and instead of that ask for weekly mail with the status of the project. Writing things down in an email help to recap all the details of the status of the project (KPI's, tasks, next steps) and can be shared with all the stakeholders.
 
 Conclusion
 --------------------------
-We have seen in this post different communication events where people interact with exchanging ideas, concepts, thoughts regarding different aspects and situations during the work in an agile software development team. Are you missing any important meetings on this list? Which is your favorite kind of meeting? and the worthless? 
+We have seen in this post different communication events where people interact with exchanging ideas, concepts, thoughts regarding different aspects and situations during the work in an agile software development team. Are you missing any important meetings on this list? Which is your favorite meeting? and the worthless? 
  
