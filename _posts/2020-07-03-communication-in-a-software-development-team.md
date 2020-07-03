@@ -16,7 +16,7 @@ Daily (Stand-up)
 ----------------------------
 In <a href="https://en.wikipedia.org/wiki/Agile_software_development">Agile</a> methodology, this kind of <a href="https://en.wikipedia.org/wiki/Stand-up_meeting">meeting</a> is normally in the morning. All the team has to be there to review the virtual board from right to left. The oldest tickets are the topics that have to be addressed before. 
 
-Remember, finish things rather than starting new things. There is a flow facilitator role that reads the board and goes through each ticket where the person assigned shares some learnings about he's doing and communicates if there's a blocker that stops him from advancing. 
+Remember, finish things rather than starting new things. There is a flow facilitator role that reads the board and goes through each ticket where the person assigned shares some learnings about his task and communicates if there's a blocker that stops him from advancing. 
 
 Those meetings should be quick, 10 minutes and after reviewing all the tickets, you can give space for some other topics that don't belong to tickets (new member joining the team, some meeting where people can attend optionally ...)
 
