@@ -30,7 +30,7 @@ Retrospectives
 ----------------------------
 These <a href="https://www.shmula.com/what-is-a-kanban-retrospective/22539/">events</a> are to review something that has finished as a project, see which things can be improved, what things were great, and which things were not as good. Those meetings are not to blame anyone, they are always constructive looking for new ways of working that can level up the team. 
 
-It's possible to do a retrospective when there's a bug in production also or when there's a rollback but they seem that you are pointing someone that has released something that it didn't have enough quality or it was not completely tested.
+It's possible to do a retrospective when there's a bug in production also or when there's a rollback, but I don't recommend them becuase it seems that you are pointing someone that has released something that it didn't have enough quality or it was not completely tested.
 
 Pair programming
 ----------------------------
