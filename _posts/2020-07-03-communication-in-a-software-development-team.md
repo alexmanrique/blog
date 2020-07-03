@@ -40,7 +40,7 @@ One trick if you are using IntelliJ IDE is to use the <a href="https://www.jetbr
 
 Code review feedback
 ----------------------------
-Here we are not talking of a meeting, but it's a very important for of communication inside a development team. This communication is asynchronous because the person that reviews the code writes a comment in the code that some mate has developed and the person that has his code reviewed can respond in another moment. 
+Here we are not talking of a meeting, but it's a very important form of communication inside a development team. This communication is asynchronous because the person that reviews the code writes a comment in the code that some mate has developed and the person that has his code reviewed can respond in another moment. 
 
 This feedback starts when the developer does a <a href="https://docs.github.com/en/github/getting-started-with-github/github-glossary#pull-request">pull request</a> and adds as reviewers some mates of the team or all the team, depends on the rules that you agreed between the team. The feedback has to be always constructive having in mind that the person who worked with that code did the best way that he knew at that moment.
 
