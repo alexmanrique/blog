@@ -9,6 +9,8 @@ ref: review
 tags: java code clean 
 ---
 
+![dependency injection]({{ site.baseurl }}/images/dependency-injection.jpg)
+
 When you write code you have to think that every <a href="https://en.wikipedia.org/wiki/Java_class_file">class</a> represents a unit of code that should be testable by itself. 
 If you can't write a <a href="https://en.wikipedia.org/wiki/Unit_testing">unit test</a> without executing the logic 
 of another class it means that your class is <a href="https://www.geeksforgeeks.org/coupling-in-java/">coupled</a> with the other class, which means that you can't 
