@@ -50,7 +50,7 @@ These meetings are used to communicate some news that can impact the team in the
 
 Training
 ----------------------------
-In these events, there's a trainer that explains to the others some topic and the others learn about it. When you explain someone to others you force yourself to understand it and you benefit from it also. The audience of these meetings can be small or large. With the remote conditions, we don't have space limitations anymore.
+In these events, there's a trainer that explains to the others some topic and the others learn about it. When you explain something to others you force yourself to understand it and you benefit from it also. The audience of these meetings can be small or large. With the remote conditions, we don't have space limitations anymore.
 
 One to ones
 ---------------------------
