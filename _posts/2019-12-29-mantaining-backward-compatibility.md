@@ -8,6 +8,8 @@ lang: en
 tags: apis, java, jaxrs, backward compatibility
 ---
 
+![java code]({{ site.baseurl }}/images/java-code.jpg)
+
 Keeping backward compatibility between different releases of your API is of _utmost_ importance in ensuring that your API will remain compatible with all of the clients that consume it.
 
 We will talk in this post about client-server integrations that use Java in the server side and use Java client contracts in client side.
