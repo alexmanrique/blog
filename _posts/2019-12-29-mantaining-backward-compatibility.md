@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Maintaining backward compatibility in your REST Java API"
+title: "Avoid breaking backward compatibility in your REST Java API"
 date: 2019-12-29 00:13:53 +0200
 categories: development
 comments: true
@@ -8,7 +8,7 @@ lang: en
 tags: apis, java, jaxrs, backward compatibility
 ---
 
-Maintaining backward compatibility between different releases of your API is of _utmost_ importance in ensuring that your API will remain compatible with all of the clients that consume it.
+Keeping backward compatibility between different releases of your API is of _utmost_ importance in ensuring that your API will remain compatible with all of the clients that consume it.
 
 We will talk in this post about client-server integrations that use Java in the server side and use Java client contracts in client side.
 
