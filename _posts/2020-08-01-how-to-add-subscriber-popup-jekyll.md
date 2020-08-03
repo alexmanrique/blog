@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "How to add a subscriber pop-up with Jekyll"
+title: "How to add a subscriber pop-up in your Jekyll blog"
 date: 2020-08-01 13:20:53 +0200
 categories: development
 comments: true
@@ -10,7 +10,7 @@ tags: jekyll, popup, email
 
 ![popup]({{ site.baseurl }}/images/popup.jpg)
 
-In this post we are going to talk about how to add a popup form in a <a href="https://jekyllrb.com/">Jekyll</a> website with <a href="https://github.com/mmistakes/minimal-mistakes">minimal-mistakes</a> plugin. Notice that we are using Jekyll but it can work with any other platform that you control the source code of the website where you can include a Javascript <a href="https://en.wikipedia.org/wiki/Snippet_(programming)">code snippet</a>.
+In this post we are going to talk about how to add a popup form in a <a href="https://jekyllrb.com/">Jekyll</a> website with <a href="https://github.com/mmistakes/minimal-mistakes">minimal-mistakes</a> theme. Notice that we are using Jekyll but it can work with any other platform that you control the source code of the website where you can include a Javascript <a href="https://en.wikipedia.org/wiki/Snippet_(programming)">code snippet</a>.
 
 Using Jekyll for your personal blog
 --------------------------------------
