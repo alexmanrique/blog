@@ -8,6 +8,8 @@ lang: en
 tags: jekyll, popup, email
 ---
 
+![email]({{ site.baseurl }}/images/popup.jpg)
+
 In this post we are going to talk about how to add a popup form in a <a href="https://jekyllrb.com/">Jekyll</a> website with <a href="https://github.com/mmistakes/minimal-mistakes">minimal-mistakes</a> plugin. Notice that we are using Jekyll but it can work with any other platform that you control the source code of the website where you can include a Javascript <a href="https://en.wikipedia.org/wiki/Snippet_(programming)">code snippet</a>.
 
 Using Jekyll for your personal blog
