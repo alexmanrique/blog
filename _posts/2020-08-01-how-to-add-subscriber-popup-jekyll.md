@@ -6,6 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: jekyll, popup, email
+image: images/popup.jpg
 ---
 
 ![popup]({{ site.baseurl }}/images/popup.jpg)
