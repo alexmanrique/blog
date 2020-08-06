@@ -5,7 +5,8 @@ date: 2020-07-19 13:20:53 +0200
 categories: development
 comments: true
 lang: en
-tags: test, unit-test, quality 
+tags: test, unit-test, quality
+image: images/tdd.jpg
 ---
 
 ![test driven development]({{ site.baseurl }}/images/tdd.jpg)

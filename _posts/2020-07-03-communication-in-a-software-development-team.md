@@ -5,7 +5,8 @@ date: 2020-07-03 15:00:53 +0200
 categories: development
 comments: true
 lang: en
-tags: communication, agile 
+tags: communication, agile
+image: images/remote-meetings.jpg
 ---
 
 ![remote meetings]({{ site.baseurl }}/images/remote-meetings.jpg)
