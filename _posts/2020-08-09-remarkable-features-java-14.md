@@ -35,9 +35,9 @@ if(s instanceof String s){
 }
 
 ```
-Notice that we don't have to do the cast like in previous versions. This will reduce the bolierplate code that we had to do everytime that we were using an instanceof. 
+Notice that we don't have to do the cast like in previous versions. This will reduce the bolierplate code that we had to do everytime that we were using an `instanceof`. 
 
-My personal opinion here is that Java code that is using `instanceof` has poor design and is not using <a href="https://www.w3schools.com/java/java_polymorphism.asp">polimorphism</a> the right way. However, If you have to deal with instanceof in your legacy code you can take advantage of this new feature ;)
+In my opinion, Java code that is using `instanceof` has poor design and is not using <a href="https://www.w3schools.com/java/java_polymorphism.asp">polimorphism</a> the right way. However, If you have to deal with instanceof in your legacy code you can take advantage of this new feature ;)
 
 More info in <a href="https://openjdk.java.net/jeps/305">JEP 305</a> link.
 
@@ -45,7 +45,7 @@ JEP-358: Detailed message in NullPointerExceptions
 --------------------------------------------
 This can be really useful because when encountering a null pointer, the JVM analyses the program to determine which reference was `null` and provide more details in the `NullPointerException.getMessage()`. Also the method, filename and line number are returned. 
 
-This option by default is disabled, to active it we need to use `-XX:+ShowCodeDetailsInExceptionMessages`. If you want to know how to configure it I share with this <a href="https://jlefebure.com/blog/detailed-nullpointerexception-messages-in-jdk-14">post</a> where you can see how to do the configuration.
+This option is disabled by default, to active it we need to use `-XX:+ShowCodeDetailsInExceptionMessages`. If you want to know how to configure it I share with this <a href="https://jlefebure.com/blog/detailed-nullpointerexception-messages-in-jdk-14">post</a> where you can see how to do the configuration.
 
 More info can be found in the <a href="https://openjdk.java.net/jeps/358">JEP 358</a>
 
