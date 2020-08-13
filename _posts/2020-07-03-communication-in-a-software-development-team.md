@@ -73,5 +73,5 @@ This kind of meeting (in my opinion) can be omitted and instead of that ask for 
 
 Conclusion
 --------------------------
-We have seen in this post different communication events where people interact with exchanging ideas, concepts, thoughts regarding different aspects and situations during the work in an agile software development team. Are you missing any important meetings on this list? Which is your favorite meeting? and the worthless? 
+We have seen in this post different communication events where people interact with exchanging ideas, concepts, thoughts regarding different aspects and situations during the work in an agile software development team. Are you missing any important meetings on this list? Which is your favorite meeting? and the ones that should be skipped? 
  
