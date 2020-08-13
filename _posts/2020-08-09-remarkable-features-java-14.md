@@ -6,6 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: java, development, java14 
+image: images/coffee.png
 ---
 
 ![coffee]({{ site.baseurl }}/images/coffee.png)
