@@ -11,7 +11,7 @@ image: images/coffee.png
 
 ![coffee]({{ site.baseurl }}/images/coffee.png)
 
-In this post we are going to talk about the new features in <a href="https://docs.oracle.com/en/java/javase/14/">Java SE 14</a> and its open source Java Development kit (<a href="https://openjdk.java.net/projects/jdk/14/">JDK 14</a>) that was released on March 17th 2020 (yes during the covid-19 lockdown) and we will see also how we can take advantage of this new features to develop. 
+In this post we are going to talk about the new features in <a href="https://docs.oracle.com/en/java/javase/14/">Java SE 14</a> and its open source Java Development kit (<a href="https://openjdk.java.net/projects/jdk/14/">JDK 14</a>) that was released on March 17th 2020 (yes during the covid-19 lock-down) and we will see also how we can take advantage of this new features to develop. 
 
 JEP-305: Pattern matching for instanceof
 ---------------------------------
@@ -52,9 +52,9 @@ More info can be found in the <a href="https://openjdk.java.net/jeps/358">JEP 35
 
 JEP-359: Records 
 --------------------------
-Records is a new kind of declaration in Java programming language. Like an <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html">enum</a> a `record` is a restricted form of class. Java has been critized for being a verbose programming language and this goes in the direction to reduce the boilerplate code. 
+Records is a new kind of declaration in Java programming language. Like an <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html">enum</a> a `record` is a restricted form of class. Java has been criticized for being a verbose programming language and this goes in the direction to reduce the boilerplate code. 
 
-Classes that only have state without any logic that have constructor, getters, setters, equals, hashcode and toString. All this methods have to be created everytime that we want to create a class that just carries data. For example 
+Think about classes that only have state without any logic that have constructor, getters, setters, equals, hashcode and toString. All these methods have to be created every time we want to create a class that just carries data. For example: 
 
 ```java
 record Point(int x, int y) { }
