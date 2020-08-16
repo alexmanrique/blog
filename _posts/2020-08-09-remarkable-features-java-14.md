@@ -13,7 +13,7 @@ image: images/coffee.png
 
 In this post we are going to talk about the new features in <a href="https://docs.oracle.com/en/java/javase/14/">Java SE 14</a> and its open source Java Development kit (<a href="https://openjdk.java.net/projects/jdk/14/">JDK 14</a>) that was released on March 17th 2020 (yes during the covid-19 lock-down) and we will see also how we can take advantage of this new features to develop. 
 
-JEP-305: Pattern matching for instanceof
+JEP-305: Pattern matching for instanceof (preview)
 ---------------------------------
 To reduce the number of casts in the Java applications a new feature has been introduced in this version. It's called `Pattern matching for instanceof` and to understand it we will use an example:
 
@@ -21,8 +21,8 @@ In older versions of Java when we don't know if an object is an instance of a cl
 
 ```java
 
-if(s instanceof String){
-	String value = (String)s;
+if(object instanceof String){
+	String value = (String)object;
 	value.contains ...
 }
 
@@ -31,12 +31,23 @@ Now with this new feature we will be able to do this:
 
 ```java
 
-if(s instanceof String s){
+if(object instanceof String s){
 	s.contains ...
 }
 
 ```
 Notice that we don't have to do the cast like in previous versions. This will reduce the bolierplate code that we had to do everytime that we were using an `instanceof`. 
+
+To use this feature within <a href="https://www.jetbrains.com/idea/promo/ultimate/">Intellij</a> you have to enable <a href="https://docs.oracle.com/en/java/javase/14/language/preview-language-and-vm-features.html">preview features</a> and accept the warning that you are using a preview feature. If you don't enable preview features and you want to try this you will get an error saying "patterns are not supported at language level 14" and your code will not compile.
+
+To enable preview features like this you have to go to File > Project structure > Project settings > Project
+
+![project settings]({{ site.baseurl }}/images/intellij-project-settings.png)
+
+
+And then in the project language level dropdown look for the Java14 preview option. 
+ 
+![accept preview features]({{ site.baseurl }}/images/enabling-java14-preview-features.png)
 
 In my opinion, Java code that is using `instanceof` has poor design and is not using <a href="https://www.w3schools.com/java/java_polymorphism.asp">polimorphism</a> the right way. However, If you have to deal with instanceof in your legacy code you can take advantage of this new feature ;)
 
@@ -57,7 +68,7 @@ Records is a new kind of declaration in Java programming language. Like an <a hr
 Think about classes that only have state without any logic that have constructor, getters, setters, equals, hashcode and toString. All these methods have to be created every time we want to create a class that just carries data. For example: 
 
 ```java
-record Point(int x, int y) { }
+record Appartment(int squareMeters) { }
 ```
 A `record` acquires many standard members automatically.
 - a private final field for each component declared.
