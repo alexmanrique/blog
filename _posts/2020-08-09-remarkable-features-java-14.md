@@ -44,7 +44,6 @@ To enable preview features like this you have to go to File > Project structure 
 
 ![project settings]({{ site.baseurl }}/images/intellij-project-settings.png)
 
-
 And then in the project language level dropdown look for the Java14 preview option. 
  
 ![accept preview features]({{ site.baseurl }}/images/enabling-java14-preview-features.png)
