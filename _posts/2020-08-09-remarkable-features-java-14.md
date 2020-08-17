@@ -62,7 +62,7 @@ This option is disabled by default, to active it we need to use `-XX:+ShowCodeDe
 
 More info can be found in the <a href="https://openjdk.java.net/jeps/358">JEP 358</a>
 
-JEP-359: Records 
+JEP-359: Records (preview)
 --------------------------
 Records is a new kind of declaration in Java programming language. Like an <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html">enum</a> a `record` is a restricted form of class. Java has been criticized for being a verbose programming language and this goes in the direction to reduce the boilerplate code. 
 
@@ -155,7 +155,8 @@ For more information about this feature you can read <a href="https://openjdk.ja
 
 Conclusion
 ------------------------
-In this post we have seen the more remarkable features in Java 14. Which is your favourite new feature? 
+In this post we have seen the more remarkable features in Java 14. 
+Pattern matching for instanceof and Records are just preview features and should not be used in a production environment yet. The full release of this function is expected in java 15.
 
 
 
