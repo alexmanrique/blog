@@ -42,7 +42,9 @@ To use this feature within <a href="https://www.jetbrains.com/idea/promo/ultimat
 
 To enable preview features like this you have to go to File > Project structure > Project settings > Project
 
+{:refdef: style="text-align: center;"}
 ![project settings]({{ site.baseurl }}/images/intellij-project-settings.png)
+{: refdef}
 
 And then in the project language level dropdown look for the Java14 preview option. 
  
