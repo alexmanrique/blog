@@ -8,6 +8,8 @@ lang: en
 tags: java, cache 
 ---
 
+![remote meetings]({{ site.baseurl }}/images/computer-books.jpg) 
+
 In this post, we are going to talk about caches, the importance that they have, the issues with blocking operations, how to detect slow operations in your API, and an example of implementing a nonblocking cache in Java with the <a href="https://github.com/google/guava">Guava</a> library.
 
 Advantages of a cache
