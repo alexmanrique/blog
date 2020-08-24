@@ -17,17 +17,28 @@ Do you wonder how you can have your personal website without having to pay a hos
 
 1 - Create a Github account
 -------------------------------------------
-We need to have a Github account to be able to publish our personal website. Without it we cannot fork, commit neither publish our personal website. It's completely free and if you are a developer you should consider having a personal account because it helps you stay up to date, you can contribute to open source and you can have your public profile out there. It's the most famous social network for developers. 
+We need to have a <a href="https://www.github.com">Github</a> account to be able to publish our personal website. Without it we cannot do the following steps needed to publish our personal website. It's completely free and if you are a developer you should consider having a personal account because it helps you stay up to date, you can contribute to open source and you can have your public profile out there. It's the most famous social network for developers. 
 
-2 - Look for a template that you like in Github
+2 - Look for a template that you like on Github
 ---------------------------------------------------
-The second think you should do is to look for a template that you like on github. There are two topics in Github where you can find examples of websites <a href="https://github.com/topics/personal-website">personal website topic</a> and <a href="https://github.com/topics/portfolio-template">portfolio template topic</a> 
+The second thing you should do is to look for a template that you like on Github. There are two topics in Github where you can find examples of websites: 
+- <a href="https://github.com/topics/personal-website">personal website topic</a> 
+- <a href="https://github.com/topics/portfolio-template">portfolio template topic</a> 
+
+You can get inspiration with the different websites that appear in the previous links. I choosed <a href="https://github.com/mmacneil/devfolio">devfolio</a> because it's a simple responsive single-page portfolio and it meet my needs.
 
 3 - Fork the repository that has your favourite template
 ---------------------------------------------------------
-Once you find the one that you like you have to do a fork of this repository to be able to modify the template with your own data. You will see that in your personal space you will have a new  repository. To start working on that you have to clone the repository in your personal computer.
+Once you find the one that you like you have to do a fork of this repository to be able to modify the template with your own data. You will see that in your personal space you will have a new  repository. 
 
 ![fork repository]({{ site.baseurl }}/images/fork-repository.png)
+
+To start working on that you have to clone the repository in your personal computer. In my case the command was:
+
+```
+$> git clone https://github.com/alexmanrique/devfolio.git 
+
+```
 
 4 - Customize template with your experience
 ---------------------------------------------------
@@ -41,9 +52,20 @@ I saw that the template was using <a href="https://fontawesome.com/icons?d=galle
 
 This way I could add 2 links in the template to those links with a suitable fontawesome icon.
 
+```html
+
+ <a href="https://alexmanrique.com/blog" class="icon is-large has-text-light">
+    <i class="fas fa-2x fa-blog"></i>
+ </a>
+ <a href="https://play.google.com/store/apps/details?id=com.manriqueapps.simuladorhipoteca" class="icon is-large has-text-light">
+    <i class="fa-2x fab fa-android"></i>
+ </a>
+
+```
+
 5 - Copy the build files in a new repository called username.github.io
 --------------------------------------------------
-Those templates that are on Github are not ready to be shown in <a href="https://pages.github.com/">github pages</a> because the `index.html` file is not in the root folder of the repository and it's inside a `dist` folder. 
+Those templates that are on Github are not ready to be shown in <a href="https://pages.github.com/">github pages</a> because the `index.html` file is not in the `root` folder of the repository and it's inside a `dist` folder. 
 
 We have to create a new repository with the name `username.github.io` and visibility `public`. 
 
@@ -51,24 +73,28 @@ We have to create a new repository with the name `username.github.io` and visibi
 ![create repository]({{ site.baseurl }}/images/create-repository.png)
 {: refdef}
 
-The idea here is to copy those files from dist folder into a repository that all the files that are in the `dist` folder are in the root folder. This includes index.html `css` , `js` or any other subfolders. If you don't include this folders the template will not render as you expect.
+The idea here is to copy those files from dist folder into a repository that all the files that are in the `dist` folder are in the root folder. This includes index.html `css` , `js` or any other subfolders. If you don't include those folders the template will not render as you expect.
 
 {:refdef: style="text-align: center;"}
 ![dist files]({{ site.baseurl }}/images/dist-files.png)
 {: refdef}
 
-6 - You will have your personal website in username.github.io
+In the following link <a href="https://github.com/alexmanrique/alexmanrique.github.io">https://github.com/alexmanrique/alexmanrique.github.io</a> you can see the repository that I have on Github where are the files from my personal website.
+
+6 - Access your brand new personal website in username.github.io
 ------------------------------------------------------------------ 
 When you have commited the files in the repository username.github.io your personal website will be available in `https://username.github.io`. If you see a 404 error is that you have missed some previous step.
 
 7 - (Bonus) Having your personal website under your domain
 ------------------------------------------------------------
-Add a `CNAME` file in the root of the repository with your domain. You can read more information about how to do this configuration in the following <a href="https://docs.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site">link</a>
+Add a `CNAME` file in the root of the repository with your domain. You can read more information about how to do this configuration in the following <a href="https://docs.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site">link</a> from Github documentation.
+
+In the repository that I was sharing with you before you can see the <a href="https://github.com/alexmanrique/alexmanrique.github.io/blob/master/CNAME">CNAME</a> file in the repository.
 
 
 Conclusion
 ------------------------
-In this post we have went through all the steps to create a personal website without having to pay a hosting using Github pages technology. If you want to see the result of my work you can visit https://alexmanrique.com. Do you have a personal website? Do you like the idea of having a personal website?
+In this post we have went through all the steps to create a personal website without having to pay a hosting using <a href="https://pages.github.com/">github pages</a> technology. If you want to see the result of my work you can visit <a href="https://alexmanrique.com">https://alexmanrique.com</a>. Do you have a personal website? Do you like the idea of having a personal website?
 
 
 
