@@ -89,8 +89,6 @@ When you have commited the files in the repository username.github.io your perso
 ------------------------------------------------------------
 Add a `CNAME` file in the root of the repository with your domain. You can read more information about how to do this configuration in the following <a href="https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">link</a> from Github documentation.
 
-In the repository that I was sharing with you before you can see the <a href="https://github.com/alexmanrique/alexmanrique.github.io/blob/master/CNAME">CNAME</a> file in the repository.
-
 
 Conclusion
 ------------------------
