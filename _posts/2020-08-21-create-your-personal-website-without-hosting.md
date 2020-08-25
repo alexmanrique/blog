@@ -21,15 +21,15 @@ We need to have a <a href="https://www.github.com">Github</a> account to be able
 
 2 - Look for a template that you like on Github
 ---------------------------------------------------
-The second thing you should do is to look for a template that you like on Github. There are two topics in Github where you can find examples of websites: 
+The second thing you should do is to look for a template that you like on Github. There are two topics on Github where you can find examples of websites:
 - <a href="https://github.com/topics/personal-website">personal website topic</a> 
 - <a href="https://github.com/topics/portfolio-template">portfolio template topic</a> 
 
-You can get inspiration with the different websites that appear in the previous links. I choosed <a href="https://github.com/mmacneil/devfolio">devfolio</a> because it's a simple responsive single-page portfolio and it meet my needs.
+You can get inspiration with the different websites that appear in the previous links. I chosed <a href="https://github.com/mmacneil/devfolio">devfolio</a> because it's a simple responsive single-page portfolio and it meet my needs.
 
 3 - Fork the repository that has your favourite template
 ---------------------------------------------------------
-Once you find the one that you like you have to do a fork of this repository to be able to modify the template with your own data. You will see that in your personal space you will have a new  repository. 
+Once you find the one that you like you have to do a fork of this repository to be able to modify the template with your own data. You will see that in your personal space you will have a new repository.
 
 ![fork repository]({{ site.baseurl }}/images/fork-repository.png)
 
