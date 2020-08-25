@@ -83,7 +83,7 @@ In the following link <a href="https://github.com/alexmanrique/alexmanrique.gith
 
 6 - Access your brand new personal website in username.github.io
 ------------------------------------------------------------------ 
-When you have commited the files in the repository username.github.io your personal website will be available in `https://username.github.io`. If you see a 404 error is that you have missed some previous step.
+When you have commited the files in the repository username.github.io your personal website will be available in `https://username.github.io` If you see a 404 error is that you have missed some previous step.
 
 7 - (Bonus) Having your personal website under your domain
 ------------------------------------------------------------
