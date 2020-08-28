@@ -1,1 +1,0 @@
-cparse.o: cparse.c $(hdrdir)/ruby/ruby.h $(topdir)/config.h $(hdrdir)/ruby/defines.h
