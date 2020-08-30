@@ -231,4 +231,4 @@ More information of this in <a href="https://openjdk.java.net/jeps/158">https://
 
 Conclusion
 ------------------------
-Java 9 came in 2017 as a new version of the well known Java programming language with modular characteristics and new features for developers to write better software with less effort using better tools.
+Java 9 came in 2017 as a new version of the well known Java programming language with modular characteristics and new features for developers to write better software with less effort using better tools. Which is your favourite Java 9 feature?
