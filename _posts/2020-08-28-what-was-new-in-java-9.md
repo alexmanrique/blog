@@ -89,7 +89,11 @@ And we add the following VM option:
 ![dist files]({{ site.baseurl }}/images/intellij-add-vm-option.png)
 {: refdef}
 
+When we run the main we will receive a warning because we are using the incubator module.
 
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/http-client-java9-output.png)
+{: refdef}
 
 Since Java 11 you can find these classes in `java.net.http` package.
 
