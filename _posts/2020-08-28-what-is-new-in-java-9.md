@@ -6,6 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: java9, jdk
+image: images/java9.jpg
 ---
 
 {:refdef: style="text-align: center;"}
