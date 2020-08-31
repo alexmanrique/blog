@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "What was new in Java 9"
+title: "What's new in Java 9"
 date: 2020-08-28 02:00:53 +0200
 categories: development
 comments: true
@@ -116,7 +116,7 @@ public class ProcessAPIExample {
 }
 ```
 
-All these classes are in `java.lang` that's why you don't see any import in the previous class.s
+All these classes are in `java.lang` that's why you don't see any import in the previous class.
 
 4 - Try-with-resources improvement
 ---------------------------------------------------
@@ -214,7 +214,7 @@ List<String> list = optionals.stream()
 10 - Unified JVM logging
 -------------------------------
 
-The goal of this improvement is to provide a unified logging system for all the componenents of the JVM .
+The goal of this improvement is to provide a unified logging system for all the components of the JVM .
 
 When running our Java application if we add the new command line option `-Xlog` we will be able to use this new logging system.
 
@@ -231,4 +231,4 @@ More information of this in <a href="https://openjdk.java.net/jeps/158">https://
 
 Conclusion
 ------------------------
-Java 9 came in 2017 as a new version of the well known Java programming language with modular characteristics and new features for developers to write better software with less effort using better tools. Which is your favourite Java 9 feature?
+Java 9 came in 2017 as a new version of the well-known Java programming language with modular characteristics and new features for developers to write better software with less effort using better tools. Which is your favourite Java 9 feature?
