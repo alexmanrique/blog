@@ -71,7 +71,7 @@ public class HttpClientExample {
     }
 }
 ```
-In Java 9 these classes were in package `jdk.incubator.http` and you need to import the module `jdk.incubator.httpclient` otherwise, you received the following error:
+In Java 9 these classes were in package `jdk.incubator.http` and you need to import the module `jdk.incubator.httpclient` otherwise, you will receive the following error:
 
 ```console
 Error:(1, 21) java: package jdk.incubator.http is not visible
