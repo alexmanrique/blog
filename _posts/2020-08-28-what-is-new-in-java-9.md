@@ -13,7 +13,7 @@ tags: java9, jdk
 {: refdef}
 
 
-In this post, we are going to see the most relevant features for developers introduced in Java 9. The percentage of companies still using Java 8 is <a href="https://snyk.io/blog/jvm-ecosystem-report-2018/"> high </a> taking into account that this version was generally available on 21 September 2017. 
+In this post, we are going to see the most relevant features for developers introduced in <a href="https://jdk.java.net/java-se-ri/9">Java 9</a>. The percentage of companies still using Java 8 is <a href="https://snyk.io/blog/jvm-ecosystem-report-2018/"> high </a> taking into account that this version was generally available on 21 September 2017. 
 
 Note that this version is not a long term support version (LTS) and it's recommended to migrate to Java 11. However, features that we are covering in this post are in Java 11. 
 
