@@ -26,7 +26,7 @@ git clone https://github.com/alexmanrique/spring-boot-application-example.git
 
 Prerequisites
 ---------------------------
-To run the app you need to have <a href="https://maven.apache.org/">Maven</a> installed in your local environment to be able to download all the dependencies of the project. You need to have also installed Java 8.  
+To run the app you need to have <a href="https://maven.apache.org/">Maven</a> installed in your local environment to be able to download all the dependencies of the project. You need to have also installed <a href="https://www.oracle.com/sa/java/technologies/javase/javase-jdk8-downloads.html">Java 8 JDK</a>.  
 
 Once you have cloned the repository you can open the repository in Intellij IDEA or your favorite IDE.
 
