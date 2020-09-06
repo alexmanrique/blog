@@ -39,7 +39,7 @@ module com.foo.bar {
 
 More info can be found in this <a href="https://openjdk.java.net/projects/jigsaw/quick-start">jigsaw quickstart</a> project.
 
-2 - A new HTTP 2 client
+2 - A new HTTP client
 ---------------------------------------------------
 If you are using Java 8 and you need to call an API you could use <a href="https://docs.oracle.com/javase/8/docs/api/java/net/HttpURLConnection.html">`HttpURLConnection`</a> as explained in this <a href="https://stackoverflow.com/questions/2793150/how-to-use-java-net-urlconnection-to-fire-and-handle-http-requests">Stackoverflow thread</a> or using <a href="https://hc.apache.org/httpcomponents-client-ga/">Apache httpComponents</a>. The good news is that from Java 9 you can use an Http client without using any external library.
 
@@ -71,7 +71,7 @@ public class HttpClientExample {
     }
 }
 ```
-In Java 9 these classes were in package `jdk.incubator.http` and you need to import the module `jdk.incubator.httpclient` otherwise, you received the following error:
+In Java 9 these classes were in package `jdk.incubator.http` and you need to import the module `jdk.incubator.httpclient` otherwise, you will receive the following error:
 
 ```console
 Error:(1, 21) java: package jdk.incubator.http is not visible
