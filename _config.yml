@@ -23,7 +23,7 @@ github_username:  alexmanrique
 # Build settings
 markdown: kramdown
 
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes@4.20.2"
 
 plugins:
   - jekyll-remote-theme

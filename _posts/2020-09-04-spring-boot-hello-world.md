@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Spring boot helloworld example"
+title: "Spring boot hello-world example"
 date: 2020-09-04 02:00:53 +0200
 categories: development
 comments: true

@@ -1,13 +1,13 @@
 # main links links
 main:
-    
-  - title: 
-    children:
-    - title: "Blog"
-      url: /
+    - title: "CV"
+      url: https://alexmanrique.com/media/resume-alex-manrique.pdf  
     - title: "About"
       url: /about/
     - title: "Posts"
-      url: "/year-archive/"
+      url: /year-archive/
     - title: "Tags"
-      url: "/tags/"
+      url: /tags/
+    - title: "Sitemap"
+      url: /sitemap/
+  
