@@ -19,7 +19,7 @@ You have to stick this in your head because it is something that as time goes by
 
 Your expectations
 -----------------------------
-We are expected to do things well, to do clean code, to do good tests, that our code is readable, that we do good documentation so that there is evidence of what we have done so that in the end those who come after us can learn it more easily. 
+We are expected to do things well, to do <a href="{{ site.baseurl }}{% post_url 2018-01-05-tips-to-write-clean-code %}">clean code</a>, to do good tests, that our code is readable, that we do good documentation so that there is evidence of what we have done so that in the end those who come after us can learn it more easily. 
 
 However, all this is not what your company or the customer who is paying you wants.
 
