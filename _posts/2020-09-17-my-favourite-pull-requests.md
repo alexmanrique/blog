@@ -39,7 +39,7 @@ Sources of dead code
 ---------------------------------------
 - Legacy product features: We have talked about this previously. When we detect that some feature is not used we can get rid of it. No matter if this was requested by some product owner guru or some important person in your company. Just remove it.
 - Wizard generated UI code: There are tools that allow you to do some starter code. This can be a source of code to be considered to remove. 
-- Return values of functions: This is an example of a code that is not used. Return values if are not used by the caller it means that the lines of code that calculate/process this value can be considered to get rid of. 
+- Return values of functions: This is an example of a code that is not used. Return values if are not used by the caller it means that the lines of code that calculate/process this value can be considered to get removed. 
 
 How to remove code
 --------------------------------------------
