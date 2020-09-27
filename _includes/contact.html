@@ -1,25 +1,27 @@
----
-title: "Subscribe"
----
-
-
 <!-- Begin Mailchimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
 	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    #trust { padding-top: 0.5em;text-align: left;}
+    #disclaimer { background:#f7f7f7; width:100%;}
 </style>
+
 <div id="mc_embed_signup">
 <form action="{{site.mailchimp-list}}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
-	<label for="mce-EMAIL">Subscribe</label>
+	<label for="mce-EMAIL">Subscribe to receive new posts</label>
 	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_01dc101c3bd1d708e13e72e12_4079f165ee" tabindex="-1" value=""></div>
     <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
+    <div id="trust">I won't give your address to anyone else, won't send you any spam, and you can unsubscribe at any time.</div>
 </form>
+</div>
+<div id="disclaimer">
+    Disclaimer: Opinions are my own and not the views of my employer
 </div>
 
 <!--End mc_embed_signup-->
