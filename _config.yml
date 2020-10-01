@@ -28,6 +28,8 @@ markdown: kramdown
 
 remote_theme: "mmistakes/minimal-mistakes@4.20.2"
 
+url: "https://alexmanrique.com"
+
 plugins:
   - jekyll-remote-theme
   - jekyll-feed

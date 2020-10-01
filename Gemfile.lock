@@ -261,9 +261,10 @@ DEPENDENCIES
   jekyll-include-cache
   jekyll-remote-theme
   jekyll-seo-tag
+  jekyll-sitemap
   kramdown (>= 2.3.0)
   nokogiri (>= 1.10.8)
   tzinfo-data
 
 BUNDLED WITH
-   2.1.2
+   2.1.4
