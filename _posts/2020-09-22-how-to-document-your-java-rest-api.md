@@ -6,6 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: jaxrs, code, job
+image: images/swagger-documentation.png 
 ---
 
 {:refdef: style="text-align: center;"}
