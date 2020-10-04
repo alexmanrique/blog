@@ -74,7 +74,7 @@ We need to set up one of the two versions in the `dependency management` section
 ![dist files]({{ site.baseurl }}/images/nosuchmethoderror4.png)
 {: refdef}
 
-If we come back to the dependency tree we won't see red lines anymore, neither with the maven dependency plugin. 
+After setting the dependency in the pom file If we come back to the dependency tree we won't see red lines anymore, neither in the maven dependency plugin. 
 
 {:refdef: style="text-align: center;"}
 ![dist files]({{ site.baseurl }}/images/nosuchmethoderror5.png)
