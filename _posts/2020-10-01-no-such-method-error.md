@@ -60,7 +60,7 @@ or using the dependency view diagram with the Intellij Idea:
 ![dist files]({{ site.baseurl }}/images/diagram_show_dependencies.png)
 {: refdef}
 
-we get the tree diagram. In this case, we can see the red lines that indicate we have a dependency conflict.
+In this case, we can see the red lines that indicate we have a dependency conflict.
 
 {:refdef: style="text-align: center;"}
 ![dist files]({{ site.baseurl }}/images/nosuchmethoderror3.png)
