@@ -25,9 +25,9 @@ When we have two different `jars` of the same library that have the same class i
 
 In the picture above we have two different versions of Guava (16 and 25.1-android) that have the same class `PreConditions`. 
 
-However, at compile time the method that is not found in runtime was found at compile. According to the Oracle <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/NoSuchMethodError.html">documentation</a>, this error may occur at runtime if a class has been incompatibly changed. 
+According to the Oracle <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/NoSuchMethodError.html">documentation</a>, this error may occur at runtime if a class has been incompatibly changed. 
 
-This normally happens with transitive dependencies which are the ones that you import indirectly from a library into your project. 
+This error appears when we have transitive dependencies which are the ones that you import indirectly from a library into your project. 
 
 A real example
 --------------------------
@@ -37,7 +37,7 @@ In the following image we can see that the call to the method `checkArgument` of
 ![dist files]({{ site.baseurl }}/images/nosuchmethoderror.png)
 {: refdef}
 
-If we look for the class `PreConditions` in Intellij Idea typing `PreConditions.class` in the search menu (if we don't write class Intellij we won't find the <a href="https://docs.oracle.com/javase/tutorial/java/concepts/class.html">class</a>) we will see that it's present in three different `jars`:
+If we look for the class `PreConditions` in Intellij Idea typing `PreConditions.class` in the search menu (if we don't write .class in Intellij we won't find the <a href="https://docs.oracle.com/javase/tutorial/java/concepts/class.html">class</a>) we will see that it's present in three different `jars`:
 
 - Guava version 25.1-android
 - Guava version 16.0
