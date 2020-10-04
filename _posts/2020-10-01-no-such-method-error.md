@@ -49,7 +49,7 @@ If we look for the class `PreConditions` in Intellij Idea typing `PreConditions.
 
 Looking at the dependencies
 ------------------------------
-If we look at the maven dependencies tree that we can generate using the <a href="https://maven.apache.org/plugins/maven-dependency-plugin/">maven dependency plugin</a> in the command line 
+We can check the maven dependencies tree using the <a href="https://maven.apache.org/plugins/maven-dependency-plugin/">maven dependency plugin</a> in the command line 
 
 ```
 $> mvn dependency:tree 
