@@ -27,7 +27,7 @@ In the picture above we have two different versions of Guava (16 and 25.1-androi
 
 According to the Oracle <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/NoSuchMethodError.html">documentation</a>, this error may occur at runtime if a class has been incompatibly changed. 
 
-This error appears when we have transitive dependencies which are the ones that you import indirectly from a library into your project. 
+In the following example we will see a problem that I had with transitive dependencies (the ones that we import into our application indirectly from other dependencies)
 
 A real example
 --------------------------
