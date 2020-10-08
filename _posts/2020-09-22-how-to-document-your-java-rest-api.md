@@ -44,13 +44,13 @@ When you have Swagger in place working you will be able to share to developers f
 
 In the following link you can see a live example of  <a href="https://petstore.swagger.io/?_ga=2.25871421.1425290472.1601114879-866601831.1599386328#/">a pet store API</a> using Swagger UI.
 
-Is it hard the maintenance of Swagger?
+Is it hard the documentation maintenance with Swagger?
 -------------------------------
 Because Swagger is attached to the code, if developers are changing the API, if in their <a href="{{ site.baseurl }}{% post_url 2020-09-17-my-favourite-pull-requests %}">pull request</a> they have not updated the code to show the changes we can request them to update them. 
 
-If the documentation is in a wiki page is more difficult to remember to update the documentation, but if we have it in the code the developer is forced to keep it up date.
+If the documentation is in a wiki page is more difficult to remember to update the documentation, but if we have it in the code the developer is forced to keep it up to date.
 
-If we check the stars that has the Swagger UI <a href="https://github.com/swagger-api/swagger-ui">repository</a> in Github, they have 18,6k stars, so the probability that the project is discontinued is low. 
+If we check the stars that has the Swagger UI <a href="https://github.com/swagger-api/swagger-ui">repository</a> in Github, they have 18,6k stars, so the odds that the project is discontinued are low. 
 
 How to add Swagger to your API?
 -----------------------------------
@@ -238,7 +238,7 @@ We have to define also an HTML file that will load all the operations of the API
 
 Conclusion
 ----------------------------
-In this post, we have seen why it's important to document your API and how Swagger can help us to achieve this objective. If you want to see how to use Swagger with Spring boot in this  <a href="{{ site.baseurl }}{% post_url 2020-09-04-spring-boot-hello-world %}"> post </a> I explain how to do a Hello world with Spring boot and the API that the app deploys is using Swagger. You can find the code for the spring boot hello world with Swagger in the following <a href="https://github.com/alexmanrique/spring-boot-application-example">link</a>. 
+In this post, we have seen why it's important to document your API and how Swagger can help us to achieve this objective. If you want to see how to use Swagger with Spring boot in this  <a href="{{ site.baseurl }}{% post_url 2020-09-04-spring-boot-hello-world %}"> post </a> I explain how to do a Hello world with Spring boot and the API that the app deploys is using Swagger. You can find the code for the Spring boot hello world with Swagger in the following <a href="https://github.com/alexmanrique/spring-boot-application-example">link</a>. 
 
 
 
