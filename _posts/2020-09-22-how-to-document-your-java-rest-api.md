@@ -238,7 +238,7 @@ We have to define also an HTML file that will load all the operations of the API
 
 Conclusion
 ----------------------------
-In this post, we have seen why it's important to document your API and how Swagger can help us to achieve this objective. If you want to see how to use Swagger with Spring boot in this  <a href="{{ site.baseurl }}{% post_url 2020-09-04-spring-boot-hello-world %}"> post </a> I explain how to do a Hello world with Spring boot and the API that the app deploys is using Swagger. You can find the code for the Spring boot hello world with Swagger in the following <a href="https://github.com/alexmanrique/spring-boot-application-example">link</a>. 
+In this post, we have seen why it's important to document our API and how Swagger can help us to achieve this objective. If you want to see how to use Swagger with Spring boot in this  <a href="{{ site.baseurl }}{% post_url 2020-09-04-spring-boot-hello-world %}"> post </a> I explain how to do a Hello world with Spring boot and the API that the app deploys is using Swagger. You can find the code for the Spring boot hello world with Swagger in the following <a href="https://github.com/alexmanrique/spring-boot-application-example">link</a>. 
 
 
 
