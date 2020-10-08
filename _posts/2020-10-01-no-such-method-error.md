@@ -25,9 +25,9 @@ When we have two different `jars` of the same library that have the same class i
 
 In the picture above we have two different versions of Guava (16 and 25.1-android) that have the same class `PreConditions`. 
 
-However, at compile time the method that is not found in runtime was found at compile. According to the Oracle <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/NoSuchMethodError.html">documentation</a>, this error may occur at runtime if a class has been incompatibly changed. 
+According to the Oracle <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/NoSuchMethodError.html">documentation</a>, this error may occur at runtime if a class has been incompatibly changed. 
 
-This normally happens with transitive dependencies which are the ones that you import indirectly from a library into your project. 
+In the following example we will see a problem that I had with transitive dependencies (the ones that we import into our application indirectly from other dependencies)
 
 A real example
 --------------------------
@@ -37,7 +37,7 @@ In the following image we can see that the call to the method `checkArgument` of
 ![dist files]({{ site.baseurl }}/images/nosuchmethoderror.png)
 {: refdef}
 
-If we look for the class `PreConditions` in Intellij Idea typing `PreConditions.class` in the search menu (if we don't write class Intellij we won't find the <a href="https://docs.oracle.com/javase/tutorial/java/concepts/class.html">class</a>) we will see that it's present in three different `jars`:
+If we look for the class `PreConditions` in Intellij Idea typing `PreConditions.class` in the search menu (if we don't write .class in Intellij we won't find the <a href="https://docs.oracle.com/javase/tutorial/java/concepts/class.html">class</a>) we will see that it's present in three different `jars`:
 
 - Guava version 25.1-android
 - Guava version 16.0
@@ -49,7 +49,7 @@ If we look for the class `PreConditions` in Intellij Idea typing `PreConditions.
 
 Looking at the dependencies
 ------------------------------
-If we look at the maven dependencies tree that we can generate using the <a href="https://maven.apache.org/plugins/maven-dependency-plugin/">maven dependency plugin</a> in the command line 
+We can check the maven dependencies tree using the <a href="https://maven.apache.org/plugins/maven-dependency-plugin/">maven dependency plugin</a> in the command line 
 
 ```
 $> mvn dependency:tree 
@@ -60,7 +60,7 @@ or using the dependency view diagram with the Intellij Idea:
 ![dist files]({{ site.baseurl }}/images/diagram_show_dependencies.png)
 {: refdef}
 
-we get the tree diagram. In this case, we can see the red lines that indicate we have a dependency conflict.
+In this case, we can see the red lines that indicate we have a dependency conflict.
 
 {:refdef: style="text-align: center;"}
 ![dist files]({{ site.baseurl }}/images/nosuchmethoderror3.png)
@@ -74,7 +74,7 @@ We need to set up one of the two versions in the `dependency management` section
 ![dist files]({{ site.baseurl }}/images/nosuchmethoderror4.png)
 {: refdef}
 
-If we come back to the dependency tree we won't see red lines anymore, neither with the maven dependency plugin. 
+After setting the dependency in the pom file If we come back to the dependency tree we won't see red lines anymore, neither in the maven dependency plugin. 
 
 {:refdef: style="text-align: center;"}
 ![dist files]({{ site.baseurl }}/images/nosuchmethoderror5.png)
