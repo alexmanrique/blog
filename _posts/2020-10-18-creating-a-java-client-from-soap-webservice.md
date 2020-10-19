@@ -24,7 +24,7 @@ otherwise, the clients will break if there's an operation that changes the signa
 
 > The good practice is to create a new version of the WSDL for the clients that are integrated and give time to them to migrate to the new version without breaking their integrations. 
 
-If your are interested on learning more about maintining backward compatibility you can read this <a href="{{ site.baseurl }}{% post_url 2019-03-24-learn-by-doing %}"> post </a> that I wrote some time ago.  
+If your are interested on learning more about maintining backward compatibility you can read this <a href="{{ site.baseurl }}{% post_url 2019-12-29-mantaining-backward-compatibility %}"> post </a> that I wrote some time ago.  
 
 Third-party party provides a client to integrate
 ------------------------------------------
