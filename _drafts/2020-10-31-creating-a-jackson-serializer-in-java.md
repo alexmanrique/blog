@@ -8,11 +8,16 @@ lang: en
 tags: json, serializer, java
 ---
 
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/serialization-in-java.png)
+{: refdef}
+
+
 In this post we are going to see how we can use serialization using a Java library called Jackson to be able to send Java objects using JSON in the context of a Java REST API.
 
 Why do we need serialization
 ---------------------------------------------
-Serializers converts a Java object into a stream of bytes which can be persisted into a filesystem or shared between two different servers through a network connection.
+Serializers convert a Java object into a stream of bytes which can be persisted into a filesystem or shared between two different servers through a network connection.
 
 Deserializers allow us to do the opposite process, translating from a stream of bytes that has been easy to transfer into the original Java Object.
 
@@ -41,7 +46,7 @@ This is the default serialization that we got for the class `Car` but what if we
 
 Java libraries to serialize and deserialize
 --------------------------------------------------
-There are some Java libraries out there, that you can use for serialization purposes. I choosed `Jackson` some time ago because when doing REST API's because its shipped with <a href="https://www.wildfly.org/">JBoss application server</a> and I can use free using the <a href="{{ site.baseurl }}{% post_url 2018-01-24-managing-maven-dependencies %}"> provided</a> scope when importing it using Maven. Jackson is a mature JSON serialization/deserialization library that has a lot of features, however there are other alternatives out there.  
+There are some Java libraries out there, that you can use for serialization purposes. I choosed `Jackson` some time ago because this library because its shipped with <a href="https://www.wildfly.org/">JBoss application server</a> and I can use it using the <a href="{{ site.baseurl }}{% post_url 2018-01-24-managing-maven-dependencies %}"> provided</a> scope when importing it using Maven. Jackson is a mature JSON serialization/deserialization library that is built into all JAX-RS implementations and has an extensive annotation support, however there are other alternatives out there.
 
 |   Lib name | URL         | Github stars | Forks |
 | Jackson| <a href="https://github.com/FasterXML/jackson">github.com/FasterXML/jackson</a> | 6K | 1k |
@@ -50,6 +55,25 @@ There are some Java libraries out there, that you can use for serialization purp
 | Moshi | <a href="https://github.com/square/moshi">github.com/square/moshi</a> | 6,7K | 536 |
 | Jsoniter | <a href="https://github.com/json-iterator/java">github.com/json-iterator/java</a> | 1,3K | 424 |
 
+According to the numbers of stars and forks done `Fastjson` from Alibaba is the library that right now has more support in the open source community.
+
+Using Jackson in your Maven Java application
+----------------------------------------------- 
+
+To be able to use Jackson you need to import in your `pom.xml` file if you are using Maven:
+
+```xml
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.6.0</version>
+</dependency>
+<dependency>
+    <groupId>org.jboss.resteasy</groupId>
+    <artifactId>resteasy-jackson-provider</artifactId>
+    <version>[2.3.10.Final]</version>
+</dependency>
+```
 
 Java code example to serialize and deserialize
 ----------------------------------------------- 
@@ -78,6 +102,13 @@ public class Employee {
     ...
 }
 ```
+
+Note that you need a default no args-constructor in your bean class otherwise we will receive an error similar to this.
+
+```java
+org.codehaus.jackson.map.JsonMappingException: No suitable constructor found for type [simple type, class Employee]: can not instantiate from JSON object (need to add/enable type information?) at [Source: employee.json; line: 1, column: 2] at org.codehaus.jackson.map.JsonMappingException.from(JsonMappingException.java:163) at org.codehaus.jackson.map.deser.BeanDeserializer.deserializeFromObjectUsingNonDefault(BeanDeserializer.java:746) at org.codehaus.jackson.map.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:683) at org.codehaus.jackson.map.deser.BeanDeserializer.deserialize(BeanDeserializer.java:580) at org.codehaus.jackson.map.ObjectMapper._readMapAndClose(ObjectMapper.java:2732) at org.codehaus.jackson.map.ObjectMapper.readValue(ObjectMapper.java:1817)
+```
+
 
 In the following code we can see a `LocalDateTimeSerializer` where we serialize a `LocalDateTime` using the pattern `"yyyy-MM-dd HH:mm:ss"`
 
