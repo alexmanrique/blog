@@ -28,17 +28,21 @@ Serialization example
 In the following example we can see how serialization works. Given a class `Car` 
 
 ```java
-@JsonPropertyOrder({ "name", "id" })
-public class Car {
-    public int id;
-    public String name;
+@JsonPropertyOrder({ "email", "name", "id", "yearsOfExperience" })
+public class Employee {
+    private long id;
+    private String name;
+    private String email;
+    private int yearsOfExperience;
 }
 ```
 serializing an object will output a JSON with the following structure:
 
 ```json
 {
-    "name":"My car",
+    "email":"contact@alexmanrique.com",
+    "name":"Alex",
+    "yearsOfExperience":"10",
     "id":1
 }
 ```
@@ -90,10 +94,13 @@ import java.time.LocalDateTime;
 @ApiModel(value = "Class that defines a Employee", subTypes = {Developer.class, ProductManager.class, MarketingExecutive.class})
 public class Employee {
 
+    private long id;
     @NotNull
     private String name;
     @NotNull
     private String email;
+    @NotNull
+    private int yearsOfExperience;
     @NotNull
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
