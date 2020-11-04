@@ -6,6 +6,7 @@ categories: apps
 comments: true
 lang: en
 tags: java, android
+image: images/simulador-hipoteca-update.png
 
 ---
 
