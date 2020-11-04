@@ -6,6 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: json, serializer, java
+image: images/serialization-in-java.png
 ---
 
 {:refdef: style="text-align: center;"}
