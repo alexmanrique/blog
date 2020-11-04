@@ -25,7 +25,7 @@ With this process we can transfer data in a more efficient way rather that trans
 
 Serialization example
 -----------------------------------------------
-In the following example we can see how serialization works. Given a class `Car` 
+In the following example we can see how serialization works. Given a class `Employee` 
 
 ```java
 @JsonPropertyOrder({ "email", "name", "id", "yearsOfExperience" })
@@ -50,7 +50,9 @@ This is the default serialization that we got for the class `Car` but what if we
 
 Java libraries to serialize and deserialize
 --------------------------------------------------
-There are some Java libraries out there, that you can use for serialization purposes. I choosed `Jackson` some time ago because this library because its shipped with <a href="https://www.wildfly.org/">JBoss application server</a> and I can use it using the <a href="{{ site.baseurl }}{% post_url 2018-01-24-managing-maven-dependencies %}"> provided</a> scope when importing it using Maven. Jackson is a mature JSON serialization/deserialization library that is built into all JAX-RS implementations and has an extensive annotation support, however there are other alternatives out there.
+There are some Java libraries out there, that you can use for serialization purposes. I choosed `Jackson` some time ago because this library its shipped with <a href="https://www.wildfly.org/">JBoss application server</a> and I can use it using the <a href="{{ site.baseurl }}{% post_url 2018-01-24-managing-maven-dependencies %}"> provided</a> scope when importing it using Maven. 
+
+Jackson is a mature JSON serialization/deserialization library that is built into all JAX-RS implementations and has an extensive annotation support, however there are other alternatives out there.
 
 |   Lib name | URL         | Github stars | Forks |
 | Jackson| <a href="https://github.com/FasterXML/jackson">github.com/FasterXML/jackson</a> | 6K | 1k |
@@ -61,16 +63,16 @@ There are some Java libraries out there, that you can use for serialization purp
 
 According to the numbers of stars and forks done `Fastjson` from Alibaba is the library that right now has more support in the open source community.
 
-Using Jackson in your Maven Java application
+Using Jackson in our Maven Java application
 ----------------------------------------------- 
 
-To be able to use Jackson you need to import in your `pom.xml` file if you are using Maven:
+To be able to use Jackson we need to import in your `pom.xml` file if we are using Maven:
 
 ```xml
 <dependency>
     <groupId>com.fasterxml.jackson.core</groupId>
     <artifactId>jackson-databind</artifactId>
-    <version>2.6.0</version>
+    <version>[2.6.0]</version>
 </dependency>
 <dependency>
     <groupId>org.jboss.resteasy</groupId>
@@ -82,7 +84,7 @@ To be able to use Jackson you need to import in your `pom.xml` file if you are u
 Java code example to serialize and deserialize
 ----------------------------------------------- 
 
-In the following example we can see the class Employee that is using a serializer and deserializer for the attribute `creationDate`.
+In the following example we can see the class `Employee` that is using a serializer and deserializer for the attribute `creationDate`.
 We use the annotation `@JsonDeserialize` and `@JsonSerialize` to bind the usage of the serializer and deserializer to the attribute.
 
 ```java
@@ -106,6 +108,9 @@ public class Employee {
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime creationDate;
     
+    public Employee(){
+        //needed for jackson serialization purposes
+    }
     ...
 }
 ```
