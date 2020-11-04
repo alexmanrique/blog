@@ -42,8 +42,8 @@ serializing an object will output a JSON with the following structure:
 {
     "email":"contact@alexmanrique.com",
     "name":"Alex",
-    "yearsOfExperience":"10",
-    "id":1
+    "id":1,
+    "yearsOfExperience":"10"
 }
 ```
 This is the default serialization that we got for the class `Car` but what if we have a field that is not possible to serialize? Here is when we need to create a custom serializer for this field. 
