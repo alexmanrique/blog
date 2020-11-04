@@ -169,5 +169,5 @@ public class LocalDateTimeDeserializer extends JsonDeserializer<LocalDateTime> {
 
 Conclusion
 --------------
-In this post we have seen how to create a serializer and a deserializer in Java using the Jackson library. We have seen also that there are alternatives out there to be able for serialization purposes. 
+In this post we have seen how to create a serializer and a deserializer in Java using the Jackson library. We have seen also that there are alternatives out there for serialization purposes. 
 
