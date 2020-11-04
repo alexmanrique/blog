@@ -6,6 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: wsimport, java
+image: images/Java-client-SOAP-webservice.png
 ---
 
 {:refdef: style="text-align: center;"}
