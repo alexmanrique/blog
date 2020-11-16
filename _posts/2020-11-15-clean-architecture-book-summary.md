@@ -137,4 +137,4 @@ Summary Notes
 
 Conclusion
 ----------------------------
-A really good book that anyone interested in software quality should read to become a better professional when we have to face more high-level decisions regarding the architecture of a software system.   
+A really good book that anyone interested in software quality should read to become a better professional when facing more high-level decisions regarding the architecture of a software system.   
