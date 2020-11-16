@@ -17,7 +17,7 @@ High-level thoughts
 -----------------------------
 This is a good book by <a href="https://twitter.com/unclebobmartin">uncle Bob</a>. In this publication, he explains how to achieve clean architecture and he mixes some stories from his experience to explain some concepts that help the reader understanding the philosophy behind them. Also, there are figures with drawings to explain the concepts. 
 
-I recommend this <a href="https://www.amazon.es/s?k=clean+architecture&__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=FSWH05AEJOUX&sprefix=clean+archite%2Caps%2C179&ref=nb_sb_ss_ts-a-p_1_13">book</a> to all the people that are interested in having a higher level picture of how to organize modules and applications in a way that is sustainable for the future, to maximize the productivity of developers and people working with the software.    
+I recommend this <a href="https://www.amazon.es/s?k=clean+architecture&__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=FSWH05AEJOUX&sprefix=clean+archite%2Caps%2C179&ref=nb_sb_ss_ts-a-p_1_13">book</a> to all the people that are interested in having a higher level picture of how to organize modules and applications in a way that is sustainable for the future, to maximize the productivity of developers and people working with software.    
 
 Summary Notes
 ------------------------------
