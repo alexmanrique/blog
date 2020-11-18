@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Clean architecute book summary"
+title: "Clean architecture book summary"
 date: 2020-11-15 21:08:53 +0200
 categories: books
 comments: true
