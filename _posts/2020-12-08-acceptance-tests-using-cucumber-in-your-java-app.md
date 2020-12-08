@@ -1,13 +1,20 @@
 ---
 layout: single
-title: "Acceptance tests using cucumber in your Java application"
-date: 2020-11-22 12:08:53 +0200
+title: "Acceptance tests using cucumber in Java applications"
+date: 2020-12-8 12:08:53 +0200
 categories: development
 comments: true
 lang: en
 tags: mocks, testing
-image: images/
+image: images/acceptance-tests.jpg
 ---
+
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/acceptance-tests.jpg)
+<span>Photo by <a href="https://unsplash.com/@scienceinhd?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Science in HD</a> on <a href="https://unsplash.com/s/photos/tests?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+{: refdef}
+
+In the same way that vaccines have to be tested before the rollout to the world population, we need to test our software before releasing it also to our customers. Today the first <a href="https://www.theguardian.com/world/2020/dec/08/coventry-woman-90-first-patient-to-receive-covid-vaccine-in-nhs-campaign">woman</a> received the Faizer vaccine and before this, several protocols have been executed before today's event. Software engineering it's a science (<a href="https://en.wikipedia.org/wiki/Computer_science">Computer science</a>) and because of that we need procedures to ensure that our software is doing what is expected.   
 
 Behavior-driven development
 -------------------------------
@@ -53,14 +60,16 @@ Group of tests to validate the books-api behavior
 
 Developers that need to retrieve booking data will benefit from the books-api operations
 
-Given a book with id 1 in our store
+Scenario: Validate that we can read an existing book 
 
-When a request is done to our books-api with an id 1
+Given a book with uuid 123e4567-e89b-12d3-a456-426614174000 in our store
 
-Then the books-api returns a book with id 1
+When a request is done to our books-api with an uuid 123e4567-e89b-12d3-a456-426614174000
+
+Then the books-api returns a book with uuid 123e4567-e89b-12d3-a456-426614174000
 ```
 
-each one of these sentences needs to be defined inside the parenthesis in an annotation 
+each one of these sentences needs to be defined in the glue code that interacts directly with our application. In this particular case `BooksApiSteps` class is where we have placed our sentences.
 
 ```java
 
@@ -76,18 +85,18 @@ public BooksApiSteps(BooksApiService booksApiService){
     this.booksApiService = booksApiService;
 }
 
-@Given("a book with id $1 in our store")
+@Given("a book with id (.*)$ in our store")
 public void createABookGivenAnId(String uuid) {
-    bookCreated = new BookingBuilder.withId(uuid).build(new Random());
+    bookCreated = new BookingBuilder.withUuid(uuid).build(new Random());
     booksApiService.create(bookCreated);
 }
     
-@When("a request is done to our books-api with id $1")
+@When("a request is done to our books-api with id (.*)$")
 public void aRequestIsDoneToRetrieveABook(String uuid) {
     bookRetrieved = booksApiService.getBookById(uuid);
 }
 
-@Then("the books-api returns a book with id $1")
+@Then("the books-api returns a book with id (.*)$")
 public void validateTheResponse(String uuid) {
     assertEquals(bookCreated, bookRetrieved);
     assertEquals(uuid, bookRetrieved.getUuid());
@@ -117,58 +126,42 @@ To have deterministic tests that don't fail randomly and that test only your cod
 Typically what you can do in services that are defined by contracts is to create a particular implementation for the contract that you control and that you know what this implementation is going to return.
 
 ```java
-public interface LibraryService {
-    Book findBookById(long id); 
+public interface RatingService {
+    Integer getBookingRating(String uuid); 
 }  
 
-public class LibraryServiceMock implements LibraryService {
+public class RatingServiceMock implements RatingService {
 
-    Book findBookById(long id) {
-        return new Book();
+    Integer getBookingRating(String uuid) {
+       //return a value
     } 
 }
 
 ```
 
-Boot a server with your mock
-------------------------------------
-
-Given the previous mock of `LibraryService` it would be good to use it in a lightweight application server like <a href="https://www.eclipse.org/jetty/">Jetty</a>
-
-```java
-import com.sun.net.httpserver.HttpServer;
-import org.apache.log4j.Logger;
-import org.eclipse.jetty.server.Handler;
-import org.eclipse.jetty.server.NetworkTrafficServerConnector;
-import org.eclipse.jetty.server.handler.ContextHandlerCollection;
-import org.eclipse.jetty.server.handler.HandlerList;
-
-private final NetworkTrafficServerConnector connector;
-private final ContextHandlerCollection contextHandlerCollection;
-
-JettyServer(int portNumber, boolean listenInAllInterfaces) {
-   final org.eclipse.jetty.server.Server server = new org.eclipse.jetty.server.Server();
-   connector = new NetworkTrafficServerConnector(server);
-   connector.setHost(listenInAllInterfaces ? "0.0.0.0" : "localhost");
-   connector.setPort(portNumber);
-   connector.setIdleTimeout(30000);
-   server.addConnector(connector);
-   HandlerList handlers = new HandlerList();
-   WsGzipHandler wsGzipHandler = new WsGzipHandler();
-   contextHandlerCollection = new ContextHandlerCollection();
-   wsGzipHandler.setHandler(contextHandlerCollection);
-   handlers.addHandler(wsGzipHandler);
-   // Needed by Jetty to publish endpoints
-   handlers.addHandler(contextHandlerCollection); 
-   server.setHandler(handlers);
-}
-```
-This way every time that we call the endpoint `findBookById` we will receive the object that we have set in our `BooksApiSteps`
-
-
 Randomize your inputs 
 -------------------------------
-If you are always sending the same request to the system that you are doing the acceptance test is possible that you always test the same behavior. For that, a good practice is to randomize the inputs that you do to your services to ensure that there's no corner case that you have not considered.
+If your are always sending the same request to the system that you are testing it's possible that you always test the same behavior. In this case the `BookingBuilder` has different attributes as we can see in the following `builder`.
+
+```java
+new BookingBuilder.
+      withUuid(uuid).
+      withGenre(genre).
+      withDatePublished(date).
+      withAuthor(author).
+      withStars(stars).
+      withComments(comments).
+      withPrice(price).
+      build();
+```
+
+A good practice here would be to randomize the inputs that you do to your services to ensure that there's no corner case that you have not considered. It would be good to provide a constructor in your builder that allows creating objects with random fields. 
+
+```java
+new BookingBuilder.
+      build(new Random());
+```
+This way you will have books with different types of genres, stars, price ... that should not affect the result of the test execution. 
 
 
 Conclusion
