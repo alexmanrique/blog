@@ -14,7 +14,7 @@ image: images/bug.jpg
 <span>Photo by <a href="https://unsplash.com/@adamgman?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Adam Gman</a> on <a href="https://unsplash.com/s/photos/bug?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 {: refdef}
 
-In this article I am going to explain a bug that I had to solve in an application that is responsible for saving data in a non-relational database.
+In this article, I am going to explain a bug that I had to solve in an application that is responsible for saving data in a non-relational database.
 
 The problem
 ------------
@@ -38,7 +38,7 @@ The solution to the problem was to change the data type from `Integer` to `Long`
 ![dist files]({{ site.baseurl }}/images/bug_request_fixed.png)
 {: refdef}
 
-This happened because this third party sent the data using an `Integer` and then without prior notice they changed the data type to a `Long`.
+This happened because this third party sent the data using an `Integer` and then without prior notice, they changed the data type to a `Long`.
 
 How did I catch the error
 --------------------------
