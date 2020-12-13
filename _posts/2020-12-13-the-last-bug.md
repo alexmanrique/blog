@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "The last bug"
-date: 2020-12-8 12:08:53 +0200
+date: 2020-12-13 12:08:53 +0200
 categories: development
 comments: true
 lang: en
