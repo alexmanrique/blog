@@ -14,7 +14,11 @@ image: images/acceptance-tests.jpg
 <span>Photo by <a href="https://unsplash.com/@scienceinhd?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Science in HD</a> on <a href="https://unsplash.com/s/photos/tests?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 {: refdef}
 
-In the same way that vaccines have to be tested before the rollout to the world population, we need to test our software before releasing it also to our customers. Today the first <a href="https://www.theguardian.com/world/2020/dec/08/coventry-woman-90-first-patient-to-receive-covid-vaccine-in-nhs-campaign">woman</a> received the Faizer vaccine and before this, several protocols have been executed before today's event. Software engineering it's a science (<a href="https://en.wikipedia.org/wiki/Computer_science">Computer science</a>) and because of that we need procedures to ensure that our software is doing what is expected.   
+In the same way that vaccines have to be tested before the rollout to the world population, we need to test our software before releasing it also to our customers. 
+
+Today the first <a href="https://www.theguardian.com/world/2020/dec/08/coventry-woman-90-first-patient-to-receive-covid-vaccine-in-nhs-campaign">woman</a> received the Pfizer vaccine and before this, several protocols have been executed before today's event. 
+
+Software engineering it's a science (<a href="https://en.wikipedia.org/wiki/Computer_science">Computer science</a>) and because of that we need procedures to ensure that our software is doing what is expected.   
 
 Behavior-driven development
 -------------------------------
