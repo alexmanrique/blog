@@ -17,7 +17,7 @@ https://www.azul.com/downloads/zulu-community/?os=macos&architecture=arm-64-bit&
 
 https://github.com/microsoft/openjdk-aarch64/releases/tag/16-ea%2B10-macos
 
-Add Java home to the JAVA_HOME environment variable
+Add Java to the JAVA_HOME environment variable
 -----------------------------------------------------
 Content of the file .zhsrc
 
@@ -25,7 +25,7 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/home/jre
 
 Installing Maven
 ----------------------------
-To install maven in your Macbook Air sillicon
+To install maven in your Macbook Air M1
 
 export PATH=/opt/apache-maven-3.6.3/bin:$PATH
 
@@ -34,7 +34,7 @@ https://stackoverflow.com/questions/64788005/java-jdk-for-apple-m1-chip
 MacOs M1 vs Windows 10 Intel i7 vs MacOs Intel i5 2011 
 --------------------------------------------------------
 
-Ejecución en MacOs 2011 con Intel i5
+Ejecución en Imac 2011 con Intel i5 4GB RAM 
 
 In 9,8 seconds the spring-boot application starts
 
@@ -42,9 +42,24 @@ In 9,8 seconds the spring-boot application starts
 ![dist files]({{ site.baseurl }}/images/spring-boot-mac-2011-intel-i5.png)
 {: refdef}
 
-In the new Macbook AIR the spring-boot application starts in 3,97 seconds using azul jdk 8
+Ejecución en Windows con Intel i7 12GB RAM
 
-Ejecución en Windows con Intel i7
+In 12.953 seconds the spring boot application starts
+
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/spring-boot-windows-10-intel-i7.png)
+{: refdef}
+
+Ejecución en Macbook AIR M1 8GB RAM
+
+In 3,97 seconds the spring-boot application starts  
+
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/spring-boot-macbook-air-m1.png)
+{: refdef}
+
+new Macbook AIR the spring-boot application starts in using azul jdk 8
 
 Conclusion
 --------------
+In this post we have seen how to use Java in a new Macbook air M1 and how the new processors of Apple outperform the old intel ones that I was using in other computers.
