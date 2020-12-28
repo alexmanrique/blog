@@ -21,11 +21,11 @@ Maven is a build system to manage dependencies in your Java project that has als
 
 It’s been around for more than <a href="https://maven.apache.org/background/history-of-maven.html#:~:text=History%20of%20Maven%20by%20Jason,sources%20happened%20in%20August%202001.">15 years</a> and it's not going away anytime soon. 
 
-It became the de-facto standard for building Java projects, so a good strategy to became a productive Java developer would be to embrace it :-)
+It became the de-facto standard for building Java projects, so a good strategy to became a productive Java developer would be to become familiar with it :-)
 
 Transitive dependencies
 -----------------------------
-When you add a dependency in your project object model (POM) file, you are not only importing this dependency in your project. You are importing also the dependencies that this dependency needs to work. 
+When you add a dependency in your project object model (POM) file, you are not only importing this dependency in your project. You are importing also the dependencies that this dependency needs to work. In the following example if we are importing dependency A, we are importing also dependency C.
 
 {:refdef: style="text-align: center;"}
 ![dist files]({{ site.baseurl }}/images/transitive_dependencies.png)
@@ -37,16 +37,23 @@ Cyclic dependencies
 ----------------------------
 One problem that you might have is when a cyclic dependency is discovered. Maven does not allow cyclic dependencies between projects, because otherwise, it is not clear which project to build first. So you need to get rid of this cycle. 
 
+In the following example we have `Entities` that depends on `Authorizer` that it's in another file, that depends on `Interactors` and this one dependends on `Entities`. 
+
 {:refdef: style="text-align: center;"}
-![dist files]({{ site.baseurl }}/images/breaking_cycle.png)
+![dist files]({{ site.baseurl }}/images/cycle_dependency.png)
 {: refdef}
 
-One thing to break this cycle is to create an interface module and, an implementation module, which gets rid of most cycles (Review the concept of <a href="https://en.wikipedia.org/wiki/Dependency_inversion_principle">dependency inversion principle</a> if you are not familiar with it). 
+One way to break this cycle is to create an interface module and, an implementation module, which gets rid of most cycles (Review the concept of <a href="https://en.wikipedia.org/wiki/Dependency_inversion_principle">dependency inversion principle</a> if you are not familiar with it). 
 
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/breaking_cycle_dependency.png)
+{: refdef}
+
+As you can see we have introduced the interface `Permissions` to break the cycle that we had in the first picture :-) 
 
 Declare all the dependencies used 
 ----------------------------------
-Including ONLY what you need in your project is a really good practice. You can take advantage of the maven dependency plugin, which has a goal called analyze that you can execute running the following command:
+Including ONLY what you need in your project is a really good practice. You can take advantage of the maven dependency plugin, which has a goal called `analyze` that you can execute running the following command:
 
 ~~~ java
 $> mvn dependency:analyze
@@ -79,7 +86,7 @@ If you are relying on a transitive dependency in your project, if you update a d
 
 Excluding dependencies
 ----------------------
-In the previous paragraph, we talked about including what you want to use, but what if there's a dependency that we want to exclude from our dependencies? 
+In the previous paragraph, we talked about including what you want to use, but what if there's a dependency that you want to exclude? 
 
 Unwanted dependencies included in your project can be excluded within the tags of dependency tag in an artifact in the POM file. In the following <a href="https://github.com/google/guava/blob/master/pom.xml">example</a> of Google Guava pom file, we can see the exclusion of an artifact when including the dependency of Google Truth.
 
@@ -112,7 +119,7 @@ They help to determine which artifacts to include in the distribution of the pro
 - System (similar to provided but you have to provide explicitly the dependency)
 - Import (only for dependencies of type pom)
 
-More info about the different scopes you can find <a href="https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#dependency-scope">here</a> 
+More info about the different scopes can be found <a href="https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#dependency-scope">here</a> 
 
 A JAR is not being included
 ----------------------------
@@ -127,9 +134,9 @@ In those cases that the jar is not included, it may cause a `ClassNotFoundExcept
 Dependency mediation
 --------------------------------
 In the case of a conflict, Maven uses the “nearest dependency” technique.
-- Nearest Definition: means that the version used will be the closest one to your project in the tree of dependencies.
+- Nearest dependency: means that the version used will be the closest one to your project in the tree of dependencies.
 - If two dependency versions are at the same depth in the dependency tree, it's the order in the declaration that counts.
-- You could explicitly add a dependency to D1 in A to force the use of D1… or just exclude D2.
+- You could explicitly add a dependency to Dv1 in A to force the use of Dv1… or just exclude Dv2.
 
 {:refdef: style="text-align: center;"}
 ![dist files]({{ site.baseurl }}/images/transitive_dependencies_1.png)
@@ -160,4 +167,4 @@ $> mvn versions:display-dependency-updates
 
 Conclusion
 --------------
-In this post, we have seen some useful tips when we are working with Maven in our Java project.
+In this post, we have seen some tips when we are working with Maven in our Java projects. Hope you know more about this important Java tool. If you want to read more about this topic I recommend you to check out the Apache Maven official page where you will find more <a href="https://maven.apache.org/articles.html">resources</a> 
