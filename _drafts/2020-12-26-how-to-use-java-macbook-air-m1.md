@@ -88,3 +88,10 @@ After opening it you will see `Virtual emulator` in Android studio available to 
 Conclusion
 --------------
 In this post we have seen how to use Java in a new Macbook air M1 and how the new processors of Apple outperform the old intel ones that I was using in other computers.
+
+
+https://androidstudio.googleblog.com/2020/12/android-emulator-apple-silicon-preview.html
+
+https://github.com/741g/android-emulator-m1-preview/releases/tag/0.2
+
+https://stackoverflow.com/questions/64907154/android-studio-emulator-on-macos-with-arm-cpu
