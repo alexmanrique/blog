@@ -6,7 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: mac, apple, m1, java
-image: images/apache_maven.png
+image: images/m1-java.png
 ---
 
 {:refdef: style="text-align: center;"}
