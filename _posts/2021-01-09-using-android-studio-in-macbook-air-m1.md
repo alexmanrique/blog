@@ -52,7 +52,7 @@ If you want to learn more regarding virtualization in processors you can read th
 
 As the previous message was telling us, we have 4 options. The easiest way to proceed is to use a physical device, but what if you haven't one available at the moment you are developing? 
 
-From now on, we will go with the option of using an Android virtual device based on an ARM system image as options 2 and 3 are not available. 
+From now on, we will go with the option of using an Android virtual device based on an ARM system image as options 2 and 3 are not possible to execute. 
 
 ### Using the virtual emulator
 
@@ -66,7 +66,7 @@ After installing the virtual emulator, we have to open it from the Applications 
 ![dist files]({{ site.baseurl }}/images/android_emulator_in_launchpad.png)
 {: refdef}
 
-After opening it you will see `Virtual emulator` in Android Studio available to use to deploy your Android application. Make sure to have Project tools available in Android Studio (View -> Tool Windows -> Project) 
+After opening it you will see `Virtual emulator` in Android Studio available to deploy your Android application. Make sure to have Project tools available in Android Studio (View -> Tool Windows -> Project) 
 
 {:refdef: style="text-align: center;"}
 ![dist files]({{ site.baseurl }}/images/virtual_device.png)
@@ -81,8 +81,6 @@ After pressing the launch button you will get your Android application running i
 Conclusion
 ------------------
 In this post, we have seen that is possible to install Android Studio in Macbook Air M1 and use a virtual device even that your M1 doesn't support VT-x. You can learn more about this emulator in the following references: 
-
-<a href="https://androidstudio.googleblog.com/2020/12/android-emulator-apple-silicon-preview.html">https://androidstudio.googleblog.com/2020/12/android-emulator-apple-silicon-preview.html</a>
 
 <a href="https://androidstudio.googleblog.com/2020/12/android-emulator-apple-silicon-preview.html">https://androidstudio.googleblog.com/2020/12/android-emulator-apple-silicon-preview.html</a>
 
