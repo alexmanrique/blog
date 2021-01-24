@@ -5,7 +5,8 @@ date: 2021-01-23 19:08:53 +0200
 categories: books
 comments: true
 lang: en
-tags: memory, leaks, java
+tags: developer, 2021
+image: images/developer-2021.jpg
 ---
 
 {:refdef: style="text-align: center;"}
