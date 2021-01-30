@@ -8,7 +8,31 @@ One of the symptoms is that you see that your application is not behaving as exp
 
 Common reasons for a memory leak can be resource that is not released:
  
-// example of resource that is not released
+```java
+ private static final String QUERY_INSERT = "INSERT INTO CARS (CODE, NAME) VALUES (?, ?)";
+ 
+ public static void insertCar(Car car, Connection connection) throws SQLException {
+        PreparedStatement stmt = connection.prepareStatement(QUERY_INSERT);
+        stmt.setString(1, car.getCode());
+        stmt.setString(2, car.getName());
+        stmt.executeUpdate();
+        //stmt.close(); <-- Not calling this close can lead to memory leak 
+}
+```
+A way to solve this memory leak will be using the try with resources that closes the `PreparedStatement` 
+
+```java
+
+ private static final String QUERY_INSERT = "INSERT INTO CARS (CODE, NAME) VALUES (?, ?)";
+
+    public static void insertCar(Car car, Connection connection) throws SQLException {
+        try (PreparedStatement stmt = connection.prepareStatement(QUERY_INSERT)) {
+            stmt.setString(1, car.getCode());
+            stmt.setString(2, car.getName());
+            stmt.executeUpdate();
+        }
+    }
+```
 
 A reference to an object is not released
 
