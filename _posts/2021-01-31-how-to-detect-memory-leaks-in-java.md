@@ -90,12 +90,12 @@ In this particular case we have an static field that has a reference to an objec
 ```java
 private static final List<Double> list = new ArrayList<>(1000000);
 
-@Test
+@Test(expected = OutOfMemoryError.class)
 public void memoryLeakWhenWeHaveLotsOfOperationsInAStaticField() throws InterruptedException {
     for (int i = 0; i < 1000000; i++) {
         list.add(Double.valueOf(i));
     }
-    Thread.sleep(8000); // to allow GC do its job
+    Thread.sleep(8000); 
 }
 
 ```
@@ -156,9 +156,7 @@ public void shouldThrowOutOfMemoryError() {
 }
 
 ```
-*Solution*: If you don't need access to the Outer class make the inner class static to avoid this reference to the Outer class. On the other hand use a non-static nested class (or inner class) 
-
-If you require access to an enclosing instance's fields but make sure that there are no references to the outer class neither the inner class to allow the GC to free the memory.
+*Solution*: If you don't need access to the Outer class make the inner class static to avoid this reference to the Outer class. On the other hand use a non-static nested class (or inner class) if you require access to an enclosing instance's fields but make sure that there are no references to the outer class neither the inner class to allow the GC to free the memory.
 
 ## Conclusion
 That's it for now! we have seen what is a memory leak and some ways to generate and fix memory leaks in our Java application.
