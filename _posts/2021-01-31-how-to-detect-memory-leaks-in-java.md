@@ -24,7 +24,7 @@ It’s a common unknown unknown between Java developers that are starting their 
 
 ## 1. Memory leak symptoms
 
-Some of the related symptoms to a memory leaks could be that: 
+Some of the related symptoms to memory leaks could be that: 
 - your application is not behaving as expected 
 - it stops without a particular reason
 - you need to restart everyday this application cause the memory usage increases without limit. 
