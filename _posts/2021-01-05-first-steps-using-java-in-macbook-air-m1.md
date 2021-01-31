@@ -100,8 +100,8 @@ In the following table, we can see a summary of the numbers and the difference i
 
 |Processor |    JDK version |Total RAM| OS system|  Total time seconds| % decrease| Number times per day |  1 day time cost |   1 month time cost | 1 year time cost|   days per year cost |
 | ----------- | ----------- |----------- | ------ | ----------- | ----------- |----------- | ------ |----------- | ----------- |----------- | 
-|Intel i5   |Java 8 |   4GB|    Macosx| 9,8 |59,48979592|   15  |147|   2940    |35280  |9,8|
-|Intel i7|  Java 8 |12GB|   Windows 10  |12,953|    69,35072956 |15 |194,295    |3885,9|    46630,8 |12,953|
+|Intel core i5 2,8 GHz |Java 8 |   4GB|    Macosx| 9,8 |59,48979592|   15  |147|   2940    |35280  |9,8|
+|Intel i7 |  Java 8 |12GB|   Windows 10  |12,953|    69,35072956 |15 |194,295    |3885,9|    46630,8 |12,953|
 |M1|    Azul Java 8 |8GB|   Macosx| 3,97|   -   |15 |59,55| 1191|   14292|  3,97|
 
 The cost time per deployment is much better with the M1 than in the other computers.

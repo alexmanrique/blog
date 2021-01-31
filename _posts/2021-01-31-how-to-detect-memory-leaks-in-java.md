@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "How to detect and fix memory leaks in your Java application"
-date: 2021-01-29 19:08:53 +0200
+date: 2021-01-31 19:08:53 +0200
 categories: development
 comments: true
 lang: en
