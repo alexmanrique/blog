@@ -13,21 +13,21 @@ image: images/memory-leak.jpg
 ![dist files]({{ site.baseurl }}/images/memory-leak.jpg)
 {: refdef}
 
-In this post we are going to talk about how to find memory leaks in Java and some strategies to fix them. 
+In this post, we are going to talk about how to find memory leaks in Java and some strategies to fix them. 
 
 You don’t look actively into memory leaks in your Java code if there are no symptoms that lead you to think that you have a memory leak. However, you have to be aware that:
 
 > A small leak will sink a great ship
 > ~ Benjamin Franklin
 
-It’s a common unknown unknown between Java developers that are starting their career in software development. 
+It’s a common unknown between Java developers that are starting their career in software development. 
 
 ## 1. Memory leak symptoms
 
-Some of the related symptoms to a memory leaks could be that: 
+Some of the related symptoms to memory leaks could be that: 
 - your application is not behaving as expected 
 - it stops without a particular reason
-- you need to restart everyday this application cause the memory usage increases without limit. 
+- you need to restart every day this application cause the memory usage increases without limit. 
 - you detect out-of-memory heap error in the logs.
 
 ## 2. Visualizing memory leaks when running the application
@@ -40,15 +40,15 @@ Once you have downloaded it you can open the application and attach VisualVM to 
 ![dist files]({{ site.baseurl }}/images/visual-vm.png)
 {: refdef}
 
-Next step is to perform the operation that causes the bad performance. Inspect the Monitor and the visual gc tab. The objects leaked will be in the old gen pool.
+The next step is to perform the operation that causes the bad performance. Inspect the Monitor and the visual gc tab. The objects leaked will be in the old gen pool.
 
-In the next screenshot we can see the old gen memory thanks to the `visual-gc` plugin that we have to install using the plugins menu `Tools > Plugins`
+In the next screenshot, we can see the old gen memory thanks to the `visual-gc` plugin that we have to install using the plugins menu `Tools > Plugins`
 
 {:refdef: style="text-align: center;"}
 ![dist files]({{ site.baseurl }}/images/visual-vm-visual-gc.png)
 {: refdef}
 
-In the next section we are going to see some of the common mistakes in code that can lead to a memory leak.
+In the next section, we are going to see some of the common mistakes in code that can lead to a memory leak.
 
 ## 3. Common memory leak sources.
 
@@ -81,11 +81,11 @@ Opening a connection with the database from our backend code can cause a memory 
         }
     }
 ```
-Make sure to use properly code that has `Autoclosable` if you are using Java 7 or newer version of Java, opening the resource with the try catch with resources capability this way you will not need to close it explicitly.
+Make sure to use proper code that has `Autoclosable` if you are using Java 7 or a newer version of Java, opening the resource with the try-catch with resources capability this way you will not need to close it explicitly.
 
 ### 3.2. A reference to an object is not released
 
-In this particular case we have an static field that has a reference to an object that is using a lot of memory:
+In this particular case we have a static field that has a reference to an object that is using a lot of memory:
 
 ```java
 private static final List<Double> list = new ArrayList<>(1000000);
@@ -103,7 +103,7 @@ public void memoryLeakWhenWeHaveLotsOfOperationsInAStaticField() throws Interrup
 
 ### 3.3. Equals and hashcode are not implemented 
 
-If we are using objects that don't have implemented the `equals` and `hashcode` and we had them into a `Set` it will grow, and it will ignore duplicates. We will not be able to remove these objects after adding them into this data structure. 
+If we are using objects that don't have implemented the `equals` and `hashcode` and we had them into a `Set` it will grow, and it will ignore duplicates. We will not be able to remove these objects after adding them to this data structure. 
 
 ```java
 public class MyObject{
@@ -127,9 +127,9 @@ public void shouldThrowOutOfMemoryError(){
 ```
 *solution*: Implement `equals` and `hashcode` always, but especially if you are going to use them in a datastructure. You can use <a href="https://projectlombok.org/">Lombok</a> that has <a href="https://projectlombok.org/features/EqualsAndHashCode">EqualsAndHashCode</a> annotation that save you time writing those methods and reducing the boilerplate code.
 
-### 3.4. Inner classes that reference outer classes can leak. 
+### 3.4. Inner classes that reference outer classes can leak. 
 
-Each instance of an anoymous inner class always keeps a reference to the outer class. This is not a problem unless: 
+Each instance of an anonymous inner class always keeps a reference to the outer class. This is not a problem unless: 
 
 - you don’t keep a lot of data in the Outer instance or
 - the lifetime of the Result object is short
@@ -156,13 +156,9 @@ public void shouldThrowOutOfMemoryError() {
 }
 
 ```
-*Solution*: If you don't need access to the Outer class make the inner class static to avoid this reference to the Outer class. On the other hand use a non-static nested class (or inner class) 
+*Solution*: If you don't need access to the Outer class make the inner class static to avoid this reference to the Outer class. On the other hand, use a non-static nested class (or inner class) 
 
 If you require access to an enclosing instance's fields but make sure that there are no references to the outer class neither the inner class to allow the GC to free the memory.
 
 ## Conclusion
 That's it for now! we have seen what is a memory leak and some ways to generate and fix memory leaks in our Java application.
-
-
- 
-
