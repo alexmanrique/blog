@@ -6,8 +6,12 @@ categories: development
 comments: true
 lang: en
 tags: jekyll, m1, macbook
-image: 
+image: images/jekyll_m1.png
 ---
+
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/jekyll_m1.png)
+{: refdef}
 
 This post will be a little bit different cause I will add the commands that I used to get Jekyll running on my Macbook Air m1.
 
