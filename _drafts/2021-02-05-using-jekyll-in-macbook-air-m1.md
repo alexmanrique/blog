@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Installing Jekyll in Macbook Air m1"
+title: "Installing Jekyll in Macbook Air M1"
 date: 2021-02-05 19:08:53 +0200
 categories: development
 comments: true
