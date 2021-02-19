@@ -50,15 +50,5 @@ At that time I was using my old 2014 Asus laptop, I connected it to a 19' screen
 ## Plug the laptop into the screen
 To plug the laptop into the screen and using an ethernet connection to connect to the internet I bought a USB-c from Amazon. The product cost 20 euros and after some weeks of using it, I had to buy a new one because the HDMI connection was not working and I couldn't use my screen. Then some days ago I bought another <a href="https://www.amazon.es/gp/product/B07PPGWQ15/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1">adapter</a> (hope this one is better) and its working completely fine.
 
-## Some pictures of the process
-
-{:refdef: style="text-align: center;"}
-![dist files]({{ site.baseurl }}/images/desktop-1.jpg)
-{: refdef}
-
-{:refdef: style="text-align: center;"}
-![dist files]({{ site.baseurl }}/images/desktop-2.jpg)
-{: refdef}
-
 ## Conclusion
 In this post, I have shared with you how I changed my working space to be more comfortable working. What do you think about standing desks? Have you ever tried to work standing for some time? Have you adapted your workspace to work during this pandemic?
