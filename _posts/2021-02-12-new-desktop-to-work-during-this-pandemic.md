@@ -6,8 +6,12 @@ categories: development
 comments: true
 lang: en
 tags: developer, standing-desk
-image: 
+image: images/standing-desk.png
 ---
+
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/standing-desk.png)
+{: refdef}
 
 Do you wonder how is the desktop of a developer work during this pandemic? In this blog post, I will share with you the table and the accessories that I use to work daily.
 
@@ -21,7 +25,7 @@ The first thing that I did was to move the direction of the table. The table was
 But then, I realized that there was space two put two tables instead of a single one in this new setup. I started to seek some inspiration in some YouTubers that show their fancy desktop setups and some of them were using a type of desk called standing desk. I use to have some shoulder/neck pain and the thing is that being sitting for 8 hours a day is not good for our bodies to cause we are not adapted to the chair, so I started to investigate more on the subject. 
 
 ## Our body needs movement
-According to the following <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4760895/">study</a> people who sat for thirteen hours had twice the mortality rate as the average. And it was not only the total sitting time that mattered but also the duration of each sitting. At the same total time, those who sat for shorter periods, interspersed with some movement, had less risk than the rest
+According to the following <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4760895/">study</a> people who sat for thirteen hours had twice the mortality rate as the average. And it was not only the total sitting time that mattered but also the duration of each sitting. At the same total time, those who sat for shorter periods, interspersed with some movement, had less risk than the rest.
 
 ## Measuring the space available
 I started measuring the space that I wanted to fill with a table. The table could not be wide because then I would reduce space in the room when I'm not working. I have the bed in this room and I have a small table beside the bed and the window and didn't want that the new table occupied more space than It should. 
@@ -39,7 +43,7 @@ In the instruction sheet were all the steps that you had to follow to have it co
 I did some holes in the wood worktop to be able to put the screws to join the structure with the table. The final result was better than I'd expected. I had a standing desk table that fits in the available space in the room.
 
 ## Arm for my screen
-Once I had the table in place I wanted to set my screen but without using table space and having separated enough from me while I was at the table working. I bought then an <a href="https://www.amazon.es/gp/product/B07DFJRTQ1/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1">arm</a> to put monitors and flexible to move it up, down, and without using extra space in the table (Remember the width of the table is 52cm, so I have to use every cm )
+Once I had the table in place I wanted to set my screen but without using table space and having separated enough from me while I was at the table working. I bought then an <a href="https://www.amazon.es/gp/product/B07DFJRTQ1/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1">arm</a> to put monitors and flexible to move it up, down, and without using extra space in the table (Remember the width of the table is 52cm, so I have to use every cm)
 
 ## New mouse 
 Even that my idea is to use the mouse less and less in favor of using the keyboard shortcuts to be more productive and do things faster, I bought the <a href="https://www.amazon.es/Logitech-Inal%C3%A1mbrico-Desplazamiento-Seguimiento-Superficie/dp/B07W6JG6Z7">MX master 3 logitech</a> because the mouse that I was using to work was not comfortable enough and I read good reviews. 
