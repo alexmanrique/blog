@@ -29,7 +29,7 @@ The trend is increasingly to buy online without physically going to a store, whi
 --------------------------------------------
 If we look at the figures for the salaries of developers in the <a href="https://www.careerexplorer.com/careers/software-engineer/salary/">United States</a> or <a href="https://www.payscale.com/research/CH/Job=Software_Engineer/Salary">Switzerland</a>, these are around 100k on average, quite different from the average salaries of their respective countries.
 
-A programmer engineer is not going to get rich but he is going to have a higher salary compared to other professions.
+A programmer engineer job is not going to get rich but he is going to have a higher salary compared to other professions.
 
 4 - When you program you are creating a product, a digital product.
 ---------------------------------------------------------------------
