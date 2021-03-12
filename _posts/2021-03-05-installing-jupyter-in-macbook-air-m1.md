@@ -6,7 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: python, silicon, macbook
-image: images/set-zeroes-matrix.png
+image: images/m1-jupyter.png
 ---
 
 {:refdef: style="text-align: center;"}
