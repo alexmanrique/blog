@@ -58,7 +58,7 @@ with the following command, we install Python version 3.9.1
 pyenv install 3.9.1
 ```
 
-with the following command, we can add the initialization of `pyenv` new values into the `.zshrc` file, this way we don't have to type the same command everytime we open a new `iterm`.
+with the following command, we can add the initialization of `pyenv` new values into the `.zshrc` file, this way we don't have to type the same command everytime we open a new terminal, in my case I use <a href="https://iterm2.com/">`iterm2`</a>.
 
 ```console
 echo 'eval "$(pyenv init -)"' >> .zshrc
@@ -84,7 +84,7 @@ Once jupyter is installed we can run a jupyter notebook with the following comma
 ```console
 jupyter notebook
 ```
-And 'voila' we have jupyter notebook running in our Macbook air m1 on <a href="http://localhost:8888/tree">http://localhost:8888/tree</a>
+And 'voila' we have jupyter notebook running in our Macbook Air M1 on <a href="http://localhost:8888/tree">http://localhost:8888/tree</a>
 
 {:refdef: style="text-align: center;"}
 ![dist files]({{ site.baseurl }}/images/jupyter-notebook.png)
@@ -92,7 +92,7 @@ And 'voila' we have jupyter notebook running in our Macbook air m1 on <a href="h
 
 Fixing the Jupyter kernel issue
 ----------------------------------- 
-There's a problem with Jupyter notebook kernel that stops working in our shiny Macbook m1 laptops. A workaround is explained in this <a href="https://www.youtube.com/watch?v=mwmke957ki4&feature=youtu.be&t=2740">George Hotz youtube video</a>.
+There's a problem with Jupyter notebook kernel that stops working in our shiny Macbook m1 laptop. A workaround is explained in this <a href="https://www.youtube.com/watch?v=mwmke957ki4&feature=youtu.be&t=2740">George Hotz youtube video</a>.
 
 We have to look for `eventloops.py` file in our system. To do this we can execute the following command:
 
@@ -115,6 +115,6 @@ we save and close the file and the kernel should not stop anymore :-)
 
 Conclusion
 ------------------------
-In this post, we have seen how to install Jupyter notebook in a Macbook air m1. Now it's time to see what things we can do with Jupyter notebooks but this will be in another post.
+In this post, we have seen how to install Jupyter notebook in a Macbook Air M1. Now it's time to see what things we can do with Jupyter notebooks but this will be in another post.
 
 
