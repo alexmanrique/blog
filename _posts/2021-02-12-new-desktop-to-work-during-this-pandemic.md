@@ -16,13 +16,13 @@ image: images/standing-desk.png
 Do you wonder how is the desktop of a developer work during this pandemic? In this blog post, I will share with you the table and the accessories that I use to work daily.
 
 ## A working space redesign
-From the moment I started working from home I knew that the room that I was using to work was not the best place to be working 8 hours a day. I knew that I had to do some improvements to be comfortable and in the best environment to be able to execute my job .
+From the moment I started working from home I knew that the room that I was using to work was not the best place to be working 8 hours a day. I knew that I had to do some improvements to be comfortable and in the best environment to be able to execute my job.
 
 ## Changing the sitting direction 
 The first thing that I did was to move the direction of the table. The table was in front of the window and the amount of direct light dazzled my eyes and for some days I had eye redness. So, I decided to set the table in a way that I could seat lateral to the window. This way I was taking advantage of the light that I got in the room without damaging my eyes.
 
 ## Why not standing instead of sitting?
-But then, I realized that there was space two put two tables instead of a single one in this new setup. I started to seek some inspiration in some YouTubers that show their fancy desktop setups and some of them were using a type of desk called standing desk. I use to have some shoulder/neck pain and the thing is that being sitting for 8 hours a day is not good for our bodies to cause we are not adapted to the chair, so I started to investigate more on the subject. 
+But then, I realized that there was space two put two tables instead of a single one in this new setup. I started to seek some inspiration in some YouTubers that show their fancy desktop setups and some of them were using a type of desk called a standing desk. I use to have some shoulder/neck pain and the thing is that being sitting for 8 hours a day is not good for our bodies to cause we are not adapted to the chair, so I started to investigate more on the subject. 
 
 ## Our body needs movement
 According to the following <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4760895/">study</a> people who sat for thirteen hours had twice the mortality rate as the average. And it was not only the total sitting time that mattered but also the duration of each sitting. At the same total time, those who sat for shorter periods, interspersed with some movement, had less risk than the rest.
