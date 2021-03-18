@@ -9,7 +9,13 @@ tags: elasticsearch
 image: images/set-zeroes-matrix.png
 ---
 
-Caused by: ElasticsearchException[Elasticsearch exception [type=illegal_argument_exception, reason=[half_float] supports only finite values, but got [94433.46]]]
+In the following post we are going to see how to solve an error that I found in an application that is using Elasticsearch as a storage.
+
+What is Elasticsearch
+-----------------------------
+Elasticsearch is a non-relational database that is really powerful for doing searches by text. 
+
+> Caused by: ElasticsearchException[Elasticsearch exception [type=illegal_argument_exception, reason=[half_float] supports only finite values, but got [94433.46]]]
 
 https://www.elastic.co/guide/en/elasticsearch/reference/6.8/number.html
 
@@ -17,4 +23,3 @@ According to the elasticsearch documentation the maximum value that can have a h
 
 ## Conclusion
 
-This problem has time complexity O(MxN) because we have to interate over all the matrix, and O(1) space complexity because we are not allocating extra space.

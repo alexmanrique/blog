@@ -6,11 +6,11 @@ categories: development
 comments: true
 lang: en
 tags: developer, standing-desk
-image: images/standing-desk.png
+image: images/standing-desk.jpg
 ---
 
 {:refdef: style="text-align: center;"}
-![dist files]({{ site.baseurl }}/images/standing-desk.png)
+![dist files]({{ site.baseurl }}/images/standing-desk.jpg)
 {: refdef}
 
 Do you wonder how is the desktop of a developer work during this pandemic? In this blog post, I will share with you the table and the accessories that I use to work daily.

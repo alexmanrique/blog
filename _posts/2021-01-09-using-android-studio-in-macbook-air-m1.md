@@ -63,7 +63,7 @@ Once you have downloaded you have to right-click to the .dmg file and click open
 After installing the virtual emulator, we have to open it from the Applications menu. 
 
 {:refdef: style="text-align: center;"}
-![dist files]({{ site.baseurl }}/images/android_emulator_in_launchpad.png)
+![dist files]({{ site.baseurl }}/images/android_emulator_in_launchpad.jpg)
 {: refdef}
 
 After opening it you will see `Virtual emulator` in Android Studio available to deploy your Android application. Make sure to have Project tools available in Android Studio (View -> Tool Windows -> Project) 
