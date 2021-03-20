@@ -113,6 +113,8 @@ repository: alexmanrique/blog
 
 mailchimp-list: "https://alexmanrique.us17.list-manage.com/subscribe/post?u=01dc101c3bd1d708e13e72e12&amp;id=4079f165ee"
 
+after_footer_scripts     :
+  - /assets/js/cookie-consent.js
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
