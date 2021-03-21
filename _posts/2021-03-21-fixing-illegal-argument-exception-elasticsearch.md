@@ -78,5 +78,5 @@ reindexing.</a> of the data from the old index to the new index.
 
 ## Conclusion
 
-In this post, we have seen how to fix a half float problem that we had in our Elasticsearch index where we were storing prices that were higher than the `half_float` maximum value.
+In this post, we have seen how to fix a `half_float` problem that we had in our Elasticsearch index where we were storing prices that were higher than the `half_float` maximum value.
 
