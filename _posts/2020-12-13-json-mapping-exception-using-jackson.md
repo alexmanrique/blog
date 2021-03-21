@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "The last bug"
+title: "Solving JsonMappingException error in Fasterxml Jackson"
 date: 2020-12-13 12:08:53 +0200
 categories: development
 comments: true
@@ -40,7 +40,7 @@ The solution to the problem was to change the data type from `Integer` to `Long`
 
 This happened because this third party sent the data using an `Integer` and then without prior notice, they changed the data type to a `Long`.
 
-How did I catch the error
+How did I catch the error?
 --------------------------
 I realized that there was an error in the application logs using <a href="https://www.elastic.co/es/kibana">Kibana</a>. Also, because there was no data in the metrics as previously and this triggered an alarm that it's configured by Grafana (read this <a href="{{ site.baseurl }}{% post_url 2018-01-15-metrics-in-your-java-application %}">post</a> that I wrote some time ago if you want to know more) that sends a warning to a Slack channel.
 
