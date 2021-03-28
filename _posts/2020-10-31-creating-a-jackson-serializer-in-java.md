@@ -47,7 +47,7 @@ serializing an object will output a JSON with the following structure:
     "yearsOfExperience":"10"
 }
 ```
-This is the default serialization that we got for the class `Car` but what if we have a field that is not possible to serialize? Here is when we need to create a custom serializer for this field. 
+This is the default serialization that we got for the class `Employee` but what if we have a field that is not possible to serialize? Here is when we need to create a custom serializer for this field. 
 
 Java libraries to serialize and deserialize
 --------------------------------------------------

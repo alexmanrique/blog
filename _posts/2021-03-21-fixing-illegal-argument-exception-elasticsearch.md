@@ -10,7 +10,7 @@ image: images/elasticsearch_half_float.png
 ---
 
 {:refdef: style="text-align: center;"}
-![dist files]({{ site.baseurl }}/images/elasticsearch_half_float.png)
+![dist files]({{ site.baseurl }}/images/elasticsearch_error.png)
 {: refdef}
 
 In the following post, we are going to see how to solve an error that I found in an application that is using Elasticsearch as storage.
@@ -79,4 +79,8 @@ reindexing.</a> of the data from the old index to the new index.
 ## Conclusion
 
 In this post, we have seen how to fix a `half_float` problem that we had in our Elasticsearch index where we were storing prices that were higher than the `half_float` maximum value.
+
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/elasticsearch_ok.png)
+{: refdef}
 
