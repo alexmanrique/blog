@@ -13,8 +13,7 @@ image: images/serialization-in-java.png
 ![dist files]({{ site.baseurl }}/images/serialization-in-java.png)
 {: refdef}
 
-
-In this post, we are going to see how we can use serialization using a Java library called Jackson to be able to send Java objects using JSON in the context of a Java REST API.
+In this post, we are going to see how we can serialize objects using JSON in the context of a Java REST API with a library called Jackson.
 
 Why do we need serialization?
 ---------------------------------------------
@@ -55,7 +54,7 @@ There are some Java libraries out there, that you can use for serialization purp
 
 Jackson is a mature JSON serialization/deserialization library that is built into all JAX-RS implementations and has extensive annotation support, however, there are other alternatives out there.
 
-|   Lib name | URL         | Github stars | Forks |
+| Lib name | URL         | Github stars | Forks |
 | Jackson| <a href="https://github.com/FasterXML/jackson">github.com/FasterXML/jackson</a> | 6K | 1k |
 | GSON | <a href="https://github.com/google/gson">github.com/google/gson</a> |   18,7K | 3,6k  |
 | Fastjson | <a href="https://github.com/alibaba/fastjson">github.com/alibaba/fastjson</a> | 22,5K | 6k |
