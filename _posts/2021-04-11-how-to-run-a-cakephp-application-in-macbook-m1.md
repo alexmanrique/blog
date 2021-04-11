@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "How to set up a CakePHP application in Macbook Air M1"
+title: "How to run a CakePHP application in Macbook Air M1"
 date: 2021-04-11 00:00:00 +0200
 categories: development
 comments: true
@@ -68,26 +68,26 @@ After uncommenting the extension I got the same error as before `intl extension 
 
 ## Installing PHP through Homebrew
 
-Then I could list which versions were available to install using `brew`. 
+With the following command we can list which versions of PHP are available to install using `brew`. 
 
 ```console
 brew list | grep php
 ```
 
-I decided to install version 7.2 of PHP 
+Then we proceed to install version 7.2 of PHP 
 
 ```console
 brew install php@7.2
 ```
 
-Then using the link command of brew I forced the usage of the version that I had previously installed.
+Then using the link command of brew we can force the usage of the version that we have previously installed.
 
 ```console
 brew link --force php@7.2
 ```
 ## Adding newly installed PHP version to the PATH
 
-Then I added in the `.zshrc` file the path to the installation directory `bin` and `sbin` of `php`
+The next thing to do is to add in the `.zshrc` file the path to the installation directory `bin` and `sbin` of new PHP installation.
 
 ```console
 echo 'export PATH="/opt/homebrew/opt/php@7.2/bin:$PATH"' >> ~/.zshrc
@@ -97,7 +97,7 @@ echo 'export PATH="/opt/homebrew/opt/php@7.2/bin:$PATH"' >> ~/.zshrc
 echo 'export PATH="/opt/homebrew/opt/php@7.2/sbin:$PATH"' >> ~/.zshrc
 ```
 
-Now that we have installed a new version of PHP using Homebrew we can execute the following command to find where the `php.ini` file is located. If the previous steps were successfull we will see that php is now inside `homebrew` folder.
+Now that we have installed a new version of PHP using Homebrew we can execute again the following command to find where the `php.ini` file is located. If the previous steps were successfull we will see that php is now inside `homebrew` folder.
 
 ```console
 php --ini
@@ -121,7 +121,7 @@ composer install
 
 ## Updating captcha-com plugin
 
-This point is really specific to my CakePHP application. The thing is that I'm using a captcha plugin. After `composer` was installed I was able to update the captcha plugin that I'm using to filter spambots using the following command.
+This point is really specific to my CakePHP application. The thing is that I'm using a captcha plugin. After `composer` is installed we are able to update the captcha plugin to filter <a href="https://en.wikipedia.org/wiki/Spambot">spambots</a> from <a href="https://en.wikipedia.org/wiki/Form_(HTML)">forms</a> using the following command.
 
 ```console
 composer update captcha-com/cakephp-captcha --no-plugins
@@ -129,7 +129,7 @@ composer update captcha-com/cakephp-captcha --no-plugins
 
 ## Running cake 
 
-To run a cake application locally we can use a built-in server going to the `bin/` folder and executing `bin/cake server` command. If we have done the previous installation properly we will be able to run the previous command good and we will see the following output in the command line.
+To run a CakePHP application locally we can use a built-in server going to the `bin/` folder and executing `bin/cake server` command. If we have done the previous installation properly we will be able to run the previous command good and we will see the following output in the command line.
 
 ```console
 bin/cake server
@@ -147,7 +147,7 @@ You can exit with `CTRL-C`
 
 ## Creating a docker-compose.yml  
 
-My CakePHP application is using a relational database to store data. Every time that I had to change the computer I had to install MariaDB, then, a way to avoid this is to use <a href="https://www.docker.com/">docker</a> to run an instance of MariaDB. Here we can see the `docker-compose.yml` file where we specify a MariaDB service and a <a href="https://www.adminer.org/">adminer</a> to be able to see the tables that are created and run some queries (similar to <a href="https://www.phpmyadmin.net/">phpmyadmin</a>)    
+My CakePHP application is using a relational database to store data. To avoid having to install MariaDB in our local computer we can use <a href="https://www.docker.com/">docker</a> to run an instance of MariaDB. Here we can see the `docker-compose.yml` file where we specify a MariaDB service and a <a href="https://www.adminer.org/">adminer</a> to be able to see the tables that are created and run some queries (similar to <a href="https://www.phpmyadmin.net/">phpmyadmin</a>)    
 
 ``` yaml
 version: '3.1'
@@ -166,7 +166,7 @@ services:
 
 ## Connection refused to MariaDB
 
-I was trying to connect to MariaDB from the CakePHP application but I was getting connection refused. I didn't understand why because MariaDB was starting successfully.
+I was trying to connect to MariaDB from the CakePHP application but I was getting connection refused. I didn't understand why, because MariaDB was starting successfully.
 
 ```
 SQLSTATE[HY000] [2002] Connection refused cakephp
@@ -193,4 +193,10 @@ services:
 
 ## Conclusion
 
-In this post, we have seen how to install PHP and run CakePHP application using a MariaDB database running inside docker in a Macbook Air M1.
+In this post, we have seen how to:
+
+- install new version of PHP
+- run CakePHP application 
+- run MariaDB database using docker-compose  
+
+all this in a Macbook Air M1. Let me know if you found this useful.
