@@ -6,14 +6,18 @@ categories: development
 comments: true
 lang: en
 tags: php
-image: 
+image: images/cakephp-m1.png
 ---
+
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/cakephp-m1.png)
+{: refdef}
 
 In this post I'm going to summarize the steps that I followed to have running on my Macbook Air M1 a <a href="https://cakephp.org/">CakePHP</a> application using <a href="https://mariadb.org/">MariaDB</a> as a database.
 
 ## PHP and MacOS big Sur are not good friends
 
-If we look for where PHP is installed in macOS big Sur we find it in `/etc/` directory. If you don't know where you have it you can run the following command.
+If we look for where PHP is installed in MacOS big Sur we find it in `/etc/` directory. If you don't know where you have it you can run the following command.
 
 ```console
 ls -l $(which php)
@@ -29,7 +33,7 @@ drwxr-xr-x   3 root  wheel      96  1 ene  2020 php-fpm.d
 -r--r--r--   1 root  wheel   71554 28 mar 19:22 php.ini.default
 ``` 
 
-You can notice a `php-NOTICE-PLANNED-REMOVAL.txt` file warning you that PHP will be removed from newer versions of the operating system. 
+We can notice a `php-NOTICE-PLANNED-REMOVAL.txt` file warning us that PHP will be removed from newer versions of the operating system. 
 
 ```console
 WARNING: PHP is not recommended.
@@ -37,13 +41,15 @@ PHP is included in macOS for compatibility with legacy software.
 Future versions of macOS will not include PHP.
 ```
 
-To know which version of PHP I had installed on my computer I run the following command
+To know which version of PHP we have installed on our computer we can run the following command
 
 ```console
 php -v 
 ```
 
-After trying to uncomment the line where the `intl` extension was defined on `/etc/php.ini` file  
+## Intl extension is not loaded
+
+When trying to use the PHP version that comes within MacOs Big Sur we've got `Intl extension is not loaded` error. If we look for the `php.ini` file that we can find using the command `php --ini` we can uncomment the line where the `intl` extension is defined. This file was on the following path `/etc/php.ini`.  
 
 ```console
 ; - Many DLL files are located in the extensions/ (PHP 4) or ext/ (PHP 5+)
@@ -58,7 +64,7 @@ After trying to uncomment the line where the `intl` extension was defined on `/e
 ;extension=gmp
 extension=intl
 ``` 
-I had the same error as before, so I decided to install a separate version of PHP using Homebrew.
+After uncommenting the extension I got the same error as before `intl extension is not loaded`, so I decided to install a separate version of PHP using Homebrew.
 
 ## Installing PHP through Homebrew
 
@@ -91,7 +97,7 @@ echo 'export PATH="/opt/homebrew/opt/php@7.2/bin:$PATH"' >> ~/.zshrc
 echo 'export PATH="/opt/homebrew/opt/php@7.2/sbin:$PATH"' >> ~/.zshrc
 ```
 
-The following command is helpful to find where the php.ini file is located.
+Now that we have installed a new version of PHP using Homebrew we can execute the following command to find where the `php.ini` file is located. If the previous steps were successfull we will see that php is now inside `homebrew` folder.
 
 ```console
 php --ini
@@ -115,7 +121,7 @@ composer install
 
 ## Updating captcha-com plugin
 
-Then once composer was installed I was able to update the captcha plugin that I'm using to filter spambots.
+This point is really specific to my CakePHP application. The thing is that I'm using a captcha plugin. After `composer` was installed I was able to update the captcha plugin that I'm using to filter spambots using the following command.
 
 ```console
 composer update captcha-com/cakephp-captcha --no-plugins
@@ -141,7 +147,7 @@ You can exit with `CTRL-C`
 
 ## Creating a docker-compose.yml  
 
-My CakePHP application is using a relational database to store data. Every time that I had to change the computer I had to install MariaDB, then, a way to avoid this is to use docker to run an instance of MariaDB. Here we can see the `docker-compose.yml` file where we specify   
+My CakePHP application is using a relational database to store data. Every time that I had to change the computer I had to install MariaDB, then, a way to avoid this is to use <a href="https://www.docker.com/">docker</a> to run an instance of MariaDB. Here we can see the `docker-compose.yml` file where we specify a MariaDB service and a <a href="https://www.adminer.org/">adminer</a> to be able to see the tables that are created and run some queries (similar to <a href="https://www.phpmyadmin.net/">phpmyadmin</a>)    
 
 ``` yaml
 version: '3.1'
