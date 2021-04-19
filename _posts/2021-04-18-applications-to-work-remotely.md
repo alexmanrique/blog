@@ -17,7 +17,7 @@ image: images/apps-post.jpeg
 Photo by <a href="https://unsplash.com/@mikaelashannon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mikaela Shannon</a> on <a href="https://unsplash.com/s/photos/desktop-apps?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 {: refdef}  
 
-In this post, I'm going to talk about the application that I use daily.
+In this post, I'm going to talk about the applications that I use weekly. There are more that I use but in this list I add the ones that I couldn't work without them.
 
 ## Slack
 
@@ -93,4 +93,4 @@ This application allows me to connect to a Virtual desktop interface (VDI). It's
 
 ## Conclusions
 
-These are the applications that I use daily. Which are the apps that you use to work? 
+These are the applications that I use weekly. Which are the apps that you use to work? 
