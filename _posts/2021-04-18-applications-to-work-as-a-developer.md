@@ -33,7 +33,7 @@ With this tool you can create tickets, you can create Kanban boards, you can set
 
 ## Confluence
 
-It's a wiki where you can document and share things with the team or with other teams. Having things documented is important on a team basis. You can document there your policies, your agreements as a team, the modules of software that your team owns, the metrics of the team 
+It's a wiki where you can document and share things with the team or with other teams. Having things documented is important on a team basis. You can document there your policies, your agreements as a team, the modules of software that your team owns or the metrics of the team. 
 
 ## Hangouts
 
