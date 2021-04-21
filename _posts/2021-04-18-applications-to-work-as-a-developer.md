@@ -49,15 +49,15 @@ I use this tool to plan my week things that I want to do and it also has a Pomod
 
 ## Intellij Idea
 
-It's the IDE that I have used more during my time that I have been developing. Before this IDE I used it at the beginning of my career Eclipse but when I discovered Intellij I never when back.
+It's the IDE that I have used more during my time as developer. Before this IDE I used at the beginning of my career Eclipse but when I discovered Intellij I never change again for Java projects.
 
 ## Google Calendar
 
-All the meetings that I have every week are scheduled in this application. At the beginning of the week, I look at the calendar and see the most important meetings that I have to attend and if I have something to prepare.
+All the meetings that I have every week are scheduled in this application. At the beginning of the week, I look at the calendar and see the most important meetings that I have to attend and if I have to prepare something.
 
 ## Android Studio
 
-I have used this application to program an android application. It's like Intellij. You can use different emulators to check how your application works on different devices.
+I have used this application to program an Android application. It's like Intellij. You can use different emulators to check how your application works on different devices.
 
 ## Postman
 
@@ -65,11 +65,11 @@ This application is perfect to have a collection of projects to call to differen
 
 ## Google docs
 
-I use it to write shared documents, presentations, spreadsheets. You can share with people giving read and write access permissions. You can add comments to a shared document and you can discuss with other coworkers things about the content, ideas.
+I use it to write shared documents, presentations, spreadsheets or surveys. You can share with people giving read and write access permissions. You can add comments to a shared document and you can discuss with other coworkers things about content or ideas.
 
 ## Visual studio code
 
-I started using this IDE for non-Java projects. If I have to write some application that needs html5, CSS, javascript, and PHP I use this one. This blog I'm writing it using visual studio code.
+I started using this IDE for non-Java projects. If I have to write some application that needs Html5, CSS, Javascript or PHP I use this one. I'm writing this blog post using visual studio code.
 
 ## Alfred
 
