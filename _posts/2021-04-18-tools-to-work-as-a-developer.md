@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Applications to work as a developer"
+title: "Tools to work as a developer"
 date: 2021-04-18 09:08:53 +0200
 categories: development
 comments: true
@@ -17,7 +17,7 @@ image: images/apps-post.jpeg
 Photo by <a href="https://unsplash.com/@mikaelashannon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mikaela Shannon</a> on <a href="https://unsplash.com/s/photos/desktop-apps?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 {: refdef}  
 
-In this post, I'm going to talk about the applications that I use weekly. There are more that I use but in this list I add the ones that I couldn't work without them.
+In this post, I'm going to talk about the tools that I use weekly. There are more that I use but in this list I add the ones that I couldn't work without them.
 
 ## Slack
 
