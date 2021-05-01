@@ -6,7 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: java, backend, gcs
-image: 
+image: images/bucket.jpg
 ---
 
 {:refdef: style="text-align: center;"}
