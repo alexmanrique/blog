@@ -41,6 +41,10 @@ We need to add the following lines in the `pom.xml` file of our Java project. Th
 
 If IntelliJ IDE is not importing the dependencies we can refresh them in the maven tab, pressing the refresh icon.
 
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/maven-refresh-button.png)
+{: refdef}
+
 ## Creating a configuration class 
 
 We need to have a Java file where we set the configuration to be able to connect with the Google cloud storage system. We need two things to configure a connection: a bucket name and the credentials.
