@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "How to apply template method in Java"
+title: "How to apply template method design pattern in Java"
 date: 2021-05-09 09:08:53 +0200
 categories: development
 comments: true
@@ -71,7 +71,7 @@ One might think that the name of the topic could be parameterized by passing it 
 
 It was not a possible solution because to instantiate the kafka topic as you can see in the previous code you have to use an annotation to define the topic in which we want to publish.
 
-## The solution: Use design template method
+## The solution: Use template method design pattern
 
 As the two classes needed the same code, we thought about using an <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">abstract class</a> where we could put the common code and then an abstract method that would be the one that would give us the `publisher` corresponding to the implementation that interests us.
 
@@ -144,4 +144,3 @@ We are using the design pattern called <a href="https://en.wikipedia.org/wiki/Te
 ## Conclusion
 
 In this post we have seen how to reuse code using the design pattern called `template`. Do you use design patterns when developing software? What is your favorite?
-
