@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Fixing IllegalArgumentException in elasticsearch"
+title: "Fixing IllegalArgumentException in Elasticsearch"
 date: 2021-03-21 09:08:53 +0200
 categories: development
 comments: true
