@@ -45,7 +45,7 @@ When we install the JDK using the `.dmg` file, it installs the JDK in the follow
 ```java
 /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/home/jre
 ```
-Then to have the Java commands available in the command line you should add this directory into your `.zhsrc` file (in case you are using zsh) or `.bashrc` (in case you are using bash) 
+Then to have the Java commands available in the command line you should add this directory into your `.zshrc` file (in case you are using zsh) or `.bashrc` (in case you are using bash) 
 
 Content of the file `.zhsrc`
 
