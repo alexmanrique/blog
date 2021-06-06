@@ -20,11 +20,11 @@ To protect your pictures of being used by someone that has not the rights of thi
 
 Also you can use it to reinforce the brand name in your product/service because the potential clients will see your brand and will notice that your product is unique of your company, so a good candidate for your watermark is using the logo of your company for instance. 
 
-There are other alternatives to Gimp in the market more known like Adobe Photoshop, Canva for enterprise, Pixlr ... but for adding a watermark in our pictures Gimp fits our needs.
-
 ## Gimp as an images editor program
 
 Gimp is a cross-platform open source software application to edit all kinds of images. You can find out the source code of in github in the following <a href="https://github.com/GNOME/gimp">url</a> direction. 
+
+There are other alternatives to Gimp in the market more known like Adobe Photoshop, Canva for enterprise, Pixlr ... but for adding a watermark in our pictures Gimp fits our needs.
 
 ## How to add a watermark with Gimp
 
