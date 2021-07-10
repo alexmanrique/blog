@@ -13,7 +13,7 @@ image: images/template.jpeg
 ![dist files]({{ site.baseurl }}/images/template.jpeg)
 {: refdef}
 
-{:refdef: style="text-align: center;font-size:9px"}
+{:refdef: style="text-align:center font-size:9px"}
 Photo by <a href="https://unsplash.com/@domenicoloia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Domenico Loia</a> on <a href="https://unsplash.com/s/photos/design?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 {: refdef}  
 
