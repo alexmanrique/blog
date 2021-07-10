@@ -53,14 +53,14 @@ In the western digital UI we have to go to Configuration > Network > and enable 
 
 Now we are able to use `rsync` to copy our files from one location to another. In the following command, we are using `rsync` telling that we want to back up the `pictures` folder into a `backup_pictures` folder on the western digital IP address. 
 
-Note that you should adapt the IP internal address to the one that your NAS device is using in your local network. Also, we are using the `sshd` user that Western Digital enables when we open SSH.
+Note that you should adapt the IP internal address to the one that your NAS device is using in your local network. Also, we are using the `sshd` user that western Digital enables when we open SSH.
 
 ```console
 rsync -r pictures/ sshd@192.168.1.39:backup_pictures
 ```
 
-If you want to learn more about rsync command you can check out the following tutorial from Digital Ocean <a href="https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories">https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories</a>
+If you want to learn more about `rsync` command you can check out the following tutorial from Digital Ocean <a href="https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories">https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories</a>
 
 ## Conclusion
 
-It's a great idea to backup your files to be ready for any problem that may arise in your disk taking into account that the meantime to failure of disks is 5 years. In this post, we have seen how to use this program to synchronize files from location A to location B using SSH.
+It's a great idea to backup your files to be ready for any problem that may arise in your disk taking into account that the meantime to failure of disks is 5 years. In this post, we have seen how to use `rsync` to synchronize files from location A to location B using SSH.
