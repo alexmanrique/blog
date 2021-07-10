@@ -25,7 +25,7 @@ I use this application to send messages to my coworkers. You can create channels
 
 ## Draw.io
 
-With this application, I can draw diagrams online. When I have to design some new application or explain something a draw is better than a thousand words. I can export these drawings into different file formats and when I have to draw something I use this tool.
+With this application, I can draw diagrams online. When I have to design some new application or explain something a drawing is better than a thousand words. I can export these drawings into different file formats and when I have to draw something I use this tool.
 
 ## Jira
 
