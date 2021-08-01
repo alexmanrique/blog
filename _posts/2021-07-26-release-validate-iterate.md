@@ -59,7 +59,7 @@ We reverted the code to the version that business told us that was working fine.
 
 4th release
 ----------------
-At this point that we had recovered from the drop, we analyzed using metrics, which part of the process was consuming more time and we find out that we had a bigger problem than the queries done to the database. (See a previous post where I talk about how to  <a href="{{ site.baseurl }}{% post_url 2018-01-15-metrics-in-your-java-application %}">metricate</a> your Java application) 
+At this point that we had recovered from the drop, we analyzed using metrics, which part of the process was consuming more time and we find out that we had a bigger problem than the queries done to the database. (See a previous post where I talk about how to  <a href="{{ site.baseurl }}{% post_url 2018-01-15-metrics-in-your-java-application %}">metric</a> your Java application) 
 
 > Use metrics to see which are the points of your application where you spend more time.
 
