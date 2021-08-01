@@ -1,5 +1,5 @@
 ---
-title: "How to metric your Java application"
+title: "How to establish metrics in your Java application"
 date: 2018-01-15 20:13:53 +0200
 categories: development
 comments: true
