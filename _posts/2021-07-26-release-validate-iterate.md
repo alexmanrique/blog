@@ -6,7 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: release
-image: images/template.jpeg
+image: images/release.jpg
 ---
 
 {:refdef: style="text-align: center;"}
