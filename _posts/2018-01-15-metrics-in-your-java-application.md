@@ -6,8 +6,17 @@ comments: true
 lang: en
 ref: clean
 tags: java metrics
+image: images/metrics.jpeg
 ---
 
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/metrics.jpeg)
+{: refdef}
+
+{:refdef: style="text-align: center; font-size:9px"}
+Photo by <a href="https://unsplash.com/@lukechesser?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luke Chesser</a> on <a href="https://unsplash.com/s/photos/metrics?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+{:refdef}
+  
 Monitor the metrics of your application is a good way to discover any issue or problem that can be happening in production. If you are only reading the logs of your application to detect possible problems you are not seeing the full picture. In this post I will explain how to add application metrics to a Java backend application. 
 
 1 - Define your KPI's

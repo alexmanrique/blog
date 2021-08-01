@@ -15,7 +15,7 @@ image: images/release.jpg
 
 {:refdef: style="text-align: center; font-size:9px"}
 Photo by <a href="https://unsplash.com/@an_ku_sh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ankush Minda</a> on <a href="https://unsplash.com/s/photos/release?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-{: refdef}
+{:refdef}
   
 Some time ago I was working in a team where we had developed an application that had some complicated logic and unfortunately, the integration tests were not developed. In another post, we talked about test-driven development <a href="{{ site.baseurl }}{% post_url 2020-07-19-test-driven-development %}">approach</a> something that I definitely recommend.
 
