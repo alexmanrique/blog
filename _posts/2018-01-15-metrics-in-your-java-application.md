@@ -1,6 +1,6 @@
 ---
-title:  "Application level metrics in Java"
-date:   2018-01-15 20:13:53 +0200
+title: "How to metricate your Java application"
+date: 2018-01-15 20:13:53 +0200
 categories: development
 comments: true
 lang: en
