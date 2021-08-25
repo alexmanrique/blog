@@ -27,7 +27,7 @@ You have different kinds of promo codes and you see in the data storage that onl
 
 The magic of removing code
 --------------------------------
-When you remove code your <a href="{{ site.baseurl }}{% post_url 2020-04-26-increase-coverage-in-your-java-code %}"> code coverage</a> which is the number of lines of code covered by unit tests will increase (in case that the code that you are removing was not covered by unit tests) and that's positive too. 
+When you remove code your <a href="{{ site.baseurl }}{% post_url 2020-04-26-increase-coverage-in-your-java-code %}"> code coverage</a> which is the number of lines of code covered by unit tests can increase (in case that the code that you are removing was not covered by unit tests) and that's positive too. 
 
 It's better to have good unit tests and good functional tests rather than having really high code coverage testing "getters" and "setters", I talk about this in this <a href="{{ site.baseurl }}{% post_url 2020-04-26-increase-coverage-in-your-java-code %}">post</a> that I wrote some time ago.
 
