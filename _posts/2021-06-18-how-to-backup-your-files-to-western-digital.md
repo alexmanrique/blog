@@ -56,7 +56,7 @@ Now we are able to use `rsync` to copy our files from one location to another. I
 Note that you should adapt the IP internal address to the one that your NAS device is using in your local network. Also, we are using the `sshd` user that western Digital enables when we open SSH.
 
 ```console
-rsync -r pictures/ sshd@192.168.1.39:backup_pictures
+rsync -r pictures/ sshd@{internal_ip_where_is_your_nas}:backup_pictures
 ```
 
 If you want to learn more about `rsync` command you can check out the following tutorial from Digital Ocean <a href="https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories">https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories</a>
