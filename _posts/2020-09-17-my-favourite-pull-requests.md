@@ -13,7 +13,7 @@ image: images/pull-requests.jpg
 ![dist files]({{ site.baseurl }}/images/pull-requests.jpg)
 {: refdef}
 
-In this post we are going to talk about removing code. Removing code means maintaining less code and the less code that you have, the fewer bugs in your codebase. 
+In this post, we are going to talk about removing code. Removing code means maintaining less code and the less code that you have, the fewer bugs in your codebase. 
 
 Remove code without removing functionality
 ---------------------------------------------
@@ -21,7 +21,7 @@ Removing code is good if you don't remove functionality, unless you have been as
 
 To know if something is used or not, using data helps. Imagine that you have a tool that allows you to create different kinds of promo codes. 
 
-You have different kinds of promo codes and you see in the data storage that only one kind of promo codes is created. Here you have a good candidate to remove the code that allows you to create the other kinds of promo codes. Before doing it you should double check with your business partner that this functionality is not used.
+You have different kinds of promo codes and you see in the data storage that only one kind of promo code is created. Here you have a good candidate to remove the code that allows you to create the other kinds of promo codes. Before doing it you should double-check with your business partner that this functionality is not used.
 
 > Don't be afraid to do that and don't be attached to that piece of code. Just remove it. 
 
@@ -40,8 +40,8 @@ In my experience developers agree about deleting code, it can happen that they d
 Sources of dead code
 ---------------------------------------
 - Legacy product features: We have talked about this in the previous paragraph. When we detect that some feature is not used we can get rid of it. No matter if this was requested by some product owner guru or some important person in your company. Just remove it.
-- Wizard generated UI code: There are tools that allow you to do some starter code. This can be a source of code to be considered to remove. 
-- Return values of functions not used: This is an example of a code that is not used. Return values if are not used by the caller it means that the lines of code that calculate/process this value can be considered to get removed. 
+- Wizard-generated UI code: Some tools allow you to do some starter code. This can be a source of code to be considered to remove. 
+- Return values of functions not used: This is an example of a code that is not used. Return values if are not used by the caller means that the lines of code that calculate/process this value can be considered to get removed. 
 
 How to remove code
 --------------------------------------------
@@ -53,7 +53,7 @@ There's an option also in Intellij that allows you to inspect your code. You hav
 ![dist files]({{ site.baseurl }}/images/inspect_code.png)
 {: refdef}
 
-With this option, you can find code smells, warnings, potential bugs that you can have in your code and that you should be aware of. Some of them you will have to fix it, some code will be elegible to be removed and some other will be necessary to refactor. 
+With this option, you can find code smells, warnings, potential bugs that you can have in your code and that you should be aware of. Some of them you will have to fix, some code will be eligible to be removed and some others will be necessary to refactor. 
 
 {:refdef: style="text-align: center;"}
 ![dist files]({{ site.baseurl }}/images/inspect_code_results.png)
@@ -61,7 +61,7 @@ With this option, you can find code smells, warnings, potential bugs that you ca
 
 Conclusion
 ----------------------------
-In this post, we have talked about the importance of removing code, this way we reduce the number of lines of code without decreasing the functionality of our product/service, that will lead to fewer bugs and we will have more time to do other things because the time of maintenance is lower.
+In this post, we have talked about the importance of removing code, this way we reduce the number of lines of code without decreasing the functionality of our product/service, which will lead to fewer bugs and we will have more time to do other things because the time of maintenance is lower.
 
 
 
