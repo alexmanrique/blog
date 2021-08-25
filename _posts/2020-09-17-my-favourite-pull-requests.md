@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Removing code without removing functionality"
+title: "Removing code without removing used functionality"
 date: 2020-09-17 02:00:53 +0200
 categories: development
 comments: true
