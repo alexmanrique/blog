@@ -15,7 +15,7 @@ image: images/pull-requests.jpg
 
 In this post, we are going to talk about removing code. Removing code means maintaining less code and the less code that you have, the fewer bugs in your codebase. 
 
-Remove code without removing functionality
+Remove code without removing used functionality
 ---------------------------------------------
 Removing code is good if you don't remove functionality, unless you have been asked to do so or that you detect that some functionality is not used. 
 
