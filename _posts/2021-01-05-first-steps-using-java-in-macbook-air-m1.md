@@ -50,7 +50,7 @@ Then to have the Java commands available in the command line you should add this
 Content of the file `.zhsrc`
 
 ```java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/home/jre
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/home
 ```
 
 Installing Maven
@@ -62,7 +62,7 @@ I like placing this kind of software at `/opt` folder because according to the <
 Then we have to add it also in the `.zhsrc` file to have the maven commands available. 
 
 ```java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/home/jre
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/home
 export PATH=/opt/apache-maven-3.6.3/bin:$PATH
 ```
 
