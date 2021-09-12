@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Ten tips to improve your unit tests"
-date: 2021-07-26 09:08:53 +0200
+date: 2021-09-11 09:08:53 +0200
 categories: development
 comments: true
 lang: en
@@ -27,7 +27,7 @@ There are two kinds of cases that we want to test. The first type of test is the
 
 Don't use method names like `testMethod` because this doesn't communicate the intention to the reader of the unit test. We spend much more time reading code rather than writing it so, we need to write good method names that express intention. Things like `shouldReturn...` or `shouldCalculateTheSame...` communicate more than a simple `testMethod`. 
 
-### 3 - Use one assert per test
+### 3 - Test one thing in each unit test
 
 If we are using more than one `assert` per test it means that we could be unit testing more than one thing in the same test. It's a good thing to split this into different tests rather than having everything into the same one. A method should test one thing and do it well. 
 
