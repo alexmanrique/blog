@@ -1,2 +1,6 @@
 # Config overrides for development.
 url: http://localhost:4000
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass

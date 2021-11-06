@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "Being a developer during covid-19"
+title: "Being a developer during covid"
 date: 2020-04-16 00:13:53 +0200
-categories: development, lockdown
+categories: development
 comments: true
 lang: en
 tags: developer

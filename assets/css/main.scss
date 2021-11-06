@@ -1,5 +1,8 @@
 @charset "utf-8";
 
-@import "minimal-mistakes";
+$link-color: red;
+$type-size-5 :0.8em;
 
-@import "child-theme/main";
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
