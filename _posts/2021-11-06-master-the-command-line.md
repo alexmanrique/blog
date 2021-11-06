@@ -6,7 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: command-line, terminal
-image: 
+image: images/shell.jpg
 ---
 
 {:refdef: style="text-align: center;"}
