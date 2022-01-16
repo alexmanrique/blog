@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Using php in macbook air M1"
+title: "Using PHP in MacBook air M1"
 date: 2022-01-16 09:08:53 +0200
 categories: development
 comments: true
