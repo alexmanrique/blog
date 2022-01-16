@@ -166,14 +166,14 @@ Problem 3 - Find the largest component
 ```java
 public int largestComponent() {
         boolean []visited = new boolean[V];
-        int longest = 0;
+        int largest = 0;
         for (int i = 0; i < V; i++) {
             int result = exploreSize(i, visited);
-            if (result > longest) {
-                longest = result;
+            if (result > largest) {
+                largest = result;
             }
         }
-        return longest;
+        return largest;
     }
 
     public int exploreSize(int node, boolean[] visited) {
