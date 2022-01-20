@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Using PHP in MacBook air M1"
+title: "Unable to load dynamic library intl"
 date: 2022-01-16 09:08:53 +0200
 categories: development
 comments: true
@@ -9,12 +9,11 @@ tags: php, m1
 image: 
 ---
 
-In the following post, I'm going to explain what I had to do to run a CakePHP application on my MacBook air m1. 
+In the following post, I'm going to explain how I fixed the `Unable to load dynamic library intl` message error that I got when I tried to run a CakePHP application on my MacBook air m1. 
 
 Trying to run cake server on my localhost
 --------------------------------------------
-
-Some days ago I found myself trying to run a <a href="https://cakephp.org/">cakephp</a> application that I maintain. The application is a website with a frontend (html5, CSS, Javascript) and the backend is using a PHP framework called CakePHP. As the database is using a Mysql that is included in my shared hosting. 
+Some days ago I found myself trying to run a <a href="https://cakephp.org/">CakePHP</a> application that I maintain. The application is a website with a frontend (Html5, Css, Javascript), the backend is using a PHP framework called CakePHP and as database it's using a Mysql that is included on OVH shared hosting. 
 
 When I tried to run the CakePHP server on my localhost using the following command:
 
