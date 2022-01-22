@@ -6,7 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: algorithms
-image: 
+image: images/graph.png
 ---
 
 {:refdef: style="text-align: center;"}

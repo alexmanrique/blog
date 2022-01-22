@@ -6,7 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: php, m1
-image: 
+image: images/php.jpg
 ---
 
 {:refdef: style="text-align: center;"}
