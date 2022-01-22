@@ -9,6 +9,14 @@ tags: php, m1
 image: 
 ---
 
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/php.jpg)
+{: refdef}
+
+{:refdef: style="text-align: center;font-size:9px"}
+Photo by <a href="https://unsplash.com/@benofthenorth?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ben Griffiths</a> on <a href="https://unsplash.com/s/photos/php?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+{: refdef}   
+
 In the following post, I'm going to explain how I fixed the `Unable to load dynamic library intl` message error that I got when I tried to run a CakePHP application on my MacBook air m1. 
 
 Trying to run cake server on my localhost
