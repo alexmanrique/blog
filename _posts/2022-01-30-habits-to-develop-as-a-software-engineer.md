@@ -72,6 +72,7 @@ Once you learn something the best way to learn it is to teach other people what 
 
 We have seen in this post some interesting habits to develop as a software engineer. Do you miss any habit that you think is interesting to develop? 
 
+
  
 
 
