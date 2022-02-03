@@ -44,7 +44,7 @@ If you are using a technology read something about this technology. You will inc
 
 You are not paid to write code. Your job is to solve problems, and for solving problems sometimes you don't need to write code. If there's a solution that you don't need to write code and solves a problem to your customer go for it first. It's good to try first the cheap solution, then if it doesn't work you can go to the next option which could be coding.
 
-## Identify code that can to remove.
+## Identify code that can be removed.
 
 If there's a functionality in the code that nobody calls, this is a candidate to remove from the source code. Look for usages, for that might be useful to have metrics in your application to detect pattern usages.  
 
