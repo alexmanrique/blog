@@ -17,7 +17,7 @@ image: images/habits-software-engineer.jpg
 Photo by <a href="https://unsplash.com/@thisisengineering?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ThisisEngineering RAEng</a> on <a href="https://unsplash.com/s/photos/developer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 {: refdef} 
   
-In this post, we are going to talk about which habits are interesting to develop as a software engineer. Habits are important in our daily lives. Developing good habits to improve as a software engineer is interesting.
+In this post, we are going to talk about which habits are interesting to develop as a software engineer. Habits are important in our daily lives. Developing good habits to improve as a software engineer is something that will pay off in the long term.
 
 ## Be open to receiving feedback from your code.
 
