@@ -17,7 +17,7 @@ image: images/habits-software-engineer.jpg
 Photo by <a href="https://unsplash.com/@thisisengineering?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ThisisEngineering RAEng</a> on <a href="https://unsplash.com/s/photos/developer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 {: refdef} 
   
-In this post, we are going to talk about which habits are interesting to develop as a software engineer. Habits are important in our daily lives. Developing good habits to improve as a software engineer is interesting.
+In this post, we are going to talk about which habits are interesting to develop as a software engineer. Habits are important in our daily lives. Developing good habits to improve as a software engineer is something that will pay off in the long term.
 
 ## Be open to receiving feedback from your code.
 
@@ -44,7 +44,7 @@ If you are using a technology read something about this technology. You will inc
 
 You are not paid to write code. Your job is to solve problems, and for solving problems sometimes you don't need to write code. If there's a solution that you don't need to write code and solves a problem to your customer go for it first. It's good to try first the cheap solution, then if it doesn't work you can go to the next option which could be coding.
 
-## Identify code that can to remove.
+## Identify code that can be removed.
 
 If there's a functionality in the code that nobody calls, this is a candidate to remove from the source code. Look for usages, for that might be useful to have metrics in your application to detect pattern usages.  
 
