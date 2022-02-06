@@ -1,13 +1,21 @@
 ---
 layout: single
 title: "Longest common subsequence in Java"
-date: 2021-11-12 09:08:53 +0200
-categories: development
+date: 2022-02-06 09:08:53 +0200
+categories: algorithms
 comments: true
 lang: en
 tags: algorithms
-image: 
+image: images/longest_subsequence.jpg
 ---
+
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/longest_subsequence.jpg)
+{: refdef}
+
+{:refdef: style="text-align: center;font-size:9px"}
+Photo by <a href="https://unsplash.com/@pankajpatel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pankaj Patel</a> on <a href="https://unsplash.com/s/photos/code?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+{: refdef} 
 
 In this post we will see how to solve a problem that is to look for the longest common subsequence of two Strings that we receive as input parameters. 
 
