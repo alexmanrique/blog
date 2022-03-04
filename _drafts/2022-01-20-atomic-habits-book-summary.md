@@ -45,4 +45,47 @@ The habit of checking the quality of the code in Sonarqube
   
 ## Conclusion
 
+Needed things to deploy microservices
+----------------------------------------
+ - Alerts 
+ - Apache & tomcat 
+ - Automated canary analysis
+ - Autoscaling
+ - Chaos
+ - Consistent naming
+ - Elb config
+ - Healthcheck
+ - Inmutable machine images
+ - Squeeze testing
+ - Staged, red/black deployments
+ - Timeouts,retries,fallbacks.
+
+ Dependency
+-------------------
+- Circuit breakers 
+- fallbacks
+- chaos
+- simple clients
+- eventual consistency
+- multi-region failover
+
+Scale
+-------------------
+- Auto-scaling 
+- Redundancy - avoid SPoF
+- Partitioned workloads
+- Failure-driven design
+- Chaos under load
+
+Variance
+-------------------
+- Engineered operations
+- Understood cost of variance
+- Prioritized support by impact
+
+Change
+-------------------
+- Automated delivery
+- Integrated practices
+
 
