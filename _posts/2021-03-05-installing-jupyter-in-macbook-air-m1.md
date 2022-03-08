@@ -115,13 +115,17 @@ we save and close the file and the kernel should not stop anymore :-)
 
 update:
 
-As a workaround to this problem 
+As a workaround to the following problem: 
 
+```console
 Installing Python-3.9.1...
 python-build: use readline from homebrew
 python-build: use zlib from xcode sdk
 
 BUILD FAILED (OS X 11.3.1 using python-build 20180424)
+```
+
+you can try: 
 
 ```console
 arch -x86_64 pyenv install 3.7.10
