@@ -113,6 +113,44 @@ and platform.mac_ver()[2] != 'arm64'
 ```
 we save and close the file and the kernel should not stop anymore :-)
 
+update:
+
+As a workaround to this problem 
+
+Installing Python-3.9.1...
+python-build: use readline from homebrew
+python-build: use zlib from xcode sdk
+
+BUILD FAILED (OS X 11.3.1 using python-build 20180424)
+
+```console
+arch -x86_64 pyenv install 3.7.10
+```
+
+then after installing it execute the following command in the terminal
+
+```console
+pyenv local 3.7.10
+```
+
+next step open file .zshrc and add the following line at the end of file
+
+```console
+eval "$(pyenv init -)"
+```
+
+close the terminal and open a new one, then execute:
+
+```console
+python -V
+```
+
+and you should see 
+
+```console
+Python 3.7.10
+```
+
 Conclusion
 ------------------------
 In this post, we have seen how to install Jupyter notebook in a Macbook Air M1. Now it's time to see what things we can do with Jupyter notebooks but this will be in another post.
