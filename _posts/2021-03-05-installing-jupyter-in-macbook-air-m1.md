@@ -129,13 +129,13 @@ BUILD FAILED (OS X 11.3.1 using python-build 20180424)
 you can try: 
 
 ```console
-arch -x86_64 pyenv install 3.7.10
+arch -x86_64 pyenv install 3.9.1
 ```
 
 then after installing it execute the following command in the terminal
 
 ```console
-pyenv local 3.7.10
+pyenv local 3.9.1
 ```
 
 next step open file .zshrc and add the following line at the end of file
@@ -153,7 +153,7 @@ python -V
 and you should see 
 
 ```console
-Python 3.7.10
+Python 3.9.1
 ```
 
 Conclusion
