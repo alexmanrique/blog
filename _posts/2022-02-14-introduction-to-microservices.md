@@ -21,7 +21,7 @@ In this post, we are going to talk about which are the things that we have to co
 
 Monolithic repositories
 ----------------------------------- 
-Let's start by mentioning what microservices are not. If you have a Java application and everybody is contributing to its codebase and it is released once a week then you don't have a microservice, you have a monolith. 
+Let's start by mentioning what microservices are not. If we have a Java application and everybody is contributing to its codebase and it is released once a week then we don't have a microservice, we have a monolith. 
 
 When a change is introduced is difficult to find where is the problem and finding the problems are a complicated task because a lot of people are introducing changes at the same time and you don't know where the problem comes from.
 
@@ -31,7 +31,7 @@ The database can be also monolithic, one piece of hardware running an oracle dat
 
 An old way of developing software
 ------------------------------
-Lack of agility it's also a problem because everything is deeply interconnected. Direct calls to the database are being done, applications referencing table schemas and adding a column can become a cross-functional project. This way of doing projects was typical from the early 2000s.
+Lack of agility it's also a problem because everything is deeply interconnected. Direct calls to the database are being done, applications referencing table schemas or adding a column can become a cross-functional project in this environment. This way of doing projects was typical from the early 2000s.
 
 A formal definition of a microservice
 ----------------------------
@@ -49,13 +49,13 @@ We can see the microservices approach as an evolutionary response to the monolit
 
 > Separation of concerns is one of the critical things that this paradigm encourages. 
 
-Modularity and encapsulation are also important in this kind of architecture. We say that software is modular when it's decomposed into smaller parts using standardized interfaces. Encapsulation is a property that software has when it hides direct access to the data-providing methods.  
+Modularity and encapsulation are also important in this kind of architecture. We say that software is modular when it's decomposed into smaller parts using standardized interfaces. Encapsulation is a property that software has when it hides direct access to the data, providing methods that provide access to the data.  
 
 In terms of scalability, we need horizontal scaling to increase the number of instances in case of high traffic peaks. Workload partitioning as we are working with distributed systems we can break our work in a way that different instances do the work in parallel. 
 
 Microservices need virtualization and elasticity
 -----------------------------------------------------
-All these things don't work if you are not in an environment where on-demand provisioning can be used and we need this virtualization & elasticity. 
+All these things don't work if we are not in an environment where on-demand provisioning can be used and we need this virtualization and elasticity. 
 
 Virtualization is the act of creating a virtual (rather than actual) version of something, including virtual computer hardware platforms, storage devices, and computer network resources. 
 
@@ -68,7 +68,7 @@ Problems when dealing with microservices
 When dealing with microservices we have `intra-services` requests and here is where problems can happen like network latency or congestion.
 
 <a href="https://en.wikipedia.org/wiki/Cascading_failure">Cascading failure</a> can happen when one service fails with improper defenses and the clients of this service all fail.
-<a href="https://github.com/Netflix/Hystrix">Hystrix</a> is a Netflix OSS library has mechanisms to solve this kind of problems. 
+<a href="https://github.com/Netflix/Hystrix">Hystrix</a> is a Netflix OSS library that has mechanisms to solve this kind of problems. 
 
 Defining critical microservices 
 ---------------------------------------------------
@@ -112,9 +112,9 @@ The same principle applies to regions. If one region fails our service should su
 
 Stateless or stateful microservices
 ----------------------------------
-We have stateless microservices that are the ones that don't have a cache or a database and are frequently accessed metadata. 
+We have stateless microservices that are the ones that don't have a cache or a database and are frequently accessed. 
 
-On the other hand, we have stateful services Databases & caches custom apps that hold large amounts of data. Loss of node is a notable event
+On the other hand, we have stateful services Databases and caches custom apps that can hold large amounts of data. Loss of node is a notable event.
 
 Dedicated shards are a single point of failure
 ------------------------------------------------
