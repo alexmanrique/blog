@@ -113,6 +113,7 @@ and platform.mac_ver()[2] != 'arm64'
 ```
 we save and close the file and the kernel should not stop anymore :-)
 
+
 update:
 
 As a workaround to the following problem: 
