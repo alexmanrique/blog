@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Atomic habits book summary"
-date: 2021-07-26 09:08:53 +0200
+date: 2022-01-20 09:08:53 +0200
 categories: books
 comments: true
 lang: en
