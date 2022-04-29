@@ -316,6 +316,6 @@ public class IslandCounter {
 
 ### Conclusion
 
-In this post we have seen 5 problems related with graphs and how to implement them using Java. We have seen 2 key algorithms that help us solve this kind of problems, DFS and BFS.
+In this post we have seen how to define a graph data structure in Java. We have seen 5 problems related with graphs and how to implement them using Java. We have seen 2 key algorithms that help us solve this kind of problems, DFS and BFS.
 
 
