@@ -48,6 +48,8 @@ How to create an inmutable class in Java
 
 ### 1 - Remove setter methods
 
+In the following class we have setter methods. That is one of the reasons why this class is mutable. Having a setter allows to change the state of the object after being created. 
+
 ```java
 public class Player {
 
@@ -73,6 +75,8 @@ public class Player {
 
 ### 2 - Provide all-argument in constructor.
 
+In the following class we have two constructors, one that provides all the arguments and another that has one missing argument. This forces to have a setter from the missing argument that we have not provided in the constructor. 
+
 ```java
 public class Player {
 
@@ -95,6 +99,8 @@ public class Player {
 
 ### 3 - Set class fields final.
 
+Having all the fields of the class as final makes that we are not allowed to change the state of this fields and make that we have to define all the arguments in the constructor and if we have setters we cannot change the value of them, otherwise we will have a compilation error. 
+
 ```java
 public class Player {
 
@@ -107,20 +113,27 @@ public class Player {
 ```
 
 ### 4 - Use deep clone for mutable fields that you receive in the constructor.
+In this case in the class we have a `Map` that is mutable. In the constructor we make a copy of this `Map` that we receive in the constructor because this data structure can be changed from outside the `Player` and we want to keep the class immutable.   
+
 ```java
 public class Player {
 
     private final int age;
     private final String name;
     private final int height;
-    private final Adress address;
+    private final Map<String, String> metadata;
 
     public Player(int age, String name, int height, Address address){
         this.age = age;
         this.name = name;
         this.height = height;
         //  :-)
-        this.address = new Address(address.getStreetName(), address.getCityName(), adress.getPostalCode(), adress.getCountry());
+        Map<String, String> tempMap = new HashMap<>();
+        for (Map.Entry<String, String> entry :
+             metadata.entrySet()) {
+            tempMap.put(entry.getKey(), entry.getValue());
+        }
+        this.metadata = tempMap;
     }
  
 }
@@ -128,24 +141,37 @@ public class Player {
 
 
 ### 5 - Return deep cloned object of mutable fields. 
+
+In the get method of the metadata `Map` we create a copy also because the moment that we return it, a client  can change it from outside the `Player` class and we want to avoid the modification of the state of our `Player` class. 
+
 ```java
 public class Player {
 
     private final int age;
     private final String name;
     private final int height;
-    private final Adress address;
+    private final Map<String, String> metadata;
 
     public Player(int age, String name, int height, Address address){
         this.age = age;
         this.name = name;
         this.height = height;
-        this.address = new Address(address.getStreetName(), address.getCityName(), adress.getPostalCode(), adress.getCountry());
+        Map<String, String> tempMap = new HashMap<>();
+        for (Map.Entry<String, String> entry :
+             metadata.entrySet()) {
+            tempMap.put(entry.getKey(), entry.getValue());
+        }
+        this.metadata = tempMap;
     }
     ...
     //  :-)
-    public Address getAddress(){
-        return new Address(address.getStreetName(), address.getCityName(), adress.getPostalCode(), adress.getCountry());
+     public Map<String, String> getMetadata(){
+        Map<String, String> tempMap = new HashMap<>();
+        for (Map.Entry<String, String> entry :
+             this.metadata.entrySet()) {
+            tempMap.put(entry.getKey(), entry.getValue());
+        }
+        return tempMap;
     }
 }
 ```
