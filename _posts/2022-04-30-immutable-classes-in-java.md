@@ -52,7 +52,8 @@ In the following class we have setter methods. That is one of the reasons why th
 
 ```java
 public class Player {
-
+    
+    // :-( attributes are not final
     private int age;
     private String name;
     private int height;
@@ -80,6 +81,7 @@ In the following class we have two constructors, one that provides all the argum
 ```java
 public class Player {
 
+    // :-( attributes are not final
     private int age;
     private String name;
     private int height;
