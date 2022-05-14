@@ -125,7 +125,7 @@ public class Player {
     private final int height;
     private final Map<String, String> metadata;
 
-    public Player(int age, String name, int height, Address address){
+    public Player(int age, String name, int height, Map<String, String> metadata){
         this.age = age;
         this.name = name;
         this.height = height;
@@ -154,7 +154,7 @@ public class Player {
     private final int height;
     private final Map<String, String> metadata;
 
-    public Player(int age, String name, int height, Address address){
+    public Player(int age, String name, int height, Map<String, String> metadata){
         this.age = age;
         this.name = name;
         this.height = height;
