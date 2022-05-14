@@ -21,7 +21,7 @@ In this post we are going to talk about the importance of writing inmutable clas
 
 Classes and Objects in Java
 -----------------------------
-A class in a object oriented language like Java is the definition of a concept from a particular domain, and an object it's an instance of this abstraction. Also we can talk about classes as object constructors or a "blueprint" for creating objects. Inmutability applies to classes and objects created from this definitions. 
+A class in a object oriented language like Java is the definition of a concept from a particular domain, and an object it's an instance of this abstraction. Also we can talk about classes as object constructors or a "blueprint" for creating objects. Immutability applies to classes and objects created from this definitions. 
 
 Plain old Java objects - POJO
 ---------------------------------
