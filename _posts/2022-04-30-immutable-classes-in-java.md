@@ -37,7 +37,7 @@ Benefits of Inmutable Objects
 ---------------------------------
 If we allow that the state of an object is modified during the lifetime of it we open the door to situations like <a href="https://stackoverflow.com/questions/34510/what-is-a-race-condition">race conditions</a> in case that we have multiple threads that read and modify the state of this object. 
 
-If an inmutable object remains constant in time and we can share it safely among multiple threads. 
+If an inmutable object remains constant in time we can share it safely among multiple threads. 
 
 > We can say that immutable objects are side-effects free. 
 
