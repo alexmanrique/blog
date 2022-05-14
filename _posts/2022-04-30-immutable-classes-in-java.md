@@ -31,7 +31,7 @@ The attributes of this POJO should be only modified in the creation of an object
 
 What's an Immutable Object
 --------------------
-An inmutable object, it's an object that once it has been created cannot be modified after it's creation. In Java we have examples of inmutable classes like String or Wrapper classes like Float, Integer, Boolean, Short, Integer, Long, Float, Double, Byte or Char.
+An immutable object, it's an object that once it has been created cannot be modified after it's creation. In Java we have examples of inmutable classes like String or Wrapper classes like Float, Integer, Boolean, Short, Integer, Long, Float, Double, Byte or Char.
 
 Benefits of Inmutable Objects
 ---------------------------------
