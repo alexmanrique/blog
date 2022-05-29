@@ -12,6 +12,8 @@ image:
 
 In this book we can learn about negotiation techniques that can be used in our daily lives.
 
+Negotiation is nothing more that communication with results. Getting 
+
 List the worst things that the other party could say about you and say them before the other person can.
 
 Mirroring: repeat the words that the couterpart is using.
