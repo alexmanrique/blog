@@ -6,10 +6,14 @@ categories: books
 comments: true
 lang: en
 tags: negotiation, communication
-image: 
+image: images/never-split-the-difference.png
 ---
 
-In this book we can learn about negotiation techniques that can be used in our daily lives.
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/never-split-the-difference.png)
+{: refdef}
+
+In this book we can learn about negotiation techniques that can be used in our daily lives. Chris Voss spent 24 years working for the FBI, culminating in him becoming the bureau's lead international hostage negotiator
 
 Chapter 1
 -----------------
