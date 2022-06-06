@@ -13,7 +13,7 @@ image: images/never-split-the-difference.png
 ![dist files]({{ site.baseurl }}/images/never-split-the-difference.png)
 {: refdef}
 
-In this book we can learn about negotiation techniques that can be used in our daily lives. Chris Voss spent 24 years working for the FBI, culminating in him becoming the bureau's lead international hostage negotiator
+In this book we can learn about negotiation techniques that can be used in our daily lives. The author of this book Chris Voss spent 24 years working for the FBI, culminating in him becoming the bureau's lead international hostage negotiator. 
 
 Chapter 1
 -----------------
@@ -82,7 +82,7 @@ Bend their reality
 - Before make an offer, anchor them by saying how bad it will be. Set an extreme anchor to make your real offer seam reasonable, or use a range to seem less agressive.
 - People take more risks to avoid a loss than to realize a gain. Make sure your counterpart sees that there's something to lose by inaction.
 - One crucial aspect of any negotiation is to figure out how your adversary arrived at this position.
-- Try to look for the real motivations that the other part wants
+- Try to look for the real motivations that the other part wants.
 
 Chapter 7
 ------------------
@@ -94,7 +94,7 @@ Create the illusion of control
 - Don't ask questions that start with "Why" unless you want your counterpart to defend a goal. "Why is always an accusation, in any language".
 - Calibrate your questions to point your counterpart toward solving your problem.
 - When you are attacked in a negotiation, pause and avoid angry emotional reactions. Instead, ask your counterpart a calibrated question. 
-- In salary negotiations don't be the first to talk. You can use a range 
+- In salary negotiations don't be the first to talk. You can use a range. 
 
 Chapter 8
 -------------
