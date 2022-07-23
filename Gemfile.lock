@@ -220,6 +220,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.6-x64-mingw32)
       racc (~> 1.4)
+    nokogiri (1.13.6-x86_64-darwin)
+      racc (~> 1.4)
     octokit (4.20.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
@@ -272,9 +274,8 @@ DEPENDENCIES
   jekyll-remote-theme
   jekyll-seo-tag
   jekyll-sitemap
-  jemoji
   kramdown (>= 2.3.0)
-  nokogiri (>= 1.10.8)
+  nokogiri (>= 1.6.7)
   tzinfo-data
 
 BUNDLED WITH

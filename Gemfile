@@ -11,7 +11,7 @@ gem 'jekyll-remote-theme'
 
 gem 'jekyll-include-cache'
 
-gem "nokogiri", ">= 1.10.8"
+gem "nokogiri", ">= 1.13.6"
 
 gem "kramdown", ">= 2.3.0"
 
