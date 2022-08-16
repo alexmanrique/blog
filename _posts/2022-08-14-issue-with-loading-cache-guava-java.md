@@ -1,14 +1,22 @@
 ---
 layout: single
-title: "Issue with Loading cache Guava Java"
+title: "Issue with Loading cache Guava"
 date: 2022-08-14 09:08:53 +0200
 categories: development
 comments: true
 lang: en
 tags: cache
-image: 
+image: images/layer.jpeg
 ---
 
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/layer.jpeg)
+{: refdef}
+
+{:refdef: style="text-align: center;font-size:9px"}
+Foto de <a href="https://unsplash.com/@hasanalmasi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hasan Almasi</a> en <a href="https://unsplash.com/es/s/fotos/capa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+{: refdef} 
+  
 In this post we are going to talk about a bug that I found after making a release to production. Like all releases, it is recommended and necessary to have a way to verify that what we have released to production does not break the old functionality.
 
 The thing is that in this delivery to production the release consisted of an optimization to reduce the response time of an endpoint of a rest api. It turns out that this endpoint had a response time of 10 seconds.
