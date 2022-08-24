@@ -43,12 +43,6 @@ To do this I used a Guava `LoadingCache` and a `CacheLoader` that refreshes the 
 
 When releasing the changes to Canary and making a request to the stable pod balancer I saw that the request returned 3982 elements and that the request to Canary returned 3982-24. In other words, 24 elements less than what should be returned to me.
 
-```java
-
-cache.asMap().keySet()
-
-```
-
 After spending 1 day of work investigating what was happening, it turned out that the problem was the maximum size with which the cache was configured.
 
 It was configured with a maximum of 4000 elements. This caused that when trying to return all the elements of the cache, it returned all the elements added except the last 24.
