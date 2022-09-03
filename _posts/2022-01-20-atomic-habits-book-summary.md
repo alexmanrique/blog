@@ -6,8 +6,12 @@ categories: books
 comments: true
 lang: en
 tags: productivity
-image: 
+image: images/atomic-habits.png
 ---
+
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/atomic-habits.png)
+{: refdef}
 
 I read this book in August 2021 and I want to share a summary of the key ideas in it. I would call it a personal productivity book where the author James Clear talks about creating habits that increase your productivity and improve your life.     
 
