@@ -21,9 +21,9 @@ In this post we are going to talk about a bug that I found after making a releas
 
 The thing is that in this delivery to production the release consisted of an optimization to reduce the response time of an endpoint of a rest api. It turns out that this endpoint had a response time of 10 seconds.
 
-The problem was that in each request the application made a query to the database to fetch the same data. The request always returned the same values ​​from a database table, as did a `select * from ...`
+The problem was that in each request the application made a query to the database to fetch the same data. The request always returned the same values ​​from a database table, because the app was doing a `select * from ...`
 
-The records of that table where the `select * from` was done were rarely modified compared to the number of reads, so in the code that is executed in the application to return the data it made sense to put a cache to avoid going each time to the database and thus reduce the response time.
+The records of that table where the query was done were rarely modified compared to the number of reads, so in the code that is executed in the application to return the data it made sense to put a cache to avoid going each time to the database and thus reduce the response time.
 
 To do this I used a Guava `LoadingCache` and a `CacheLoader` that refreshes the cache data every 30 minutes by doing a database query. When starting the application, the data of that cache is filled to prevent the first request from taking longer than necessary.
 
@@ -41,13 +41,7 @@ To do this I used a Guava `LoadingCache` and a `CacheLoader` that refreshes the 
     cache = CacheBuilder.newBuilder().build(loader);
 ```
 
-When releasing the changes to Canary and making a request to the stable pod balancer I saw that the request returned 3982 elements and that the request to Canary returned 3982-24. In other words, 24 elements less than what should be returned to me.
-
-```java
-
-cache.asMap().keySet()
-
-```
+When releasing the changes to Canary and making a request to the stable Pod balancer I saw that the request returned 3982 elements and that the request to Canary returned 3982-24. In other words, 24 elements less than what should be returned to me.
 
 After spending 1 day of work investigating what was happening, it turned out that the problem was the maximum size with which the cache was configured.
 
@@ -78,7 +72,7 @@ After finding the bug I did a unit test to ensure that if someone changed the ca
 
 Conclusion
 ------------
-In this post we have seen how a configuration problem in a cache can cause a bug that is difficult to detect in the development phase.
+In this post we have seen how a configuration problem in a cache can cause a bug and how we solved the issue increasing the size of the cache.
 
 
 
