@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "10 code smells to avoid in your code"
+title: "11 code smells to avoid in your code"
 date: 2022-08-14 09:08:53 +0200
 categories: development
 comments: true
@@ -37,10 +37,30 @@ Don't repeat yourself (DRY) it's one of the most important concepts. Duplicated 
 ---------------------------------------
 If your application is structured in layers (that should) the layer where you place the code for your services should not use exceptions that are from the store layer, for instance, `DataAccessException` or `SQLException`.
 
+```java
+public interface Stack {
+    Object pop() throws EmptyException;
+    void push(Object o) throws FullException;
+    double percentFull();
+}
+```
+
+This function percentFull is at the wrong level of abstraction as there are implementations of an Stack that could not know how full they are. 
+
+It would be better placed in a derivative interface such as BoundedStack.
+
+
 6 - Feature envy 
 ---------------------
 This principle it's related with the principle of having "shy code". If you are doing `car.getEngine().getPowerHorses()` it's not good cause you are accessing methods that are from an object returned by getEngine() method. // acabar de completar.
 
+```java
+public class HourlyPayCalculator {
+
+public calculateWeeklyPay(HourlyEmployee e)
+int tenthRate = e.getTenthRate().getPennies()
+}
+```
 
 7 - Replace magic numbers with constants
 -----------------------------------------
@@ -65,7 +85,6 @@ You don't need to know the details of a conditional that calls more than one fun
 11 - Avoid negative conditionals
 ---------------------------------
 Negative conditionals read really bad, it's easier to read a conditional with isActive() than another one with isNotActive()
-
 
 Conclusion
 ------------
