@@ -45,14 +45,14 @@ public interface Stack {
 }
 ```
 
-This function percentFull is at the wrong level of abstraction as there are implementations of an Stack that could not know how full they are. 
+This function `percentFull` is at the wrong level of abstraction as there are implementations of an `Stack` that could not know how full they are. 
 
-It would be better placed in a derivative interface such as BoundedStack.
+It would be better placed in a derivative interface such as `BoundedStack`.
 
 
 6 - Feature envy 
 ---------------------
-This principle it's related with the principle of having "shy code". If you are doing `car.getEngine().getPowerHorses()` it's not good cause you are accessing methods that are from an object returned by getEngine() method.
+This principle it's related with the principle of having "shy code". If you are doing `e.getTenthRate().getPennies()` it's not good cause you are accessing methods that are from an object returned by getEngine() method.
 
 ```java
 public class HourlyPayCalculator {
