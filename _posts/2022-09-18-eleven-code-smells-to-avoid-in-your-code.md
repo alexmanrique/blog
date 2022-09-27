@@ -6,15 +6,15 @@ categories: development
 comments: true
 lang: en
 tags: code
-image: 
+image: images/code-smell.jpeg
 ---
 
 {:refdef: style="text-align: center;"}
-![dist files]({{ site.baseurl }}/images/layer.jpeg)
+![dist files]({{ site.baseurl }}/images/code-smell.jpeg)
 {: refdef}
 
 {:refdef: style="text-align: center;font-size:9px"}
-Foto de <a href="https://unsplash.com/@hasanalmasi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hasan Almasi</a> en <a href="https://unsplash.com/es/s/fotos/capa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Foto de <a href="https://unsplash.com/@hrustall?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Дмитрий Хрусталев-Григорьев</a> en <a href="https://unsplash.com/es/s/fotos/smell?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 {: refdef} 
 
 1 - Comments in the code
