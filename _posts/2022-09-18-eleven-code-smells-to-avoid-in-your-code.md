@@ -52,7 +52,7 @@ It would be better placed in a derivative interface such as BoundedStack.
 
 6 - Feature envy 
 ---------------------
-This principle it's related with the principle of having "shy code". If you are doing `car.getEngine().getPowerHorses()` it's not good cause you are accessing methods that are from an object returned by getEngine() method. // acabar de completar.
+This principle it's related with the principle of having "shy code". If you are doing `car.getEngine().getPowerHorses()` it's not good cause you are accessing methods that are from an object returned by getEngine() method.
 
 ```java
 public class HourlyPayCalculator {
