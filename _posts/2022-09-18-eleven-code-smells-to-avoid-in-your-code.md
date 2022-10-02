@@ -35,7 +35,7 @@ Don't repeat yourself (DRY) it's one of the most important concepts. Duplicated 
 
 5 - Code at wrong level of abstraction
 ---------------------------------------
-If your application is structured in layers (that should) the layer where you place the code for your services should not use exceptions that are from the store layer, for instance, `DataAccessException` or `SQLException`.
+In the following block of code the function `percentFull` is at the wrong level of abstraction as there are implementations of an `Stack` that could not know how full they are. 
 
 ```java
 public interface Stack {
@@ -44,9 +44,6 @@ public interface Stack {
     double percentFull();
 }
 ```
-
-This function `percentFull` is at the wrong level of abstraction as there are implementations of an `Stack` that could not know how full they are. 
-
 It would be better placed in a derivative interface such as `BoundedStack`.
 
 
