@@ -1,7 +1,7 @@
 ---
 
 layout: single
-title: "20 things I learned as a lead engineer"
+title: "20 things I learned as a Lead engineer"
 date: 2022-12-07 09:08:53 +0200
 categories: development
 comments: true
