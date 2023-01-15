@@ -46,7 +46,7 @@ You cannot be a single point of failure. What if you go on holiday? The team nee
 
 7 - Document team processes.
 ------------------------------------------------------
-If there are processes that are not automated and someone has to follow a list of tasks to reach a goal it's important to have documentation where these processes are explained. , you should use some kind of wiki to document these things.
+If there are processes that are not automated and someone has to follow a list of tasks to reach a goal it's important to have documentation where these processes are explained. You should use some kind of wiki to document these things.
 
 8 - Document the asked questions.
 ------------------------------------------------------
