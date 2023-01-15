@@ -38,7 +38,7 @@ Open the conversation with the team members about some topic to see if it’s po
 
 5 - You can’t force individuals to grow.
 ------------------------------------------------------
-Self-development it’s an individual responsibility, you can’t force someone to a place that doesn’t want to go. But this person doesn't know where he can go or this person prefers to stay in the same place because it's difficult to go out from the confort zone. You should read people and what they want asking questions. If a team member wants to grow you need the commitment of this person with actions that go in the direction that this person wants to go and help him.
+Self-development it’s an individual responsibility, you can’t force someone to a place that doesn’t want to go. Maybe this person doesn't know where he can go or this person prefers to stay in the same place because it's difficult to go out from the confort zone. You should read people and what they want asking questions. If a team member wants to grow you need the commitment of this person with actions that go in the direction that this person wants to go and help him.
 
 6 - Redirect questions to a common team channel.
 ------------------------------------------------------
