@@ -40,27 +40,27 @@ Open the conversation with the team members about some topic to see if it’s po
 ------------------------------------------------------
 Self-development it’s an individual responsibility, you can’t force someone to a place that doesn’t want to go. But this person doesn't know where he can go or this person prefers to stay in the same place because it's difficult to go out from the confort zone. You should read people and what they want asking questions. If a team member wants to grow you need the commitment of this person with actions that go in the direction that this person wants to go and help him.
 
-6 - Redirect questions to a common team channel
+6 - Redirect questions to a common team channel.
 ------------------------------------------------------
 You cannot be a single point of failure. What if you go on holiday? The team needs to keep working without you. If you respond to all the questions even if you can answer them, your team doesn't learn and doesn't grow. You have to make that the team is able to respond and look for the responses.
 
-7 - Document team processes
+7 - Document team processes.
 ------------------------------------------------------
 If there are processes that are not automated and someone has to follow a list of tasks to reach a goal it's important to have documentation where these processes are explained. , you should use some kind of wiki to document these things.
 
-8 - Document the asked questions
+8 - Document the asked questions.
 ------------------------------------------------------
 To avoid repeating the same answers to people is good to have a place with all the asked questions. Having them in a common wiki where everybody can access to this documentation it's the best practice. Share the knowledge.
 
-9 - Protect team focus
+9 - Protect team focus.
 ------------------------------------------------------
 Is good to do a rotative role that handles interruptions during the week, this way the people of the team that is not in charge of handling interruptions can keep working on what they were doing.
 
-10 - Set clear expectations
+10 - Set clear expectations.
 ------------------------------------------------------
 If you set expectations for team members, then there will be no surprises in the assessments because you would have set expectations beforehand. In assessments there should not be surprises.
 
-11 - Help to unblock tasks
+11 - Help to unblock tasks.
 ------------------------------------------------------
 Helping the team members to work without blockers or to work around them is also a duty of a lead engineer. Any doubts or blockers you can help are more than welcome for your team members.
 
@@ -80,7 +80,7 @@ You have to listen more than you talk, we have 2 ears and 1 mouth. Seems obvious
 ------------------------------------------------------
 You can’t delegate the most difficult task to the person with less experience in the team, and you cannot also delegate the easiest task to the person that is more senior of the team because he will get bored. 
 
-16 - Every metric every team every week.
+16 - Have metrics to improve as a team.
 ------------------------------------------------------
 If you want to improve something, you have to have metrics and review them . The next step is also to take action on those metrics.
 
