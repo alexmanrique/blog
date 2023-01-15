@@ -34,7 +34,7 @@ This is not always possible but as long as the team comes with the answer everyb
 
 4 - Reaching agreements within the team.
 ------------------------------------------------------
-Open the conversation with the team members about some topic to see if it’s possible to reach an agreement. is better to listen to all the opinions and reaching a team agreement about some topic is the way to go.  
+Open the conversation with the team members about some topic to see if it’s possible to reach an agreement. It's better to listen to all the opinions and reaching a team agreement about some topic is the way to go.  
 
 5 - You can’t force individuals to grow.
 ------------------------------------------------------
