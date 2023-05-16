@@ -18,50 +18,32 @@ Foto de <a href="https://unsplash.com/@hrustall?utm_source=unsplash&utm_medium=r
 {: refdef} 
 
 1 - Comments in the code
---------------------------
-Avoid comments that try to explain what the code does. The code has to be readable without comments that explain what it does.
+--------------------------------------------
+Avoid comments that try to explain what the code does. The code has to be readable without comments that explain what it does. Instead of relying on comments, focus on writing clear and self-explanatory code. Use meaningful variable and function names, follow a consistent coding style, and break complex code into smaller, more manageable functions.
 
 2 - Too many arguments
------------------------
-Functions that have more than 3 arguments are difficult to test and it's quite possible that they do more than one thing. You should strive for having at most 3 arguments.
+--------------------------------------------
+Functions that have more than 3 arguments are difficult to test and it's quite possible that they do more than one thing. You should strive for having at most 3 arguments. If a function requires a large number of arguments, it indicates a potential violation of the Single Responsibility Principle. Consider refactoring the function by encapsulating related arguments into objects or using default values and optional parameters where appropriate.
 
 3 - Dead function
--------------------
-Function that nobody calls. Modern IDE'S can help you on this because this methods appear in grey colour. Get rid of this dead functions. The less code that you have, the better.
+--------------------------------------------
+A dead function is a function that nobody calls. Modern IDEs can help you identify dead functions as they usually appear in grey color. Remove these unused functions from your codebase as they add unnecessary clutter and can confuse other developers. Keeping your codebase lean and clean improves maintainability and makes it easier to understand the code.
 
 4 - Duplication
--------------------
-Don't repeat yourself (DRY) it's one of the most important concepts. Duplicated code it's a missed opportunity to abstract functionalities. 
+--------------------------------------------
+Don't repeat yourself (DRY) is one of the most important concepts in software development. Duplicated code is a missed opportunity to abstract functionalities and can lead to maintenance issues. Instead of duplicating code, strive to create reusable functions, classes, or modules that can be shared across your codebase. This promotes code reuse, improves readability, and reduces the chances of introducing bugs when making changes.
 
 5 - Code at wrong level of abstraction
----------------------------------------
-In the following block of code the function `percentFull` is at the wrong level of abstraction as there are implementations of an `Stack` that could not know how full they are. 
+--------------------------------------------
+In the given code snippet, the function percentFull appears to be at the wrong level of abstraction. It is defined in the Stack interface, but different implementations of a stack may not need to know how full they are. To address this, consider placing the percentFull function in a derivative interface such as BoundedStack that specifically deals with stack implementations that have bounded capacity. This ensures that each component of your codebase is responsible for its specific functionality and avoids unnecessary dependencies.
 
-```java
-public interface Stack {
-    Object pop() throws EmptyException;
-    void push(Object o) throws FullException;
-    double percentFull();
-}
-```
-It would be better placed in a derivative interface such as `BoundedStack`.
-
-
-6 - Feature envy 
----------------------
-This principle it's related with the principle of having "shy code". If you are doing `e.getTenthRate().getPennies()` it's not good cause you are accessing methods that are from an object returned by getEngine() method.
-
-```java
-public class HourlyPayCalculator {
-
-public calculateWeeklyPay(HourlyEmployee e)
-int tenthRate = e.getTenthRate().getPennies()
-}
-```
+6 - Feature envy
+--------------------------------------------
+The principle of feature envy relates to having "shy code" and avoiding excessive method chaining. If you find yourself accessing methods from an object returned by another method, like e.getTenthRate().getPennies(), it can indicate a potential violation of encapsulation and hinder code maintainability. Instead, consider refactoring your code to promote better encapsulation and move the necessary operations closer to the relevant objects or classes.
 
 7 - Replace magic numbers with constants
------------------------------------------
-The code should not have hardcoded values, instead of that is better to use constants that abstract the reader of the code of that particular value that don't provide value.  
+--------------------------------------------
+Hardcoded values in code, often referred to as magic numbers, should be avoided as they make the code less readable and maintainable. Instead, use constants with meaningful names to represent these values. By abstracting the values into constants, you enhance the readability of your code and make it easier to understand the purpose and significance of the numbers used. 
 
 
 8 - Function names should say what they do
@@ -70,22 +52,20 @@ Seems obvious this principle but if the name of the method doesn't explain what 
 
 
 9 - Prefer polymorphism to if/else or switch case
---------------------------------------------------
-Have you seen code that has 10 different if/else branches. This is a bad sympthon that the code is not well written and there's a good opportunity to use polymorphism. Instead of asking the type of the object and call a function doing a cast it's better to call a method of an object and depending of his type it will execute the definition of the method.
-
+-----------------------------------------------------
+When you encounter code with multiple if/else branches, it's often a sign of poorly structured code. A better approach is to leverage polymorphism, which allows you to define common behavior through interfaces or base classes and provide specific implementations in derived classes. Instead of checking the object's type and casting, you can simply call a method on the object, and the appropriate implementation will be executed based on its type. This promotes cleaner code, reduces branching logic, and improves extensibility.
 
 10 - Encapsulate conditionals
--------------------------------
-You don't need to know the details of a conditional that calls more than one function. It's better to group those calls into a method to abstract the reader of the details of the conditional and only provide a method function call. 
-
+-----------------------------------------------------
+Complex conditionals that involve multiple function calls can make code harder to understand and maintain. To improve readability and abstraction, consider encapsulating these conditionals within a separate method. By grouping the related function calls together, you provide a higher-level abstraction that hides the details of the conditional logic. This enhances code clarity and allows other developers to focus on the method's purpose without being distracted by the implementation details of the conditional.
 
 11 - Avoid negative conditionals
----------------------------------
-Negative conditionals read really bad, it's easier to read a conditional with isActive() than another one with isNotActive()
+-----------------------------------------------------
+Negative conditionals, such as using "isNotActive()" instead of "isActive()", can make code more difficult to read and understand. Positive conditionals are generally easier to follow and have a more natural flow. When writing conditionals, strive to use positive, affirmative language that clearly expresses the intended behavior. By favoring positive conditionals, you can improve code readability and make it easier for others to comprehend the logic at a glance.
 
 Conclusion
-------------
-In this post we have seen 11 code smells that you have to avoid in your code if you want to increase the quality of it. 
+-----------------------------------------------------
+In this post, we have explored 11 code smells that you should avoid in your code to enhance its quality. By addressing issues such as excessive comments, too many arguments, dead code, duplication, incorrect abstraction levels, feature envy, magic numbers, poor function naming, over-reliance on if/else or switch case, complex conditionals, and negative conditionals, you can create cleaner, more maintainable, and easier-to-understand code. Remember, writing high-quality code is essential for long-term success in software development.
 
 
 
