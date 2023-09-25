@@ -105,7 +105,7 @@ author:
 analytics:
   provider: "google"
   google:
-    tracking_id: "UA-68424461-1"
+    tracking_id: "G-79GL8C39KM"
     anonymize_ip: false # default
 
 comments:
