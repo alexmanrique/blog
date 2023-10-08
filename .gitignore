@@ -3,5 +3,6 @@ _site
 .jekyll-metadata
 .bundle
 .idea
+.vendor
 .DS_store
 

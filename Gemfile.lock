@@ -232,6 +232,8 @@ GEM
       jekyll-seo-tag (~> 2.1)
     minitest (5.15.0)
     multipart-post (2.2.3)
+    nokogiri (1.12.5-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
     octokit (4.25.1)
@@ -275,6 +277,7 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
+  arm64-darwin-22
   x86_64-darwin-17
 
 DEPENDENCIES
@@ -287,4 +290,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   2.2.8
+   2.3.26
