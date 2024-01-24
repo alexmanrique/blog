@@ -6,7 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: slack
-image: images/slack.jpg
+image: images/java21.jpg
 ---
 
 {:refdef: style="text-align: center;"}
