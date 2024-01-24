@@ -20,9 +20,9 @@ Foto de <a href="https://unsplash.com/es/@merlenegoulet?utm_content=creditCopyTe
 
 Java 21 was released on 19 September 2023 and it has been some time since this new LTS was made available in production. 
 
-In this blog post we are going to talk about which are the new features that are available in this new version. 
+In this blog post, we are going to talk about which are the new features that are available in this new version. 
 
-There are features that are in <a href="https://openjdk.org/jeps/12">preview</a> status in this JDK release and are not permanent waiting for developer feedback in the real world usage.   
+There are features that are in <a href="https://openjdk.org/jeps/12">preview</a> status in this JDK release and are not permanently waiting for developer feedback in real-world usage.   
 
 
 ## 1 - String Templates (Preview)
@@ -69,7 +69,7 @@ interface SequencedCollection<E> extends Collection<E> {
 {: refdef}
 {:refdef: style="text-align: center;font-size:9px"}
 
-From the previous picture we can see the folowing points:
+From the previous picture we can see the following points:
 
 - `List` now has SequencedCollection as its immediate superinterface,
 - `Deque` now has SequencedCollection as its immediate superinterface,
@@ -92,9 +92,9 @@ More info of this feature in this <a href="https://openjdk.org/jeps/439">link</a
 
 ## 4 - Record Patterns
 
-First we need to recall the concept of <a href="https://openjdk.org/jeps/395">`Record`</a> which are classes that act as transparent carriers for immutable data.  
+First, we need to recall the concept of <a href="https://openjdk.org/jeps/395">`Record`</a> which are classes that act as transparent carriers for immutable data.  
 
-In the following code it would be better if the pattern could not only test whether a value is an instance of `Point` but also extract the x and y components from the value directly, invoking the accessor methods on our behalf.
+In the following code, it would be better if the pattern could not only test whether a value is an instance of `Point` but also extract the x and y components from the value directly, invoking the accessor methods on our behalf.
 
 ```java
 // As of Java 16
@@ -121,7 +121,7 @@ static void printSum(Object obj) {
    }
 }
 ```
-`Point(int x, int y)` is a record pattern. It lifts the declaration of local variables for extracted components into the pattern itself, and initializes those variables by invoking the accessor methods when a value is matched against the pattern
+`Point(int x, int y)` is a record pattern. It lifts the declaration of local variables for extracted components into the pattern itself and initializes those variables by invoking the accessor methods when a value is matched against the pattern
 
 More info of this feature in this <a href="https://openjdk.org/jeps/440">link</a>
 
@@ -184,7 +184,7 @@ if (r instanceof ColoredPoint(Point(int x, int y), _)) { ... x ... y ... }
 
 ```
 
-In the following example the `order` variable is not used:
+In the following example, the `order` variable is not used:
 
 ```java
 int total = 0;
@@ -235,7 +235,7 @@ More info in the following <a href="https://openjdk.org/jeps/444">link</a>
 
 ## 9 - Unnamed Classes and Instance Main Methods (Preview)
 
-The idea of this feature is that students can write their first programs without needing to understand language features designed for large programs. When you create your first Java program you need to obviate some concepts like `class`, `static` or the `String []`. With this preview feature instead of doing this code: 
+The idea of this feature is that students can write their first programs without needing to understand language features designed for large programs. When you create your first Java program you need to obviate some concepts like `class`, `static`, or the `String []`. With this preview feature instead of doing this code: 
 
 ```java
 public class HelloWorld {
@@ -258,7 +258,7 @@ More info in the following <a href="https://openjdk.org/jeps/445">link</a>
 
 <a href="https://docs.oracle.com/javase%2F7%2Fdocs%2Fapi%2F%2F/java/lang/ThreadLocal.html">Thread-local</a> variables have more complexity than is usually needed for sharing data, and significant costs that cannot be avoided.
 
-The idea behind scoped values in to maintain inheritable per-thread data for thousands or millions of virtual threads.
+The idea behind scoped values is to maintain inheritable per-thread data for thousands or millions of virtual threads.
 
 These per-thread variables are immutable, their data can be shared by child threads efficiently.
 
@@ -287,7 +287,7 @@ More info in this <a href="https://openjdk.org/jeps/446">link</a>
 
 ## 11 - Vector API (Sixth Incubator)
 
-With this feature the intetion is to introduce an <a href="https://docs.oracle.com/en/java/javase/21/docs/api/jdk.incubator.vector/jdk/incubator/vector/Vector.html">API</a> to express vector computations that reliably compile at runtime to optimal vector instructions on supported CPU architectures, thus achieving performance superior to equivalent scalar computations.
+With this feature, the intention is to introduce an <a href="https://docs.oracle.com/en/java/javase/21/docs/api/jdk.incubator.vector/jdk/incubator/vector/Vector.html">API</a> to express vector computations that reliably compile at runtime to optimal vector instructions on supported CPU architectures, thus achieving performance superior to equivalent scalar computations.
 
 More info in this <a href="https://openjdk.org/jeps/448">link</a>
 
@@ -299,14 +299,14 @@ More info in this <a href="https://openjdk.org/jeps/449">link</a>
 
 ## 13 - Prepare to Disallow the Dynamic Loading of Agents
 
-An agent is a component that can alter the code of an application while the application is running. Agents were introduced by the <a href="https://jcp.org/en/jsr/detail?id=163">Java Platform Profiling Architecture</a> in JDK 5 as a way for tools, notably profilers, to instrument classes. If the agents are loaded at startup will not cause warnings like if they were loaded into a running JVM.
+An agent is a component that can alter the code of an application while the application is running. Agents were introduced by the <a href="https://jcp.org/en/jsr/detail?id=163">Java Platform Profiling Architecture</a> in JDK 5 as a way for tools, notably profilers, to instrument classes. If the agents are loaded at startup will not cause warnings as if they were loaded into a running JVM.
 All this in order <a href="https://openjdk.org/jeps/8305968">to improve integrity by default.</a>
 
 More info in this <a href="https://openjdk.org/jeps/451">link</a>
 
 ## 14 - Key Encapsulation Mechanism API
 
-KEMs will be an important tool for defending against quantum attacks. None of the existing cryptographic APIs in the Java Platform is capable of representing KEMs in a natural way. 
+KEMs will be an important tool for defending against quantum attacks. None of the existing cryptographic APIs in the Java Platform is capable of representing KEMs naturally. 
 
 Implementors of third-party security providers have already expressed a need for a standard KEM API. 
 
