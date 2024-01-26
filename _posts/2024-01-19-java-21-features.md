@@ -22,7 +22,7 @@ Java 21 was released on 19 September 2023 and it has been some time since this n
 
 In this blog post, we are going to talk about which are the new features that are available in this new version. 
 
-There are features that are in <a href="https://openjdk.org/jeps/12">preview</a> status in this JDK release and are not permanently waiting for developer feedback in real-world usage. If you want to use them you need to do the following
+There are features that are in <a href="https://openjdk.org/jeps/12">preview</a> status in this JDK release and are not permanently waiting for developer feedback in real-world usage. If you want to use them you need to do the following:
 
 Compile your app:
 ```
