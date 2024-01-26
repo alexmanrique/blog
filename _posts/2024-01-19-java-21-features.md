@@ -18,7 +18,7 @@ image: images/java21.jpg
 Foto de <a href="https://unsplash.com/es/@merlenegoulet?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Merlene Goulet</a> en <a href="https://unsplash.com/es/fotos/taza-de-ceramica-blanca-en-la-parte-superior-del-platillo-de-ceramica-blanca-rodeado-de-granos-de-cafe-ISFopTz7sBo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 {: refdef}
 
-Java 21 was released on 19 September 2023 and it has been some time since this new LTS was made available in production. 
+Java 21 was released on 19 September 2023 and it has been some time since this new <a href="https://www.oracle.com/es/java/technologies/java-se-support-roadmap.html">LTS</a> was made available in production. 
 
 In this blog post, we are going to talk about which are the new features that are available in this new version. 
 
