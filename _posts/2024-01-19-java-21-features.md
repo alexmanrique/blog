@@ -86,7 +86,7 @@ More info of this feature in this <a href="https://openjdk.org/jeps/431">link</a
 
 ## 3 - Generational ZGC
 
-Improve application performance by extending the Z Garbage Collector (ZGC) to maintain separate generations for young and old objects. This will allow ZGC to collect young objects — which tend to die young — more frequently.
+The purpose of this feature is to improve application performance by extending the Z Garbage Collector (ZGC) to maintain separate generations for young and old objects. This will allow ZGC to collect young objects — which tend to die young — more frequently.
 
 More info of this feature in this <a href="https://openjdk.org/jeps/439">link</a>
 
@@ -126,6 +126,8 @@ static void printSum(Object obj) {
 More info of this feature in this <a href="https://openjdk.org/jeps/440">link</a>
 
 ## 5 - Pattern Matching for switch (Fourth preview)
+
+This feature is related to improving pattern matching for switch expressions and statements. Let's check the following code:
 
 ```java
 
