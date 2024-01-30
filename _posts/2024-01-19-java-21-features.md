@@ -18,11 +18,11 @@ image: images/java21.jpg
 Foto de <a href="https://unsplash.com/es/@merlenegoulet?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Merlene Goulet</a> en <a href="https://unsplash.com/es/fotos/taza-de-ceramica-blanca-en-la-parte-superior-del-platillo-de-ceramica-blanca-rodeado-de-granos-de-cafe-ISFopTz7sBo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 {: refdef}
 
-Java 21 was released on 19 September 2023 and it has been some time since this new <a href="https://www.oracle.com/es/java/technologies/java-se-support-roadmap.html">LTS</a> was made available in production. 
+Java latest version was released on 19 September 2023 and it has been some time since this new <a href="https://www.oracle.com/es/java/technologies/java-se-support-roadmap.html">LTS</a> was made available in production. 
 
-In this blog post, we are going to talk about which are the new features that are available in this new version. 
+In this blog post, we are going to talk about which are the new features of this new Java JDK. 
 
-There are features that are in <a href="https://openjdk.org/jeps/12">preview</a> status in this JDK release and are not permanently waiting for developer feedback in real-world usage. If you want to use them you need to do the following:
+There are features that are in <a href="https://openjdk.org/jeps/12">preview</a> status in this Java JDK release and are not permanently, waiting for developer feedback in real-world usage. If you want to use them you need to do the following:
 
 Compile your app:
 ```
