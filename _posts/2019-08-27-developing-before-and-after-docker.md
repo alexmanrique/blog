@@ -80,7 +80,6 @@ In the links below you can find more info if you are interested in Dockerize you
 
 Links
 --------------------------
-- https://runnable.com/docker/java/dockerize-your-java-application
 - https://www.atlassian.com/blog/software-teams/deploy-java-apps-with-docker-awesome
 - https://www.oreilly.com/ideas/how-to-manage-docker-containers-in-kubernetes-with-java
 
