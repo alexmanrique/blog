@@ -58,12 +58,6 @@ Chat Slash commands
 
 You need to select the code in Intellij IDEA and after that in the Copilot Chat use some of the previous slash commands
 
-Tuning Copilot
-------------------------- 
-- Change the color about the suggestions 
-We need to go to the Github copilot icon on the bottom, click on settings and then in the Editor you can change the color for completions. 
-- Change key bindings
-
 Conclusions
 ---------------------
 It doesn’t do magic, it suggests you blocks of code that might be useful sometimes but you need to be aware.
