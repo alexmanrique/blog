@@ -54,7 +54,7 @@ Chat Slash commands
 - /fix : it looks for fixes in the code
 - /explain : helps you understand the code that you are working with.
 - /doc : it can help you writing documentation 
-- /feedback : 
+- /feedback : send comments to the creators of the plugin
 
 You need to select the code in Intellij IDEA and after that in the Copilot Chat use some of the previous slash commands
 
