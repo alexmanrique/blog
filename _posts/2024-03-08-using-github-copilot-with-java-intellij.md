@@ -6,8 +6,14 @@ categories: development
 comments: true
 lang: en
 tags: github, copilot, intellij
-image: images/
+image: images/github-copilot.png
 ---
+
+{:refdef: style="text-align: center;"}
+![dist files]({{ site.baseurl }}/images/github-copilot.png)
+{: refdef}
+{:refdef: style="text-align: center;font-size:9px"}
+
 
 In this blog post I will talk about my experience using Github Copilot with Java inside Intellij IDE. 
 
@@ -60,7 +66,7 @@ We need to go to the Github copilot icon on the bottom, click on settings and th
 
 Conclusions
 ---------------------
-It doesn’t do magic, it proposes you blocks of code that might be useful sometimes but you need to be aware.
+It doesn’t do magic, it suggests you blocks of code that might be useful sometimes but you need to be aware.
 
 For instance if you have a dependency conflict problem in a Java application (check this blog post where I talk about how to solve it) Copilot doesn’t tell you exactly what do you need to change that will work. It can suggest you things to try that might work.
 
