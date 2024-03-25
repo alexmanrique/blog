@@ -13,6 +13,11 @@ image:
 ![dist files]({{ site.baseurl }}/images/never-split-the-difference.png)
 {: refdef}
 
+Radiologists that don't use
+
+
+
+
 
 
 
