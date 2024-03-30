@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Installing Jupyter in Macbook Air M1"
+title: "Installing Jupyter in Macbook Air M1 (Updated 2024)"
 date: 2021-03-05 09:08:53 +0200
 categories: development
 comments: true
@@ -76,6 +76,71 @@ With the next command, we can install `jupyter` using `pip3` that is a package m
 ```console
 pip3 install jupyter
 ```
+
+I got the following error when running the previous command: 
+```
+ERROR: Command errored out with exit status 1:
+   command: /Users/alex/.pyenv/versions/3.9.1/bin/python3.9 /Users/alex/.pyenv/versions/3.9.1/lib/python3.9/site-packages/pip install --ignore-installed --no-user --prefix /private/var/folders/88/9dwq00q54nb8763hg0fd3c1h0000gp/T/pip-build-env-v2dsd0y6/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'maturin>=1.0,<2.0'
+       cwd: None
+  Complete output (58 lines):
+  Collecting maturin<2.0,>=1.0
+    Downloading maturin-1.5.1.tar.gz (181 kB)
+    Installing build dependencies: started
+    Installing build dependencies: finished with status 'done'
+    Getting requirements to build wheel: started
+    Getting requirements to build wheel: finished with status 'done'
+      Preparing wheel metadata: started
+      Preparing wheel metadata: finished with status 'done'
+  Collecting tomli>=1.1.0; python_version < "3.11"
+    Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+  Building wheels for collected packages: maturin
+    Building wheel for maturin (PEP 517): started
+    Building wheel for maturin (PEP 517): finished with status 'error'
+    ERROR: Command errored out with exit status 1:
+     command: /Users/alex/.pyenv/versions/3.9.1/bin/python3.9 /Users/alex/.pyenv/versions/3.9.1/lib/python3.9/site-packages/pip/_vendor/pep517/_in_process.py build_wheel /var/folders/88/9dwq00q54nb8763hg0fd3c1h0000gp/T/tmpllbyywb7
+         cwd: /private/var/folders/88/9dwq00q54nb8763hg0fd3c1h0000gp/T/pip-install-x887a37u/maturin
+    Complete output (35 lines):
+    /private/var/folders/88/9dwq00q54nb8763hg0fd3c1h0000gp/T/pip-build-env-57dr_b4d/overlay/lib/python3.9/site-packages/setuptools/config/_apply_pyprojecttoml.py:83: SetuptoolsWarning: `install_requires` overwritten in `pyproject.toml` (dependencies)
+      corresp(dist, value, root_dir)
+    running bdist_wheel
+    running build
+    running build_py
+    creating build
+    creating build/lib.macosx-14.2-arm64-cpython-39
+    creating build/lib.macosx-14.2-arm64-cpython-39/maturin
+    copying maturin/__init__.py -> build/lib.macosx-14.2-arm64-cpython-39/maturin
+    copying maturin/import_hook.py -> build/lib.macosx-14.2-arm64-cpython-39/maturin
+    copying maturin/__main__.py -> build/lib.macosx-14.2-arm64-cpython-39/maturin
+    running egg_info
+    creating maturin.egg-info
+    writing maturin.egg-info/PKG-INFO
+    writing dependency_links to maturin.egg-info/dependency_links.txt
+    writing requirements to maturin.egg-info/requires.txt
+    writing top-level names to maturin.egg-info/top_level.txt
+    writing manifest file 'maturin.egg-info/SOURCES.txt'
+    reading manifest file 'maturin.egg-info/SOURCES.txt'
+    reading manifest template 'MANIFEST.in'
+    warning: no files found matching '*.json' under directory 'src/python_interpreter'
+    writing manifest file 'maturin.egg-info/SOURCES.txt'
+    running build_ext
+    running build_rust
+    error: can't find Rust compiler
+
+    If you are using an outdated pip version, it is possible a prebuilt wheel is available for this package but pip is not able to install from it. Installing from the wheel would avoid the need for a Rust compiler.
+
+    To update pip, run:
+
+        pip install --upgrade pip
+
+    and then retry package installation.
+```
+
+Then I run the following command:
+
+```console
+> pip install --upgrade pip
+```
+
 
 Running Jupyter
 -------------------------
