@@ -16,7 +16,7 @@
 email: contact@alexmanrique.com
 description: Software Developer
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "http://www.alexmanrique.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://alexmanrique.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: amanrique
 github_username:  alexmanrique
 title: "Learnings of a developer"
@@ -75,7 +75,7 @@ author:
   name: Alex Manrique
   avatar: images/me.png
   bio: Software engineer fascinated by software development and ideas that change the world.
-  location: Barcelona, BCN
+  location: Remote
   home: /
   email: amanrique86@gmail.com
   uri: 
