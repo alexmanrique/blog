@@ -6,16 +6,17 @@ categories: development
 comments: true
 lang: en
 tags: kanban, agile 
-image: images/inmutable.jpg
+image: images/kanban.jpg
 ---
 
 {:refdef: style="text-align: center;"}
-![dist files]({{ site.baseurl }}/images/inmutable.jpg)
+![dist files]({{ site.baseurl }}/images/kanban.jpg)
 {: refdef}
 
 {:refdef: style="text-align: center;font-size:9px"}
-Photo by <a href="https://unsplash.com/@mikaelashannon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mikaela Shannon</a> on <a href="https://unsplash.com/s/photos/desktop-apps?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Photo by <a href="https://unsplash.com/es/@patrickperkins?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Patrick Perkins</a> en <a href="https://unsplash.com/es/fotos/assorted-notepads-ETRPjvb0KM0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 {: refdef}  
+
 
 In the dynamic realm of project management, the Kanban methodology stands tall as a beacon of efficiency, guiding teams through the complexities of task management. With eight years of personal experience under my belt, I'm excited to share with you ten indispensable principles that have revolutionized my approach to work organization and productivity.
 
