@@ -6,11 +6,11 @@ categories: development
 comments: true
 lang: en
 tags: kanban, agile 
-image: images/kanban.jpg
+image: images/kanban.jpeg
 ---
 
 {:refdef: style="text-align: center;"}
-![dist files]({{ site.baseurl }}/images/kanban.jpg)
+![dist files]({{ site.baseurl }}/images/kanban.jpeg)
 {: refdef}
 
 {:refdef: style="text-align: center;font-size:9px"}
