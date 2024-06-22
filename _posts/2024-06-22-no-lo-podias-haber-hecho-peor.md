@@ -25,7 +25,7 @@ Lo que hacia la gente era imprimirla y escribir si habia algo en la clase de có
 
 Al llegar el viernes nos reuniamos todos en una sala con la clase de código impresa en papel, preparados para comentarla. Había un moderador (ahora le llamaríamos facilitator para hacerlo más guay) que daba la palabra y ponia límite en las discusiones si estas duraban más de la cuenta. Pues ese día tocaba hacer code review de una clase que habia desarrollado yo. 
 
-Yo en aquel momento tenia unos 3 años de experiencia y la gente que habia en esa sala tenía 10 años de experiencia más que yo. Podemos decir que tenia experiencia pero comparado con mis compañeros era bastante Junior. Pues bien al empezar la sesión un compañero mio me dijo con un tono bastante ironico y sarcástico "No lo podrías haber hecho peor". 
+En aquel momento tenia unos 3 años de experiencia y la gente que habia en esa sala tenía 10 años de experiencia más que yo. Podemos decir que tenia experiencia pero comparado con mis compañeros era bastante Junior. Pues bien al empezar la sesión un compañero mio me dijo con un tono bastante irónico y sarcástico "No lo podrías haber hecho peor". 
 
 Me sentó en ese momento como una patada porque no estaba acostumbrado a recibir críticas de mi trabajo y pensaba que era algo hacia mi. La clase era muy mejorable desde el punto de vista de la legibilidad, desde el punto de vista de la responsabilidad única y de unas cuantas cosas más xD
 
