@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "\"No lo podías haber hecho peor\""
+title: "\"Lecciones de un Code Review: Cómo las Críticas Mejoraron mi Código y mi Carrera\""
 date: 2024-06-22 09:08:53 +0200
 categories: development
 comments: true
