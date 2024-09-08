@@ -31,6 +31,6 @@ At that moment, it felt like a punch in the gut because I wasn't used to receivi
 
 Over time, though, I came to understand the value of that criticism in helping me improve how I develop code. Now, whenever I look at a class, I always think, how could this be improved? Could this class be made more readable somehow? Those sessions definitely helped me improve and do a better job.
 
-So, if you have someone giving you constructive criticism about your work, accept it and figure out how you can use it to improve what you do. We’re talking about code here, but this applies to any area.
+So, if you have someone giving you constructive feedback about your work, accept it and figure out how you can use it to improve what you do. We’re talking about code here, but this applies to any area.
 
 I can't take responsibility if your code turns into spaghetti code, but I can make sure you get an email letting you know when I've written a new post that might help you learn something ;) I write whenever I feel like it, so don’t expect an email from me every day. Until next time. 
