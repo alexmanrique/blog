@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "\"Lecciones de un Code Review: Cómo las Críticas Mejoraron mi Código y mi Carrera\""
+title: "\"Lessons from a Code Review: How Feedback Improved My Code and My Career\""
 date: 2024-06-22 09:08:53 +0200
 categories: development
 comments: true
@@ -17,20 +17,20 @@ image: images/badcodereview.jpg
 Foto de <a href="https://unsplash.com/es/@alvarordesign?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Alvaro Reyes</a> en <a href="https://unsplash.com/es/fotos/dos-hombres-usando-computadora-y-computadora-portatil-fSWOVc3e06w?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>  
 {: refdef} 
 
-Recuerdo aquella tarde en la oficina. Era viernes por la tarde y era cuando nos reuniamos todo el equipo para hacer un code review. Por aquel entonces ibamos a la oficina y las dinámicas eran diferentes (que os tengo que contar). 
+I remember that afternoon at the office. It was Friday afternoon, and it was when the whole team would get together for a code review. Back then, we would go to the office, and the dynamics were different (you know what I mean).
 
-Pues bien, la manera en que hacíamos el code review era la siguiente, alguien del equipo proponia una clase suya al resto del equipo con la suficiente antelación para que el resto del equipo se la pudiese leer con detenimiento. 
+So, the way we did the code review was as follows: someone on the team would propose one of their classes to the rest of the team with enough time in advance so that everyone could read it carefully.
 
-Lo que hacia la gente era imprimirla y escribir si habia algo en la clase de código que merecía ser destacado para hacer alguna propuesta de cambio o mejora. Por ejemplo "en la linea 25 has escrito una variable con un nombre que no se entiende demasiado". Este estilo de comentarios. 
+What people did was print it out and note down if there was anything in the code worth highlighting, either for suggesting changes or improvements. For example, "on line 25, you've written a variable with a name that's not very clear." These kinds of comments.
 
-Al llegar el viernes nos reuniamos todos en una sala con la clase de código impresa en papel, preparados para comentarla. Había un moderador (ahora le llamaríamos facilitator para hacerlo más guay) que daba la palabra y ponia límite en las discusiones si estas duraban más de la cuenta. Pues ese día tocaba hacer code review de una clase que habia desarrollado yo. 
+When Friday arrived, we would all meet in a room with the printed-out code, ready to discuss it. There was a moderator (nowadays, we'd probably call them a facilitator to make it sound cooler) who would give people turns to speak and set time limits if discussions dragged on too long. That day, it was my turn to have my code reviewed.
 
-En aquel momento tenia unos 3 años de experiencia y la gente que habia en esa sala tenía 10 años de experiencia más que yo. Podemos decir que tenia experiencia pero comparado con mis compañeros era bastante Junior. Pues bien al empezar la sesión un compañero mio me dijo con un tono bastante irónico y sarcástico "No lo podrías haber hecho peor". 
+At that time, I had around 3 years of experience, and the people in that room had 10 more years of experience than I did. You could say I had some experience, but compared to my colleagues, I was still quite junior. So, as soon as the session started, one of my colleagues said to me in a rather ironic and sarcastic tone, "You couldn’t have done it worse."
 
-Me sentó en ese momento como una patada porque no estaba acostumbrado a recibir críticas de mi trabajo y pensaba que era algo hacia mi. La clase era muy mejorable desde el punto de vista de la legibilidad, desde el punto de vista de la responsabilidad única y de unas cuantas cosas más xD
+At that moment, it felt like a punch in the gut because I wasn't used to receiving criticism of my work, and I took it personally. The class had a lot of room for improvement in terms of readability, single responsibility, and a few other things, haha.
 
-Luego con el tiempo entendi el valor que tenia esa critica para mejorar mi manera de desarrollar. Siempre que veo una clase de código la miro con ojos de en que se podria mejorar esto, se podría hacer más legible esta clase de alguna manera? Sin duda esas sesiones me sirvieron para mejorar y para hacer mejor mi trabajo. 
+Over time, though, I came to understand the value of that criticism in helping me improve how I develop code. Now, whenever I look at a class, I always think, how could this be improved? Could this class be made more readable somehow? Those sessions definitely helped me improve and do a better job.
 
-De manera que si teneis alguien que os de una crítica constructiva sobre vuestro trabajo aceptarla y ver de que manera la podeis utilizar para hacer mejor vuestro trabajo. Aquí estamos hablando de código pero esto puede aplicar a cualquier ambito.  
+So, if you have someone giving you constructive criticism about your work, accept it and figure out how you can use it to improve what you do. We’re talking about code here, but this applies to any area.
 
-No me puedo responsabilizar de que tu código sea Spagetti code pero sí de que recibas en tu buzon un correo de que he escrito un nuevo post con el que quiza aprendas algo ;) Escribo cuando me apetece así que no esperes que te envíe cada dia un correo. Hasta la próxima. 
+I can't take responsibility if your code turns into spaghetti code, but I can make sure you get an email letting you know when I've written a new post that might help you learn something ;) I write whenever I feel like it, so don’t expect an email from me every day. Until next time. 
