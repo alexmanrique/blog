@@ -27,7 +27,7 @@ When Friday arrived, we would all meet in a room with the printed-out code, read
 
 At that time, I had around 3 years of experience, and the people in that room had 10 more years of experience than I did. You could say I had some experience, but compared to my colleagues, I was still quite junior. So, as soon as the session started, one of my colleagues said to me in a rather ironic and sarcastic tone, "You couldn’t have done it worse."
 
-At that moment, it felt like a punch in the gut because I wasn't used to receiving criticism of my work, and I took it personally. The class had a lot of room for improvement in terms of readability, single responsibility, and a few other things, haha.
+At that moment, it felt like a punch in the gut because I wasn't used to receiving criticism of my work, and I took it personally. The class had a lot of room for improvement in terms of readability, single responsibility, and a few other things.
 
 Over time, though, I came to understand the value of that criticism in helping me improve how I develop code. Now, whenever I look at a class, I always think, how could this be improved? Could this class be made more readable somehow? Those sessions definitely helped me improve and do a better job.
 
