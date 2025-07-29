@@ -5,13 +5,13 @@ date: 2021-11-12 09:08:53 +0200
 categories: books
 comments: true
 lang: en
-tags: 
-image: 
+tags:
+image:
 ---
 
 # Antifragil - Nassim Nicholas Taleb
 
-Libro que habla sobre nuestro cerebro y como 
+Libro que habla sobre nuestro cerebro y como
 
 # La llamada del coraje - Ryan Holiday
 
@@ -19,6 +19,8 @@ Libro que habla sobre nuestro cerebro y como
 
 # Make - Peter Levels
 
-# Nervio Vago - Antonio Valenzuela 
+# Vivir cronicamente sanos - Dr Mazzuca
+
+# Nervio Vago - Antonio Valenzuela
 
 # El millonario de la puerta de al lado
