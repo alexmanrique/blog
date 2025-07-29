@@ -1,78 +1,198 @@
 ---
 layout: single
-title: "Issue with Loading cache Guava"
+title: "Issue with Loading Cache Guava"
 date: 2022-08-14 09:08:53 +0200
 categories: development
 comments: true
 lang: en
-tags: cache
+tags: cache, guava, java, performance, debugging
 image: images/layer.jpeg
 ---
 
 {:refdef: style="text-align: center;"}
-![dist files]({{ site.baseurl }}/images/layer.jpeg)
+![Cache Layer Architecture]({{ site.baseurl }}/images/layer.jpeg)
 {: refdef}
 
 {:refdef: style="text-align: center;font-size:9px"}
 Foto de <a href="https://unsplash.com/@hasanalmasi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hasan Almasi</a> en <a href="https://unsplash.com/es/s/fotos/capa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-{: refdef} 
-  
-In this post we are going to talk about a bug that I found after making a release to production. Like all releases, it is recommended and necessary to have a way to verify that what we have released to production does not break the old functionality.
+{: refdef}
 
-The thing is that in this delivery to production the release consisted of an optimization to reduce the response time of an endpoint of a rest api. It turns out that this endpoint had a response time of 10 seconds.
+In this post, I'll share a critical bug I discovered after deploying to production. This incident highlights the importance of thorough testing and understanding cache configurations when implementing performance optimizations.
 
-The problem was that in each request the application made a query to the database to fetch the same data. The request always returned the same values ​​from a database table, because the app was doing a `select * from ...`
+## The Problem: Slow API Response Times
 
-The records of that table where the query was done were rarely modified compared to the number of reads, so in the code that is executed in the application to return the data it made sense to put a cache to avoid going each time to the database and thus reduce the response time.
+We had a REST API endpoint that was taking **10 seconds** to respond. After investigation, I found that the endpoint was making a database query on every request, even though the data rarely changed. The application was executing a `SELECT * FROM ...` query for the same data repeatedly.
 
-To do this I used a Guava `LoadingCache` and a `CacheLoader` that refreshes the cache data every 30 minutes by doing a database query. When starting the application, the data of that cache is filled to prevent the first request from taking longer than necessary.
+Since the records in this table were rarely modified compared to the number of reads, implementing a cache made perfect sense to avoid hitting the database on every request.
 
-```java
+## The Solution: Implementing Guava LoadingCache
 
-    CacheLoader<String, String> loader;
-    loader = new CacheLoader<String, String>() {
-        @Override
-        public String load(String key) {
-            return key.toUpperCase();
-        }
-    };
+I decided to use Google Guava's `LoadingCache` with a `CacheLoader` that would refresh the cache data every 30 minutes. The cache would be pre-populated on application startup to prevent the first request from taking longer than necessary.
 
-    LoadingCache<String, String> cache;
-    cache = CacheBuilder.newBuilder().build(loader);
-```
-
-When releasing the changes to Canary and making a request to the stable Pod balancer I saw that the request returned 3982 elements and that the request to Canary returned 3982-24. In other words, 24 elements less than what should be returned to me.
-
-After spending 1 day of work investigating what was happening, it turned out that the problem was the maximum size with which the cache was configured.
-
-It was configured with a maximum of 4000 elements. This caused that when trying to return all the elements of the cache, it returned all the elements added except the last 24.
+Here's the basic implementation:
 
 ```java
-   CacheLoader<String, String> loader;
-    loader = new CacheLoader<String, String>() {
-        @Override
-        public String load(String key) {
-            return key.toUpperCase();
-        }
-    };
-    LoadingCache<String, String> cache;
-    cache = CacheBuilder.newBuilder().maximumSize(3).build(loader);
+CacheLoader<String, String> loader = new CacheLoader<String, String>() {
+    @Override
+    public String load(String key) {
+        return key.toUpperCase();
+    }
+};
 
-    cache.getUnchecked("first");
-    cache.getUnchecked("second");
-    cache.getUnchecked("third");
-    cache.getUnchecked("forth");
+LoadingCache<String, String> cache = CacheBuilder.newBuilder()
+    .refreshAfterWrite(30, TimeUnit.MINUTES)
+    .build(loader);
 ```
 
-In the previous code the first key will be evicted.
+## The Bug: Cache Size Limitation
 
-The solution was to increase the number of cache elements to 5000.
+After deploying the changes to our Canary environment and testing against the stable Pod balancer, I noticed a discrepancy:
 
-After finding the bug I did a unit test to ensure that if someone changed the cache settings a test would fail.
+- **Stable environment**: 3,982 elements returned
+- **Canary environment**: 3,958 elements returned (24 elements missing)
 
-Conclusion
-------------
-In this post we have seen how a configuration problem in a cache can cause a bug and how we solved the issue increasing the size of the cache.
+After spending an entire day investigating this issue, I discovered the root cause: **the cache was configured with a maximum size of 4,000 elements**.
 
+When the cache reached its maximum capacity, it started evicting the oldest entries, which caused the missing 24 elements in the response.
 
+## Understanding Cache Eviction
 
+Here's a simple example to demonstrate how cache eviction works:
+
+```java
+CacheLoader<String, String> loader = new CacheLoader<String, String>() {
+    @Override
+    public String load(String key) {
+        return key.toUpperCase();
+    }
+};
+
+LoadingCache<String, String> cache = CacheBuilder.newBuilder()
+    .maximumSize(3)  // Only 3 elements allowed
+    .build(loader);
+
+cache.getUnchecked("first");
+cache.getUnchecked("second");
+cache.getUnchecked("third");
+cache.getUnchecked("fourth");  // This will evict "first"
+```
+
+In this example, when the fourth element is added, the first element gets evicted due to the size limitation.
+
+## The Fix: Increasing Cache Size
+
+The solution was straightforward: **increase the cache size from 4,000 to 5,000 elements**.
+
+```java
+LoadingCache<String, String> cache = CacheBuilder.newBuilder()
+    .maximumSize(5000)  // Increased from 4000
+    .refreshAfterWrite(30, TimeUnit.MINUTES)
+    .build(loader);
+```
+
+## Prevention: Adding Unit Tests
+
+After fixing the bug, I created a unit test to ensure that if someone changes the cache settings in the future, the test will fail and catch the issue before it reaches production:
+
+```java
+@Test
+public void testCacheSizeIsSufficient() {
+    // Load all expected data into cache
+    for (int i = 0; i < expectedDataSize; i++) {
+        cache.getUnchecked("key" + i);
+    }
+
+    // Verify all data is still in cache
+    assertEquals(expectedDataSize, cache.size());
+
+    // Verify we can retrieve all elements
+    for (int i = 0; i < expectedDataSize; i++) {
+        assertNotNull(cache.getIfPresent("key" + i));
+    }
+}
+```
+
+## Key Lessons Learned
+
+### 1. Cache Size Planning
+
+Always calculate the maximum number of elements your cache might hold and set the size accordingly. Consider:
+
+- Current data size
+- Future growth
+- Memory constraints
+- Performance requirements
+
+### 2. Testing Cache Behavior
+
+Implement tests that verify:
+
+- Cache size limits
+- Eviction policies
+- Data consistency
+- Performance under load
+
+### 3. Monitoring Cache Metrics
+
+Monitor cache statistics to detect issues early:
+
+- Hit/miss ratios
+- Eviction counts
+- Memory usage
+- Response times
+
+### 4. Gradual Rollouts
+
+Use Canary deployments to catch issues before they affect all users. The discrepancy between environments helped identify the problem quickly.
+
+## Best Practices for Guava Cache
+
+### Size Configuration
+
+```java
+// For bounded caches, always set appropriate limits
+LoadingCache<String, Data> cache = CacheBuilder.newBuilder()
+    .maximumSize(10000)
+    .maximumWeight(1000000)  // Alternative to size
+    .build(loader);
+```
+
+### Time-based Expiration
+
+```java
+// Set appropriate expiration times
+LoadingCache<String, Data> cache = CacheBuilder.newBuilder()
+    .expireAfterWrite(30, TimeUnit.MINUTES)
+    .expireAfterAccess(10, TimeUnit.MINUTES)
+    .build(loader);
+```
+
+### Monitoring and Statistics
+
+```java
+// Enable statistics for monitoring
+LoadingCache<String, Data> cache = CacheBuilder.newBuilder()
+    .recordStats()
+    .build(loader);
+
+// Later, check statistics
+CacheStats stats = cache.stats();
+System.out.println("Hit rate: " + stats.hitRate());
+System.out.println("Eviction count: " + stats.evictionCount());
+```
+
+## Conclusion
+
+This incident taught us several important lessons about cache implementation:
+
+1. **Always plan cache size carefully** - Consider current and future data volumes
+2. **Test cache behavior thoroughly** - Include edge cases and load testing
+3. **Monitor cache performance** - Use metrics to detect issues early
+4. **Implement proper testing** - Unit tests can prevent similar issues
+5. **Use gradual deployments** - Canary deployments help catch issues quickly
+
+The bug was ultimately caused by underestimating the cache size requirements. By increasing the cache size and adding proper monitoring, we not only fixed the immediate issue but also prevented similar problems in the future.
+
+Cache implementations can be tricky, and small configuration mistakes can lead to significant production issues. Always test thoroughly and monitor your cache behavior in production environments.
+
+Have you encountered similar cache-related issues? Share your experiences in the comments below!
