@@ -27,7 +27,7 @@ By default in Cursor you have `Auto` that chooses the LLM for you but it's not t
 
 To use MCP you need an specific file called `./cursor/mcp.json` where you define which MCP's you will have available to develop. We talked about them in a previous post. 
 
-Cursor adds files, files everytime that there's a change and you have to remove code that might not be useful or it's dead code that is not used anywhere, is like it's not taking into account all the code that has generated and then the cleaning has to be done manually. It's prone to duplicate code so you have to tell explicetely that reuses code from another place to avoid repeating code one of the sins in developing software that is to duplicate code. 
+Cursor adds files everytime that there's a change and you have to remove code that might not be useful or it's dead code that is not used anywhere, is like it's not taking into account all the code that has generated and then the cleaning has to be done manually. It's prone to duplicate code so you have to tell explicetely that reuses code from another place to avoid repeating code one of the sins in developing software that is to duplicate code. 
 
 It can be useful for testing because it can do curls to your application locally or in production, however once it has performed one time testing is like for every change it tries to test it automatically, also if you commit and push to your git repository one time, then also for every change it tries to commit and push automatically something annoying because before commiting to the repository I want to test that changes performed are working and there's no issue. 
 
@@ -38,3 +38,9 @@ I want to try how it works using templates that you have in <a href="https://cur
 The way that we develop has changed a lot during the last year with a lot of new tools that help us do our work but we have to know how all this tools work and be challenging with what the models provide us, because it can be that a method for a function doesn't exist or that you have a problem and cursor wants to reinvent the wheel because it doesn't know that there's a library or a service that helps you to do that.
 
 Where I have found more difficulties is when you have to develop things for the frontend, once you have the skeleton of what you want, it's really difficult when the view is not beauty enough to specify what is wrong and how you want it to be changed. You need to have basic concepts of CSS because our natural language is not as specific as the css rules that give you a really wide set of options to specify visual things. It's easy to share with cursor a design of what you want to be accomplished but once this is implemented changing something is not as easy. 
+
+Testing. When you ask to the agent to write unit tests, It wrote tests that were depending on a database which is not ok as unit tests should only the class/file that you are testing and not depending on a external system.
+
+Use /"add current open files to the context"
+
+Check the context window percentage that you are using. Open new chat agent windows when developing different features and functionalities.

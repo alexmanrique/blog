@@ -11,7 +11,6 @@ image:
 
 # Antifragil - Nassim Nicholas Taleb
 
-Libro que habla sobre nuestro cerebro y como
 
 # La llamada del coraje - Ryan Holiday
 
@@ -21,6 +20,6 @@ Libro que habla sobre nuestro cerebro y como
 
 # Vivir cronicamente sanos - Dr Mazzuca
 
-# Nervio Vago - Antonio Valenzuela
+# Dejar ir - Dr. David Hawkins
 
 # El millonario de la puerta de al lado
