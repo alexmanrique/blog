@@ -171,7 +171,15 @@ The CI/CD workflow also needed to be updated:
 During the migration I also took the opportunity to:
 - **Add JaCoCo** for code coverage
 - **Expand the test suite** with new tests for services and mappers
-- **Update the README** with clearer instructions and build and coverage badges
+- **Update the README** with clearer instructions and badges for build status and code coverage
+
+**Adding badges to README:**
+
+I added two important badges to the GitHub repository README:
+- **Build status badge**: Shows whether the CI pipeline is passing
+- **Code coverage badge**: Displays the current code coverage percentage from JaCoCo
+
+These badges provide immediate visual feedback about the project's health and test coverage, which is especially valuable for a repository with 89 forks that serves as a reference implementation for other developers.
 
 ## Challenges encountered
 
@@ -196,6 +204,18 @@ The specific `hibernate-java8` dependency was removed since Java 8+ is now the s
 For this migration, I used **Claude Code** (with Claude Pro subscription) and **Cursor** as my AI coding assistants. These tools made the migration significantly more efficient:
 
 **Note:** Claude Pro provides access to more advanced models with better code understanding and generation capabilities, which proved particularly valuable for this complex migration task.
+
+**Switching tools mid-migration:**
+
+An interesting aspect of this migration was that I started with **Claude Code (Claude Pro)** but halfway through the migration, I hit the rate limits of Claude Pro. Rather than waiting or reducing my pace, I seamlessly transitioned to **Cursor with the Composer model** to continue the work.
+
+This transition proved to be smooth and effective:
+- The migration plan created in Claude Code's plan mode provided a clear roadmap that I could follow in Cursor
+- Cursor's Composer model was equally capable of handling the refactoring tasks, dependency updates, and test migrations
+- The comprehensive test suite I had built earlier ensured that I could verify everything worked correctly regardless of which tool I was using
+- I was able to complete the entire migration successfully, demonstrating that both tools are excellent choices for complex migration tasks
+
+This experience highlighted the importance of having a well-structured plan and comprehensive tests - they made the transition between tools seamless and ensured continuity in the migration process.
 
 ### 1. Plan mode for structured approach
 
@@ -239,6 +259,23 @@ After the migration:
 ✅ **CI/CD updated** and working correctly  
 ✅ **Improved code coverage** with JaCoCo  
 ✅ **Updated documentation** with clear instructions  
+✅ **Build and coverage badges** added to the GitHub README
+
+**Final verification:**
+
+Before considering the migration complete, I performed a final verification by running:
+
+```bash
+./mvnw spring-boot:run
+```
+
+This command successfully started the Spring Boot server, confirming that the application was fully functional after all the migration changes. The server started correctly on port 8080, and I was able to verify that:
+- The application context loaded without errors
+- All endpoints were accessible
+- Swagger UI (now SpringDoc) was working correctly
+- The H2 database was properly initialized
+
+This final verification step was crucial to ensure that the migration didn't just pass tests, but that the actual application could run successfully in a real environment.  
 
 ## Lessons learned
 
@@ -252,15 +289,17 @@ After the migration:
 
 5. **AI tools as accelerators**: AI tools can significantly accelerate the process, but it's important to review and understand the changes.
 
-6. **Documentation during the process**: Updating documentation while migrating helps keep the project maintainable.
+6. **Tool flexibility**: Having a well-structured plan and comprehensive tests allows you to seamlessly switch between different AI tools if needed (like hitting rate limits). Both Claude Code and Cursor proved equally capable for this migration.
 
-7. **CI/CD from the start**: Updating the CI/CD pipeline at the beginning ensures all changes are automatically validated.
+7. **Documentation during the process**: Updating documentation while migrating helps keep the project maintainable.
+
+8. **CI/CD from the start**: Updating the CI/CD pipeline at the beginning ensures all changes are automatically validated.
 
 ## Conclusion
 
 The migration from Java 8 to Java 17 and Spring Boot 1.4.3 to 3.3.5 was a complex but necessary process. Although it requires time and effort, the benefits in terms of performance, security, and maintainability make it worthwhile.
 
-Using AI tools like Claude Code (with Claude Pro) and Cursor made the process more efficient and less error-prone. The advanced capabilities of Claude Pro, with its deeper understanding of code context and better refactoring suggestions, were particularly helpful for navigating the breaking changes between major framework versions. However, it's important to understand the changes and not completely rely on the tools without reviewing and understanding what they're doing.
+Using AI tools like Claude Code (with Claude Pro) and Cursor made the process more efficient and less error-prone. The advanced capabilities of Claude Pro, with its deeper understanding of code context and better refactoring suggestions, were particularly helpful for navigating the breaking changes between major framework versions. When I hit Claude Pro's rate limits halfway through the migration, I seamlessly transitioned to Cursor with the Composer model, which proved equally capable of completing the remaining work. This experience demonstrated that with proper planning and comprehensive tests, you can maintain continuity even when switching between different AI tools. However, it's important to understand the changes and not completely rely on the tools without reviewing and understanding what they're doing.
 
 If you're considering a similar migration, I recommend:
 - Planning the process well
