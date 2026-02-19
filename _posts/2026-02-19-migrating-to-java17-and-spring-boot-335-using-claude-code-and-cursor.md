@@ -6,7 +6,16 @@ categories: development
 comments: true
 lang: en
 tags: java spring-boot migration claude cursor
+image: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=600&fit=crop
 ---
+
+{:refdef: style="text-align: center;"}
+![Java Code Migration](https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=600&fit=crop)
+{: refdef}
+
+{:refdef: style="text-align: center;font-size:9px"}
+Photo by <a href="https://unsplash.com/@lucabravo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luca Bravo</a> on <a href="https://unsplash.com/s/photos/code-programming?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+{: refdef}
 
 I recently completed the migration of my [Spring Boot example repository](https://github.com/alexmanrique/spring-boot-application-example) from Java 8 and Spring Boot 1.4.3 to Java 17 and Spring Boot 3.3.5. This was a significant migration that involved updating multiple components of the technology stack. In this post, I'll share my experience, the challenges encountered, and how AI tools like Claude Code and Cursor facilitated the process.
 
