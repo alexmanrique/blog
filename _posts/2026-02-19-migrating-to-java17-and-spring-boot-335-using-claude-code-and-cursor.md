@@ -17,7 +17,7 @@ image: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=600
 Photo by <a href="https://unsplash.com/@lucabravo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luca Bravo</a> on <a href="https://unsplash.com/s/photos/code-programming?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 {: refdef}
 
-I recently completed the migration of my [Spring Boot example repository](https://github.com/alexmanrique/spring-boot-application-example) from Java 8 and Spring Boot 1.4.3 to Java 17 and Spring Boot 3.3.5. This was a significant migration that involved updating multiple components of the technology stack. In this post, I'll share my experience, the challenges encountered, and how AI tools like Claude Code and Cursor facilitated the process.
+I recently completed the migration of my [Spring Boot example repository](https://github.com/alexmanrique/spring-boot-application-example) from Java 8 and Spring Boot 1.4.3 to Java 17 and Spring Boot 3.3.5. This repository is a popular example project on GitHub with **36 stars** and **89 forks**, serving as a reference implementation for developers learning Spring Boot best practices. This was a significant migration that involved updating multiple components of the technology stack. In this post, I'll share my experience, the challenges encountered, and how AI tools like Claude Code (using Claude Pro) and Cursor facilitated the process.
 
 ## Why migrate?
 
@@ -37,6 +37,42 @@ Migrating to more recent versions brings multiple benefits:
 ## The migration process
 
 The migration was carried out in several strategic commits that allowed keeping the project functional at each step:
+
+### 0. Preparation: Planning and maximizing test coverage
+
+Before touching any migration code, I followed a structured approach using **plan mode** in Claude Code. This involved creating a detailed migration plan upfront, breaking down the entire process into manageable steps and identifying potential challenges before starting.
+
+**Using Plan Mode:**
+Plan mode is particularly valuable for non-trivial tasks like this migration. It forces you to:
+- Think through the entire process before executing
+- Identify dependencies between different migration steps
+- Anticipate breaking changes and compatibility issues
+- Create a clear roadmap with checkpoints
+
+The plan mode helped me structure the migration into logical phases:
+1. Preparation (test coverage)
+2. Dependency updates
+3. Framework migrations
+4. Configuration updates
+5. CI/CD updates
+6. Verification and cleanup
+
+**Maximizing test coverage:**
+
+One of the first things I did was **maximize test coverage** to the highest possible level. This was a critical decision that paid off significantly during the migration.
+
+Why was this important?
+- **Safety net**: Comprehensive tests act as a safety net, catching regressions immediately when something breaks during migration
+- **Confidence**: High test coverage gives confidence that the application behavior remains unchanged after migration
+- **Faster debugging**: When tests fail, they pinpoint exactly what broke, making debugging much faster
+- **Documentation**: Tests serve as living documentation of expected behavior
+
+I expanded the test suite with new tests for services, mappers, and controllers that weren't previously covered. This included:
+- New test classes for `CarService`, `DriverService`, and various mappers
+- Additional test cases for edge cases and boundary conditions
+- Tests for domain value objects like `GeoCoordinate`
+
+Having this comprehensive test suite in place before starting the migration was invaluable. Every time I made a change, the tests would immediately tell me if something broke, allowing me to fix issues incrementally rather than discovering them all at once at the end.
 
 ### 1. Updating pom.xml
 
@@ -157,25 +193,40 @@ The specific `hibernate-java8` dependency was removed since Java 8+ is now the s
 
 ## How Claude Code and Cursor facilitated the process
 
-Using AI tools like Claude Code and Cursor made this migration significantly more efficient:
+For this migration, I used **Claude Code** (with Claude Pro subscription) and **Cursor** as my AI coding assistants. These tools made the migration significantly more efficient:
 
-### 1. Automatic problem identification
+**Note:** Claude Pro provides access to more advanced models with better code understanding and generation capabilities, which proved particularly valuable for this complex migration task.
+
+### 1. Plan mode for structured approach
+
+Before starting the migration, I used **plan mode** in Claude Code to create a comprehensive migration strategy. Plan mode is designed for non-trivial tasks (3+ steps or architectural decisions) and forces you to think through the entire process before executing.
+
+The plan mode helped me:
+- Break down the migration into logical, manageable phases
+- Identify dependencies between different migration steps
+- Anticipate breaking changes and compatibility issues upfront
+- Create a clear roadmap with checkpoints for verification
+- Reduce ambiguity by writing detailed specs before implementation
+
+This structured approach prevented me from getting lost in the complexity of the migration and ensured I didn't miss critical steps. Whenever something unexpected happened, I could stop, re-plan, and adjust the strategy rather than continuing blindly.
+
+### 2. Automatic problem identification
 
 The tools quickly identified compatibility issues and suggested specific solutions for each case.
 
-### 2. Assisted refactoring
+### 3. Assisted refactoring
 
 Migrating tests from JUnit 4 to JUnit 5 was much faster with assisted refactoring. The tools suggested the correct changes in each file.
 
-### 3. Dependency updates
+### 4. Dependency updates
 
 The tools helped identify which dependencies needed updating and which were compatible with the new versions.
 
-### 4. Test code generation
+### 5. Test code generation
 
 New tests were generated to improve coverage, following JUnit 5 best practices.
 
-### 5. Automatic documentation
+### 6. Automatic documentation
 
 The tools helped update the README with correct information about the new versions and how to run the project.
 
@@ -191,21 +242,25 @@ After the migration:
 
 ## Lessons learned
 
-1. **Incremental migrations**: Performing the migration in small, manageable commits facilitates debugging and rollback if necessary.
+1. **Use plan mode for complex migrations**: For non-trivial tasks like this migration, using plan mode to create a detailed strategy upfront is invaluable. It helps break down the work into manageable phases, identify dependencies, and anticipate challenges before starting.
 
-2. **Tests as a safety net**: Having a good test suite helps identify problems quickly during migration.
+2. **Maximize test coverage before migrating**: One of the most important steps is to maximize test coverage to the highest possible level BEFORE starting any migration work. This creates a safety net that catches regressions immediately and makes debugging much faster.
 
-3. **AI tools as accelerators**: AI tools can significantly accelerate the process, but it's important to review and understand the changes.
+3. **Incremental migrations**: Performing the migration in small, manageable commits facilitates debugging and rollback if necessary.
 
-4. **Documentation during the process**: Updating documentation while migrating helps keep the project maintainable.
+4. **Tests as a safety net**: Having a comprehensive test suite helps identify problems quickly during migration, but it's crucial to build this safety net BEFORE you start migrating.
 
-5. **CI/CD from the start**: Updating the CI/CD pipeline at the beginning ensures all changes are automatically validated.
+5. **AI tools as accelerators**: AI tools can significantly accelerate the process, but it's important to review and understand the changes.
+
+6. **Documentation during the process**: Updating documentation while migrating helps keep the project maintainable.
+
+7. **CI/CD from the start**: Updating the CI/CD pipeline at the beginning ensures all changes are automatically validated.
 
 ## Conclusion
 
 The migration from Java 8 to Java 17 and Spring Boot 1.4.3 to 3.3.5 was a complex but necessary process. Although it requires time and effort, the benefits in terms of performance, security, and maintainability make it worthwhile.
 
-Using AI tools like Claude Code and Cursor made the process more efficient and less error-prone. However, it's important to understand the changes and not completely rely on the tools without reviewing and understanding what they're doing.
+Using AI tools like Claude Code (with Claude Pro) and Cursor made the process more efficient and less error-prone. The advanced capabilities of Claude Pro, with its deeper understanding of code context and better refactoring suggestions, were particularly helpful for navigating the breaking changes between major framework versions. However, it's important to understand the changes and not completely rely on the tools without reviewing and understanding what they're doing.
 
 If you're considering a similar migration, I recommend:
 - Planning the process well
