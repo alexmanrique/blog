@@ -1,15 +1,19 @@
 ---
 categories: backend streaming kafka
 date: 2026-03-05
-layout: post
-tags:
-- kafka
-- event-streaming
-- distributed-systems
-- backend
-title: "Kafka Explained: Architecture, Producers, Consumers and Best
-  Practices"
+layout: single
+tags: kafka event-streaming distributed-systems backend
+title: "Kafka Explained: Architecture, Producers, Consumers and Best Practices"
+image: https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=600&fit=crop
 ---
+
+{:refdef: style="text-align: center;"}
+![Kafka Streams](https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=600&fit=crop)
+{: refdef}
+
+{:refdef: style="text-align: center;font-size:9px"}
+Photo by <a href="https://unsplash.com/@casparrubin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Caspar Camille Rubin</a> on <a href="https://unsplash.com/s/photos/code?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+{: refdef}
 
 # 🎯 What is Kafka?
 
@@ -22,13 +26,13 @@ In practical terms:
 
 Kafka is a **distributed messaging system** that:
 
--   Handles **millions of events per second**
--   Stores events **durably**
--   Allows **multiple independent consumers**
--   Guarantees **ordering within partitions**
--   Scales **horizontally**
+- Handles **millions of events per second**
+- Stores events **durably**
+- Allows **multiple independent consumers**
+- Guarantees **ordering within partitions**
+- Scales **horizontally**
 
-------------------------------------------------------------------------
+---
 
 # 📐 Core Architecture
 
@@ -53,7 +57,7 @@ Kafka is a **distributed messaging system** that:
         Producers                   Consumers
          (publish)                   (consume)
 
-------------------------------------------------------------------------
+---
 
 # Topics and Partitions
 
@@ -61,7 +65,7 @@ A **topic** is a category or feed of messages.
 
 Example:
 
-``` java
+```java
 Topic: "flight-bookings"
 
 ├── Partition 0: [msg0, msg3, msg6, msg9]
@@ -71,18 +75,18 @@ Topic: "flight-bookings"
 
 Characteristics:
 
--   A topic is divided into **partitions**
--   Each partition is an **immutable ordered sequence**
--   Messages are appended to the end (**append-only log**)
--   Each message has a **unique offset**
+- A topic is divided into **partitions**
+- Each partition is an **immutable ordered sequence**
+- Messages are appended to the end (**append-only log**)
+- Each message has a **unique offset**
 
-------------------------------------------------------------------------
+---
 
 ## Partitioning Key
 
 The producer decides the partition using a **key**.
 
-``` java
+```java
 producer.send(new ProducerRecord<>(
     "flight-bookings",
     bookingId,
@@ -100,7 +104,7 @@ Example:
     booking-456 → Partition 1
     booking-123 → Partition 0
 
-------------------------------------------------------------------------
+---
 
 # Replication
 
@@ -123,35 +127,35 @@ Key concepts:
 
 ### Leader
 
--   Handles **all reads and writes**
--   Only **one leader per partition**
+- Handles **all reads and writes**
+- Only **one leader per partition**
 
 ### Followers
 
--   Replicate data from the leader
--   Can become leader if the current one fails
+- Replicate data from the leader
+- Can become leader if the current one fails
 
 ### ISR (In-Sync Replicas)
 
 Set of replicas that are fully synchronized.
 
-------------------------------------------------------------------------
+---
 
 ## Durability with acks
 
-``` java
+```java
 props.put("acks", "all");
 props.put("acks", "1");
 props.put("acks", "0");
 ```
 
-------------------------------------------------------------------------
+---
 
 # Producers
 
 ## Basic Configuration
 
-``` java
+```java
 Properties props = new Properties();
 
 props.put("bootstrap.servers", "kafka1:9092,kafka2:9092");
@@ -168,11 +172,11 @@ KafkaProducer<String, String> producer =
     new KafkaProducer<>(props);
 ```
 
-------------------------------------------------------------------------
+---
 
 ## Asynchronous Send
 
-``` java
+```java
 producer.send(record, (metadata, exception) -> {
 
     if (exception != null) {
@@ -188,21 +192,21 @@ producer.send(record, (metadata, exception) -> {
 });
 ```
 
-------------------------------------------------------------------------
+---
 
 ## Synchronous Send
 
-``` java
+```java
 RecordMetadata metadata = producer.send(record).get();
 ```
 
-------------------------------------------------------------------------
+---
 
 # Consumers
 
 ## Basic Configuration
 
-``` java
+```java
 Properties props = new Properties();
 
 props.put("bootstrap.servers", "kafka1:9092");
@@ -221,11 +225,11 @@ KafkaConsumer<String, String> consumer =
     new KafkaConsumer<>(props);
 ```
 
-------------------------------------------------------------------------
+---
 
 ## Poll Loop
 
-``` java
+```java
 while (true) {
 
     ConsumerRecords<String,String> records =
@@ -241,7 +245,7 @@ while (true) {
 }
 ```
 
-------------------------------------------------------------------------
+---
 
 # Consumer Groups
 
@@ -255,19 +259,19 @@ Example with three partitions:
     Consumer 2 → Partition 1
     Consumer 3 → Partition 2
 
-------------------------------------------------------------------------
+---
 
 # Offset Management
 
 Manual commit example:
 
-``` java
+```java
 enable.auto.commit=false
 
 consumer.commitSync();
 ```
 
-------------------------------------------------------------------------
+---
 
 # Monitoring
 
@@ -285,7 +289,7 @@ consumer.commitSync();
     commit-latency-avg
     records-lag-max
 
-------------------------------------------------------------------------
+---
 
 # Most Important Metric: Consumer Lag
 
@@ -297,7 +301,7 @@ Example:
     booking-processors flight-bookings 0          150      150      0
     booking-processors flight-bookings 1          200      250      50
 
-------------------------------------------------------------------------
+---
 
 # Conclusion
 
@@ -305,14 +309,14 @@ Kafka is a core building block of modern event-driven architectures.
 
 Key strengths:
 
--   Horizontal scalability
--   High durability
--   Massive throughput
--   Strong ecosystem
+- Horizontal scalability
+- High durability
+- Massive throughput
+- Strong ecosystem
 
 Used heavily in:
 
--   fintech
--   ecommerce
--   streaming platforms
--   data platforms
+- fintech
+- ecommerce
+- streaming platforms
+- data platforms
