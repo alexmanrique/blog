@@ -37,6 +37,10 @@ At its core, the platform turns booking lifecycle events into outbound messages.
 
 The system is **event-driven**. Booking changes land on a Kafka topic — `booking_updates` — which sees on the order of **200,000 messages per day**. The wider product supports roughly **50,000 bookings per day**. Consumers run in a **Java**-based distributed backend, deployed on **Google Cloud** with **Docker** and **Kubernetes**. We expose **REST APIs** for integrations and use **batch jobs** where asynchronous processing fits better. **Datadog** covers metrics and alerting.
 
+{:refdef: style="text-align: center;"}
+![Architecture diagram of the transactional email platform]({{ site.baseurl }}/images/transaction-email-platform.png)
+{: refdef}
+
 Rough flow:
 
 1. A booking event is published to `booking_updates`.
