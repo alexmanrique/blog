@@ -15,7 +15,7 @@ image: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=600&fi
 
 Knowing Kafka theory is one thing — demonstrating it with working code is another. In this post, I walk through a project I built to capture the most important Kafka concepts in executable tests, using Spring Boot and an embedded broker. Each test encodes a specific behavior that I've dealt with in production and wanted to have as a reference.
 
-The full source code is available on [GitHub](https://github.com/alexmanrique/kafka-tests).
+The full source code is available on [GitHub](https://github.com/alexmanrique/apache-kafka-tests).
 
 ## The Setup
 
