@@ -6,7 +6,7 @@ categories: development
 comments: true
 lang: en
 tags: developer, code, job
-image: images/pull-requests.jpg 
+image: images/pull-requests.jpg
 ---
 
 {:refdef: style="text-align: center;"}

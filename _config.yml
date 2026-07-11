@@ -26,6 +26,8 @@ subtitle: Alex Manrique
 # Build settings
 markdown: kramdown
 
+minimal_mistakes_skin: "dark"
+
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 url: "https://alexmanrique.com"
@@ -73,34 +75,15 @@ sass:
 
 author:
   name: Alex Manrique
-  avatar: images/me.png
+  avatar: images/me.jpg
   bio: Software engineer fascinated by software development and ideas that change the world.
   location: Remote
   home: /
   email: amanrique86@gmail.com
-  uri: 
-  bitbucket: 
-  codepen: 
-  dribbble: 
-  flickr: 
-  facebook: 
-  foursquare: 
   github: alexmanrique
-  google_plus: 
-  keybase: 
-  instagram: 
-  lastfm: 
   linkedin: amanrique
-  pinterest: 
-  soundcloud: 
   stackoverflow: 919230
-  steam: 
-  tumblr:
   twitter: amanrique
-  vine: 
-  weibo: 
-  xing: 
-  youtube:
 
 analytics:
   provider: "google"
